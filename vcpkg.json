@@ -1,0 +1,8 @@
+{
+    "name": "mpitest",
+    "version-string": "0.0.1",
+    "dependencies": [
+        "openmpi",
+        "fmt"
+    ]
+}
