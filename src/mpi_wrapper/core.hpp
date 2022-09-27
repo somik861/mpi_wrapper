@@ -18,6 +18,18 @@ int Get_count(const MPI_Status& status) {
     return Get_count(status, types::get_mpi_type<T>());
 }
 
+inline int Comm_rank(MPI_Comm comm) {
+    int rank;
+    MPI_Comm_rank(comm, &rank);
+    return rank;
+}
+
+inline int Comm_size(MPI_Comm comm) {
+    int size;
+    MPI_Comm_size(comm, &size);
+    return size;
+}
+
 class Init_raii {
   public:
     Init_raii(int* argc, char*** argv) { MPI_Init(argc, argv); }
@@ -29,6 +41,20 @@ class Init_raii {
     Init_raii&& operator=(Init_raii&&) = delete;
 
     ~Init_raii() { MPI_Finalize(); }
+};
+
+class Comm_raii {
+  public:
+    MPI_Comm comm = MPI_COMM_NULL;
+
+    Comm_raii() = default;
+    Comm_raii(const Comm_raii&) = delete;
+    Comm_raii& operator=(const Comm_raii&) = delete;
+
+    Comm_raii(Comm_raii&&) = delete;
+    Comm_raii&& operator=(Comm_raii&&) = delete;
+
+    ~Comm_raii() { MPI_Comm_free(&comm); }
 };
 
 template <typename T>
