@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.18)
 project(mpi_test C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
+add_definitions(-fmax-errors=1)
 
 find_package(MPI REQUIRED)
 set(LIBS ${LIBS} MPI::MPI_CXX)

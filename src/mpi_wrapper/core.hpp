@@ -40,7 +40,7 @@ Recv(MPI_Comm comm, int source = MPI_ANY_SOURCE, int tag = MPI_ANY_TAG) {
 
     MPI_Probe(source, tag, comm, &stat);
 
-    out.data.resize(Get_count(stat));
+    out.data.resize(Get_count<T>(stat));
     MPI_Recv(out.data.data(), out.data.size(), type, stat.MPI_SOURCE,
              stat.MPI_TAG, comm, &out.status);
 
