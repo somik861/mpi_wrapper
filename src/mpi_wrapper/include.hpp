@@ -8,11 +8,5 @@
 
 // TODO
 /*
-Comms: 
-MPI_Gatherv
-MPI_Scatter
-MPI_Reduce
-MPI_Allgather
-MPI_Allreduce
-MPI_Barrier
+TESTS ???
 */
