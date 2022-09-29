@@ -1,30 +1,30 @@
 #include "../src/include.hpp"
-#include "utils.hpp"
+#include "send_recv.hpp"
 #include <cassert>
-
-void get_local_info() {}
 
 template <typename T>
 void run_all_test();
 
-template <typename T>
-void run_send_recv();
-
 int main(int argc, char** argv) {
-    MPIw::Init_raii(&argc, &argv);
+    MPIw::Init_raii _mpi_init(&argc, &argv);
     run_all_test<int>();
 
-    print("All tests passed !!!");
+    if (MPIw::Comm_rank(MPI_COMM_WORLD) == 0)
+        print("All tests passed !!!");
 }
 
 template <typename T>
 void run_all_test() {
-    run_send_recv<T>();
-}
+    bool is_printing = (MPIw::Comm_rank(MPI_COMM_WORLD) == 0);
+    std::string test_name = fmt::format("ALL TESTS ({})", get_type_name<T>());
 
-template <typename T>
-void run_send_recv() {
-    print_start_test("send / recv");
+    if (is_printing) {
+        print_start_test(test_name);
+        print_local_info(MPI_COMM_WORLD);
+    }
 
-    print_end_test("send / recv");
+    run_send_recv<T>(MPI_COMM_WORLD);
+
+    if (is_printing)
+        print_end_test(test_name);
 }

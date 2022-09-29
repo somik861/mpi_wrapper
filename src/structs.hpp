@@ -1,6 +1,7 @@
 #pragma once
 
 #include <mpi.h>
+#include <stdexcept>
 #include <vector>
 
 namespace MPIw::structs {
@@ -9,4 +10,5 @@ struct Recv_st {
     std::vector<T> data;
     MPI_Status status;
 };
+
 } // namespace MPIw::structs

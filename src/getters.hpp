@@ -25,19 +25,19 @@ inline int Comm_rank(MPI_Comm comm) {
 
 inline int Comm_size(MPI_Comm comm) {
     int size;
-    MPI_Comm_size(comm, &size);
+    errors::error_message(MPI_Comm_size(comm, &size));
     return size;
 }
 
 inline int Group_rank(MPI_Group group) {
     int rank;
-    MPI_Group_rank(group, &rank);
+    errors::error_message(MPI_Group_rank(group, &rank));
     return rank;
 }
 
 inline int Group_size(MPI_Group group) {
     int size;
-    MPI_Group_size(group, &size);
+    errors::error_message(MPI_Group_size(group, &size));
     return size;
 }
 
@@ -45,7 +45,7 @@ inline std::string Get_processor_name() {
     std::array<char, MPI_MAX_PROCESSOR_NAME> name;
     int count;
 
-    MPI_Get_processor_name(name.begin(), &count);
+    errors::error_message(MPI_Get_processor_name(name.begin(), &count));
     return std::string(name.begin(), name.begin() + count);
 }
 } // namespace MPIw

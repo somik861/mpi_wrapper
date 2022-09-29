@@ -5,6 +5,7 @@
 #include "raii.hpp"
 #include "structs.hpp"
 #include "types.hpp"
+#include "error_codes.hpp"
 
 // TODO
 /*

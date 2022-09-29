@@ -1,11 +1,13 @@
 #pragma once
 
+#include "error_codes.hpp"
 #include "getters.hpp"
 #include "structs.hpp"
 #include "types.hpp"
+#include <algorithm>
+#include <cassert>
 #include <mpi.h>
 #include <numeric>
-#include <algorithm>
 
 namespace MPIw {
 
@@ -35,11 +37,12 @@ Recv(MPI_Comm comm, int source = MPI_ANY_SOURCE, int tag = MPI_ANY_TAG) {
     MPI_Status stat;
     MPI_Datatype type = types::get_mpi_type<T>();
 
-    MPI_Probe(source, tag, comm, &stat);
+    errors::error_message(MPI_Probe(source, tag, comm, &stat));
 
     out.data.resize(Get_count<T>(stat));
-    MPI_Recv(out.data.data(), out.data.size(), type, stat.MPI_SOURCE,
-             stat.MPI_TAG, comm, &out.status);
+    errors::error_message(MPI_Recv(out.data.data(), out.data.size(), type,
+                                   stat.MPI_SOURCE, stat.MPI_TAG, comm,
+                                   &out.status));
 
     assert(stat.MPI_SOURCE == out.status.MPI_SOURCE);
     assert(stat.MPI_TAG == out.status.MPI_TAG);
@@ -50,8 +53,8 @@ Recv(MPI_Comm comm, int source = MPI_ANY_SOURCE, int tag = MPI_ANY_TAG) {
 
 template <typename T>
 void Send(MPI_Comm comm, const std::vector<T>& data, int dest, int tag) {
-    MPI_Send(data.data(), data.size(), types::get_mpi_type<T>(), dest, tag,
-             comm);
+    errors::error_message(MPI_Send(data.data(), data.size(),
+                                   types::get_mpi_type<T>(), dest, tag, comm));
 }
 
 // ===================== Bcast =====================
@@ -78,14 +81,16 @@ Bcast_managed(MPI_Comm comm, const std::vector<T>& data, int count, int root) {
 
 template <typename T>
 void Bcast_send(MPI_Comm comm, const std::vector<T>& data) {
-    MPI_Bcast(data.data(), data.size(), types::get_mpi_type<T>(),
-              Comm_rank(comm), comm);
+    errors::error_message(MPI_Bcast(data.data(), data.size(),
+                                    types::get_mpi_type<T>(), Comm_rank(comm),
+                                    comm));
 }
 
 template <typename T>
 std::vector<T> Bcast_recv(MPI_Comm comm, int count, int root) {
     std::vector<T> out(count);
-    MPI_Bcast(out.data(), count, types::get_mpi_type<T>(), root, comm);
+    errors::error_message(
+        MPI_Bcast(out.data(), count, types::get_mpi_type<T>(), root, comm));
     return out;
 }
 
@@ -93,14 +98,14 @@ template <typename T>
 void Bcast_send_managed(MPI_Comm comm, const std::vector<T>& data) {
     int count = data.size();
     int my_rank = Comm_rank(comm);
-    MPI_Bcast(&count, 1, MPI_INT, my_rank, comm);
+    errors::error_message(MPI_Bcast(&count, 1, MPI_INT, my_rank, comm));
     BCast_send(comm, data);
 }
 
 template <typename T>
 std::vector<T> Bcast_recv_managed(MPI_Comm comm, int root) {
     int count;
-    MPI_Bcast(&count, 1, MPI_INT, root, comm);
+    errors::error_message(MPI_Bcast(&count, 1, MPI_INT, root, comm));
     return Bcast_recv<T>(comm, count, root);
 }
 
@@ -116,16 +121,18 @@ std::vector<T> Gather(MPI_Comm comm, const std::vector<T>& data, int root) {
 
 template <typename T>
 void Gather_send(MPI_Comm comm, const std::vector<T>& data, int root) {
-    MPI_Gather(data.data(), data.size(), types::get_mpi_type<T>(), nullptr, -1,
-               MPI_DATATYPE_NULL, root, comm);
+    errors::error_message(MPI_Gather(data.data(), data.size(),
+                                     types::get_mpi_type<T>(), nullptr, -1,
+                                     MPI_DATATYPE_NULL, root, comm));
 }
 
 template <typename T>
 std::vector<T> Gather_recv(MPI_Comm comm, const std::vector<T>& data) {
     std::vector<T> out(Comm_size(comm) * data.size());
 
-    MPI_Gather(data.data(), data.size(), types::get_mpi_type<T>(), out.data(),
-               data.size(), types::get_mpi_type<T>(), Comm_rank(comm), comm);
+    errors::error_message(MPI_Gather(
+        data.data(), data.size(), types::get_mpi_type<T>(), out.data(),
+        data.size(), types::get_mpi_type<T>(), Comm_rank(comm), comm));
 
     return out;
 }
@@ -135,8 +142,9 @@ template <typename T>
 std::vector<T> Allgather(MPI_Comm comm, const std::vector<T> data) {
     std::vector<T> out(Comm_size(comm));
 
-    MPI_Allgather(data.data(), data.size(), types::get_mpi_type<T>(),
-                  out.data(), out.size(), types::get_mpi_type<T>(), comm);
+    errors::error_message(
+        MPI_Allgather(data.data(), data.size(), types::get_mpi_type<T>(),
+                      out.data(), out.size(), types::get_mpi_type<T>(), comm));
     return out;
 }
 
@@ -154,11 +162,12 @@ Gatherv(MPI_Comm comm, const std::vector<T>& data, int root) {
 template <typename T>
 void Gatherv_send(MPI_Comm comm, const std::vector<T>& data, int root) {
     int my_count = data.size();
-    MPI_Gather(&my_count, 1, MPI_INT, nullptr, -1, MPI_DATATYPE_NULL, root,
-               comm);
+    errors::error_message(MPI_Gather(&my_count, 1, MPI_INT, nullptr, -1,
+                                     MPI_DATATYPE_NULL, root, comm));
 
-    MPI_Gatherv(data.data(), data.size(), types::get_mpi_type<T>(), nullptr,
-                nullptr, nullptr, MPI_DATATYPE_NULL, root, comm);
+    errors::error_message(
+        MPI_Gatherv(data.data(), data.size(), types::get_mpi_type<T>(), nullptr,
+                    nullptr, nullptr, MPI_DATATYPE_NULL, root, comm));
 }
 
 template <typename T>
@@ -168,15 +177,16 @@ std::vector<std::vector<T>> Gatherv_recv(MPI_Comm comm,
     int my_count = data.size();
     int my_rank = Comm_rank(comm);
 
-    MPI_Gather(&my_count, 1, MPI_INT, counts.data(), 1, MPI_INT, my_rank, comm);
+    errors::error_message(MPI_Gather(&my_count, 1, MPI_INT, counts.data(), 1,
+                                     MPI_INT, my_rank, comm));
 
     std::vector<T> buffer(std::accumulate(counts.begin(), counts.end(), 0));
     std::vector<int> displs(counts.size());
     std::exclusive_scan(counts.begin(), counts.end(), displs.begin(), 0);
 
-    MPI_Gatherv(data.data(), data.size(), types::get_mpi_type<T>(),
-                buffer.data(), counts.data(), displs.data(),
-                types::get_mpi_type<T>(), my_rank, comm);
+    errors::error_message(MPI_Gatherv(
+        data.data(), data.size(), types::get_mpi_type<T>(), buffer.data(),
+        counts.data(), displs.data(), types::get_mpi_type<T>(), my_rank, comm));
 
     return details::split_buffer(buffer, displs);
 }
@@ -187,15 +197,16 @@ std::vector<std::vector<T>> Allgatherv(MPI_Comm comm,
     int my_count = data.size();
     std::vector<int> counts(Comm_size(comm));
 
-    MPI_Allgather(&my_count, 1, MPI_INT, counts.data(), 1, MPI_INT, comm);
+    errors::error_message(
+        MPI_Allgather(&my_count, 1, MPI_INT, counts.data(), 1, MPI_INT, comm));
 
     std::vector<int> displs(counts.size());
     std::exclusive_scan(counts.begin(), counts.end(), displs.begin(), 0);
     std::vector<T> buffer(std::accumulate(counts.begin(), counts.end(), 0));
 
-    MPI_Allgatherv(data.data(), data.size(), types::get_mpi_type<T>(),
-                   buffer.data(), counts.data(), displs.data(),
-                   types::get_mpi_type<T>(), comm);
+    errors::error_message(MPI_Allgatherv(
+        data.data(), data.size(), types::get_mpi_type<T>(), buffer.data(),
+        counts.data(), displs.data(), types::get_mpi_type<T>(), comm));
 
     return details::split_buffer(buffer, displs);
 }
@@ -216,23 +227,25 @@ std::vector<T> Scatter_send(MPI_Comm comm, const std::vector<T>& data) {
            data.size()); // data are equally splitable
 
     std::vector<T> out(count);
-    MPI_Scatter(data.begin(), count, types::get_mpi_type<T>(), out.data(),
-                count, types::get_mpi_type<T>(), Comm_rank(comm), comm);
+    errors::error_message((data.begin(), count, types::get_mpi_type<T>(),
+                           out.data(), count, types::get_mpi_type<T>(),
+                           Comm_rank(comm), comm));
     return out;
 }
 
 template <typename T>
 std::vector<T> Scatter_recv(MPI_Comm comm, int count, int root) {
     std::vector<T> out(count);
-    MPI_Scatter(nullptr, -1, MPI_DATATYPE_NULL, out.data(), out.size(),
-                types::get_mpi_type<T>(), root, comm);
+    errors::error_message(MPI_Scatter(nullptr, -1, MPI_DATATYPE_NULL,
+                                      out.data(), out.size(),
+                                      types::get_mpi_type<T>(), root, comm));
     return out;
 }
 
 template <typename T>
 std::vector<T> Scatter_send_managed(MPI_Comm comm, const std::vector<T>& data) {
     int count = data.size() / Comm_size(comm);
-    MPI_Bcast(&count, 1, MPI_INT, Comm_rank(comm), comm);
+    errors::error_message(MPI_Bcast(&count, 1, MPI_INT, Comm_rank(comm), comm));
 
     return Scatter_send(comm, data);
 }
@@ -240,7 +253,7 @@ std::vector<T> Scatter_send_managed(MPI_Comm comm, const std::vector<T>& data) {
 template <typename T>
 std::vector<T> Scatter_recv_managed(MPI_Comm comm, int root) {
     int count;
-    MPI_Bcast(&count, 1, MPI_INT, root, comm);
+    errors::error_message(MPI_Bcast(&count, 1, MPI_INT, root, comm));
     return Scatter_recv<T>(comm, count, root);
 }
 
@@ -270,13 +283,13 @@ std::vector<T> Scatterv_send(MPI_Comm comm,
 
     int my_count;
     int my_rank = Comm_rank(comm);
-    MPI_Scatter(counts.data(), 1, MPI_INT, &my_count, 1, MPI_INT, my_rank,
-                comm);
+    errors::error_message(MPI_Scatter(counts.data(), 1, MPI_INT, &my_count, 1,
+                                      MPI_INT, my_rank, comm));
 
     std::vector<T> out(my_count);
-    MPI_Scatterv(buffer.data(), counts.data(), displs.data(),
-                 types::get_mpi_type<T>(), out.data(), my_count,
-                 types::get_mpi_type<T>(), my_rank, comm);
+    errors::error_message(MPI_Scatterv(
+        buffer.data(), counts.data(), displs.data(), types::get_mpi_type<T>(),
+        out.data(), my_count, types::get_mpi_type<T>(), my_rank, comm));
 
     return out;
 }
@@ -284,12 +297,13 @@ std::vector<T> Scatterv_send(MPI_Comm comm,
 template <typename T>
 std::vector<T> Scatterv_recv(MPI_Comm comm, int root) {
     int my_count;
-    MPI_Scatter(nullptr, -1, MPI_DATATYPE_NULL, &my_count, 1, MPI_INT, root,
-                comm);
+    errors::error_message(MPI_Scatter(nullptr, -1, MPI_DATATYPE_NULL, &my_count,
+                                      1, MPI_INT, root, comm));
 
     std::vector<T> out(my_count);
-    MPI_Scatterv(nullptr, nullptr, nullptr, MPI_DATATYPE_NULL, out.data(),
-                 out.size(), types::get_mpi_type<T>(), root, comm);
+    errors::error_message(
+        MPI_Scatterv(nullptr, nullptr, nullptr, MPI_DATATYPE_NULL, out.data(),
+                     out.size(), types::get_mpi_type<T>(), root, comm));
 
     return out;
 }
@@ -309,8 +323,8 @@ void Reduce_send(MPI_Comm comm,
                  const std::vector<T>& data,
                  MPI_Op op,
                  int root) {
-    MPI_Reduce(data.data(), nullptr, data.size(), types::get_mpi_type<T>(), op,
-               root, comm);
+    errors::error_message(MPI_Reduce(data.data(), nullptr, data.size(),
+                                     types::get_mpi_type<T>(), op, root, comm));
 }
 
 template <typename T>
@@ -318,8 +332,9 @@ std::vector<T>
 Reduce_recv(MPI_Comm comm, const std::vector<T>& data, MPI_Op op) {
     std::vector<T> out(data.size());
 
-    MPI_Reduce(data.data(), out.data(), data.size(), types::get_mpi_type<T>(),
-               op, Comm_rank(comm), comm);
+    errors::error_message(MPI_Reduce(data.data(), out.data(), data.size(),
+                                     types::get_mpi_type<T>(), op,
+                                     Comm_rank(comm), comm));
     return out;
 }
 
@@ -328,12 +343,12 @@ template <typename T>
 std::vector<T> AllReduce(MPI_Comm comm, std::vector<T>& data, MPI_Op op) {
     std::vector<T> out(data.size());
 
-    MPI_Allreduce(data.data(), out.data(), data.size(),
-                  types::get_mpi_type<T>(), op, comm);
+    errors::error_message(MPI_Allreduce(data.data(), out.data(), data.size(),
+                                        types::get_mpi_type<T>(), op, comm));
     return out;
 }
 
 // ===================== Barrier =====================
-inline void Barrier(MPI_Comm comm) { MPI_Barrier(comm); }
+inline void Barrier(MPI_Comm comm) { errors::error_message(MPI_Barrier(comm)); }
 
 } // namespace MPIw
