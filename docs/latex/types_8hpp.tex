@@ -1,0 +1,196 @@
+\hypertarget{types_8hpp}{}\doxysection{/home/somik/\+WSL\+\_\+\+Workspace/cpp/mpi\+\_\+wrapper/src/types.hpp File Reference}
+\label{types_8hpp}\index{/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/types.hpp@{/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/types.hpp}}
+{\ttfamily \#include $<$complex$>$}\newline
+{\ttfamily \#include $<$mpi.\+h$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+Include dependency graph for types.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{types_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{types_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_m_p_iw}{MPIw}}
+\item 
+ \mbox{\hyperlink{namespace_m_p_iw_1_1types}{MPIw\+::types}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{types_8hpp_a6bd8b5c79d07ba85512391bc48a48ed5}{MPIw\+\_\+register\+\_\+type}}(cpp\+\_\+type,  mpi\+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\MPI\+\_\+\+Datatype \mbox{\hyperlink{namespace_m_p_iw_1_1types_ab1065887a58e86a763cc0747b343a410}{MPIw\+::types\+::get\+\_\+mpi\+\_\+type}} (T=T\{\})
+\item 
+\mbox{\hyperlink{types_8hpp_a1655c7f710259214fcc4e514ab7d54d3}{MPIw\+\_\+register\+\_\+type}} (char, MPI\+\_\+\+CHAR)
+\item 
+\mbox{\hyperlink{types_8hpp_a34bbb7abc7b98ede476b7b4d18e96a55}{MPIw\+\_\+register\+\_\+type}} (wchar\+\_\+t, MPI\+\_\+\+WCHAR)
+\item 
+\mbox{\hyperlink{types_8hpp_af809923a510844d3fc710901015c860f}{MPIw\+\_\+register\+\_\+type}} (short, MPI\+\_\+\+SHORT)
+\item 
+\mbox{\hyperlink{types_8hpp_a697a299121416217063290385ee82a4f}{MPIw\+\_\+register\+\_\+type}} (int, MPI\+\_\+\+INT)
+\item 
+\mbox{\hyperlink{types_8hpp_a4bfd5ea0f6ba219563cdbf3cfc98c8c3}{MPIw\+\_\+register\+\_\+type}} (long, MPI\+\_\+\+LONG)
+\item 
+\mbox{\hyperlink{types_8hpp_a34d48a125ab414e8d5ad92d25b7deeb1}{MPIw\+\_\+register\+\_\+type}} (signed char, MPI\+\_\+\+SIGNED\+\_\+\+CHAR)
+\item 
+\mbox{\hyperlink{types_8hpp_a71b0cf23aab215c01e67cbe4f6ccc7b3}{MPIw\+\_\+register\+\_\+type}} (unsigned char, MPI\+\_\+\+UNSIGNED\+\_\+\+CHAR)
+\item 
+\mbox{\hyperlink{types_8hpp_aab93617223cc36174d5506fe3fba752c}{MPIw\+\_\+register\+\_\+type}} (unsigned short, MPI\+\_\+\+UNSIGNED\+\_\+\+SHORT)
+\item 
+\mbox{\hyperlink{types_8hpp_a2fa688fd7d1b13ba74e3f5b70351f325}{MPIw\+\_\+register\+\_\+type}} (unsigned, MPI\+\_\+\+UNSIGNED)
+\item 
+\mbox{\hyperlink{types_8hpp_ad8f7875e690a10bfc056671c07613b5d}{MPIw\+\_\+register\+\_\+type}} (unsigned long, MPI\+\_\+\+UNSIGNED\+\_\+\+LONG)
+\item 
+\mbox{\hyperlink{types_8hpp_a7341e62bdd19e470183d07f51217bf62}{MPIw\+\_\+register\+\_\+type}} (float, MPI\+\_\+\+FLOAT)
+\item 
+\mbox{\hyperlink{types_8hpp_ade7e0bbbd191a0986338a9435af382a4}{MPIw\+\_\+register\+\_\+type}} (double, MPI\+\_\+\+DOUBLE)
+\item 
+\mbox{\hyperlink{types_8hpp_a16f8c4a62ba0f4a2db2d780b38c83a89}{MPIw\+\_\+register\+\_\+type}} (long double, MPI\+\_\+\+LONG\+\_\+\+DOUBLE)
+\item 
+\mbox{\hyperlink{types_8hpp_ae84f255769dc3586186fdc2f060ea999}{MPIw\+\_\+register\+\_\+type}} (bool, MPI\+\_\+\+CXX\+\_\+\+BOOL)
+\item 
+\mbox{\hyperlink{types_8hpp_a85a9e42ad970ea5185f777ae79574912}{MPIw\+\_\+register\+\_\+type}} (std\+::complex$<$ float $>$, MPI\+\_\+\+CXX\+\_\+\+COMPLEX)
+\item 
+\mbox{\hyperlink{types_8hpp_a55389ed50cac08a0f02b8f15100c260a}{MPIw\+\_\+register\+\_\+type}} (std\+::complex$<$ double $>$, MPI\+\_\+\+CXX\+\_\+\+DOUBLE\+\_\+\+COMPLEX)
+\item 
+\mbox{\hyperlink{types_8hpp_a58dc8a47895390e47d5d7a6d04365063}{MPIw\+\_\+register\+\_\+type}} (std\+::complex$<$ long double $>$, MPI\+\_\+\+CXX\+\_\+\+LONG\+\_\+\+DOUBLE\+\_\+\+COMPLEX)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{types_8hpp_a6bd8b5c79d07ba85512391bc48a48ed5}\label{types_8hpp_a6bd8b5c79d07ba85512391bc48a48ed5}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type}{MPIw\_register\_type}}
+{\footnotesize\ttfamily \#define MPIw\+\_\+register\+\_\+type(\begin{DoxyParamCaption}\item[{}]{cpp\+\_\+type,  }\item[{}]{mpi\+\_\+type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_m_p_iw_1_1types}{MPIw::types}} \{                                                    \(\backslash\)}
+\DoxyCodeLine{    template <>                                                                \(\backslash\)}
+\DoxyCodeLine{    MPI\_Datatype get\_mpi\_type<cpp\_type>(cpp\_type) \{                            \(\backslash\)}
+\DoxyCodeLine{        return mpi\_type;                                                       \(\backslash\)}
+\DoxyCodeLine{    \}                                                                          \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{types_8hpp_ae84f255769dc3586186fdc2f060ea999}\label{types_8hpp_ae84f255769dc3586186fdc2f060ea999}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [1/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{bool}]{,  }\item[{MPI\+\_\+\+CXX\+\_\+\+BOOL}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a1655c7f710259214fcc4e514ab7d54d3}\label{types_8hpp_a1655c7f710259214fcc4e514ab7d54d3}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [2/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{char}]{,  }\item[{MPI\+\_\+\+CHAR}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_ade7e0bbbd191a0986338a9435af382a4}\label{types_8hpp_ade7e0bbbd191a0986338a9435af382a4}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [3/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{double}]{,  }\item[{MPI\+\_\+\+DOUBLE}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a7341e62bdd19e470183d07f51217bf62}\label{types_8hpp_a7341e62bdd19e470183d07f51217bf62}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [4/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{float}]{,  }\item[{MPI\+\_\+\+FLOAT}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a697a299121416217063290385ee82a4f}\label{types_8hpp_a697a299121416217063290385ee82a4f}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [5/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{MPI\+\_\+\+INT}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a16f8c4a62ba0f4a2db2d780b38c83a89}\label{types_8hpp_a16f8c4a62ba0f4a2db2d780b38c83a89}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [6/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{long double}]{,  }\item[{MPI\+\_\+\+LONG\+\_\+\+DOUBLE}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a4bfd5ea0f6ba219563cdbf3cfc98c8c3}\label{types_8hpp_a4bfd5ea0f6ba219563cdbf3cfc98c8c3}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [7/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{long}]{,  }\item[{MPI\+\_\+\+LONG}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_af809923a510844d3fc710901015c860f}\label{types_8hpp_af809923a510844d3fc710901015c860f}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [8/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{short}]{,  }\item[{MPI\+\_\+\+SHORT}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a34d48a125ab414e8d5ad92d25b7deeb1}\label{types_8hpp_a34d48a125ab414e8d5ad92d25b7deeb1}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [9/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{signed char}]{,  }\item[{MPI\+\_\+\+SIGNED\+\_\+\+CHAR}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a55389ed50cac08a0f02b8f15100c260a}\label{types_8hpp_a55389ed50cac08a0f02b8f15100c260a}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [10/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{std\+::complex$<$ double $>$}]{,  }\item[{MPI\+\_\+\+CXX\+\_\+\+DOUBLE\+\_\+\+COMPLEX}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a85a9e42ad970ea5185f777ae79574912}\label{types_8hpp_a85a9e42ad970ea5185f777ae79574912}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [11/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{std\+::complex$<$ float $>$}]{,  }\item[{MPI\+\_\+\+CXX\+\_\+\+COMPLEX}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a58dc8a47895390e47d5d7a6d04365063}\label{types_8hpp_a58dc8a47895390e47d5d7a6d04365063}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [12/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{std\+::complex$<$ long double $>$}]{,  }\item[{MPI\+\_\+\+CXX\+\_\+\+LONG\+\_\+\+DOUBLE\+\_\+\+COMPLEX}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a71b0cf23aab215c01e67cbe4f6ccc7b3}\label{types_8hpp_a71b0cf23aab215c01e67cbe4f6ccc7b3}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [13/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{unsigned char}]{,  }\item[{MPI\+\_\+\+UNSIGNED\+\_\+\+CHAR}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_ad8f7875e690a10bfc056671c07613b5d}\label{types_8hpp_ad8f7875e690a10bfc056671c07613b5d}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [14/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{unsigned long}]{,  }\item[{MPI\+\_\+\+UNSIGNED\+\_\+\+LONG}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_aab93617223cc36174d5506fe3fba752c}\label{types_8hpp_aab93617223cc36174d5506fe3fba752c}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [15/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{unsigned short}]{,  }\item[{MPI\+\_\+\+UNSIGNED\+\_\+\+SHORT}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a2fa688fd7d1b13ba74e3f5b70351f325}\label{types_8hpp_a2fa688fd7d1b13ba74e3f5b70351f325}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [16/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{unsigned}]{,  }\item[{MPI\+\_\+\+UNSIGNED}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{types_8hpp_a34bbb7abc7b98ede476b7b4d18e96a55}\label{types_8hpp_a34bbb7abc7b98ede476b7b4d18e96a55}} 
+\index{types.hpp@{types.hpp}!MPIw\_register\_type@{MPIw\_register\_type}}
+\index{MPIw\_register\_type@{MPIw\_register\_type}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{MPIw\_register\_type()}{MPIw\_register\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [17/17]}}
+{\footnotesize\ttfamily MPIw\+\_\+register\+\_\+type (\begin{DoxyParamCaption}\item[{wchar\+\_\+t}]{,  }\item[{MPI\+\_\+\+WCHAR}]{ }\end{DoxyParamCaption})}
+

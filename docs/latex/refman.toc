@@ -1,0 +1,123 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Namespace Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}MPIw Namespace Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Function Documentation}{8}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Allgather()}{9}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Allgatherv()}{9}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}AllReduce()}{9}{subsubsection.4.1.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.1.4}Barrier()}{9}{subsubsection.4.1.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.1.5}Bcast()}{9}{subsubsection.4.1.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.1.6}Bcast\_managed()}{10}{subsubsection.4.1.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.1.7}Bcast\_recv()}{10}{subsubsection.4.1.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.1.8}Bcast\_recv\_managed()}{10}{subsubsection.4.1.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.1.9}Bcast\_send()}{10}{subsubsection.4.1.1.9}%
+\contentsline {subsubsection}{\numberline {4.1.1.10}Bcast\_send\_managed()}{10}{subsubsection.4.1.1.10}%
+\contentsline {subsubsection}{\numberline {4.1.1.11}Comm\_rank()}{11}{subsubsection.4.1.1.11}%
+\contentsline {subsubsection}{\numberline {4.1.1.12}Comm\_size()}{11}{subsubsection.4.1.1.12}%
+\contentsline {subsubsection}{\numberline {4.1.1.13}Gather()}{11}{subsubsection.4.1.1.13}%
+\contentsline {subsubsection}{\numberline {4.1.1.14}Gather\_recv()}{11}{subsubsection.4.1.1.14}%
+\contentsline {subsubsection}{\numberline {4.1.1.15}Gather\_send()}{11}{subsubsection.4.1.1.15}%
+\contentsline {subsubsection}{\numberline {4.1.1.16}Gatherv()}{11}{subsubsection.4.1.1.16}%
+\contentsline {subsubsection}{\numberline {4.1.1.17}Gatherv\_recv()}{12}{subsubsection.4.1.1.17}%
+\contentsline {subsubsection}{\numberline {4.1.1.18}Gatherv\_send()}{12}{subsubsection.4.1.1.18}%
+\contentsline {subsubsection}{\numberline {4.1.1.19}Get\_count()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{12}{subsubsection.4.1.1.19}%
+\contentsline {subsubsection}{\numberline {4.1.1.20}Get\_count()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{12}{subsubsection.4.1.1.20}%
+\contentsline {subsubsection}{\numberline {4.1.1.21}Get\_processor\_name()}{12}{subsubsection.4.1.1.21}%
+\contentsline {subsubsection}{\numberline {4.1.1.22}Group\_rank()}{12}{subsubsection.4.1.1.22}%
+\contentsline {subsubsection}{\numberline {4.1.1.23}Group\_size()}{13}{subsubsection.4.1.1.23}%
+\contentsline {subsubsection}{\numberline {4.1.1.24}Recv()}{13}{subsubsection.4.1.1.24}%
+\contentsline {subsubsection}{\numberline {4.1.1.25}Reduce()}{13}{subsubsection.4.1.1.25}%
+\contentsline {subsubsection}{\numberline {4.1.1.26}Reduce\_recv()}{13}{subsubsection.4.1.1.26}%
+\contentsline {subsubsection}{\numberline {4.1.1.27}Reduce\_send()}{13}{subsubsection.4.1.1.27}%
+\contentsline {subsubsection}{\numberline {4.1.1.28}Scatter()}{14}{subsubsection.4.1.1.28}%
+\contentsline {subsubsection}{\numberline {4.1.1.29}Scatter\_recv()}{14}{subsubsection.4.1.1.29}%
+\contentsline {subsubsection}{\numberline {4.1.1.30}Scatter\_recv\_managed()}{14}{subsubsection.4.1.1.30}%
+\contentsline {subsubsection}{\numberline {4.1.1.31}Scatter\_send()}{14}{subsubsection.4.1.1.31}%
+\contentsline {subsubsection}{\numberline {4.1.1.32}Scatter\_send\_managed()}{14}{subsubsection.4.1.1.32}%
+\contentsline {subsubsection}{\numberline {4.1.1.33}Scatterv()}{15}{subsubsection.4.1.1.33}%
+\contentsline {subsubsection}{\numberline {4.1.1.34}Scatterv\_recv()}{15}{subsubsection.4.1.1.34}%
+\contentsline {subsubsection}{\numberline {4.1.1.35}Scatterv\_send()}{15}{subsubsection.4.1.1.35}%
+\contentsline {subsubsection}{\numberline {4.1.1.36}Send()}{15}{subsubsection.4.1.1.36}%
+\contentsline {section}{\numberline {4.2}MPIw\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::details Namespace Reference}{15}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Function Documentation}{15}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}split\_buffer()}{16}{subsubsection.4.2.1.1}%
+\contentsline {section}{\numberline {4.3}MPIw\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::structs Namespace Reference}{16}{section.4.3}%
+\contentsline {section}{\numberline {4.4}MPIw\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::types Namespace Reference}{16}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Function Documentation}{16}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}get\_mpi\_type()}{16}{subsubsection.4.4.1.1}%
+\contentsline {chapter}{\numberline {5}Class Documentation}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}MPIw\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Comm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}raii Class Reference}{17}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Constructor \& Destructor Documentation}{17}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Comm\_raii()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{17}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}Comm\_raii()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{18}{subsubsection.5.1.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.1.3}Comm\_raii()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{18}{subsubsection.5.1.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.1.4}$\sim $Comm\_raii()}{18}{subsubsection.5.1.1.4}%
+\contentsline {subsection}{\numberline {5.1.2}Member Function Documentation}{18}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}get()}{18}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}operator MPI\_Comm()}{18}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}operator\&()}{18}{subsubsection.5.1.2.3}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{18}{subsubsection.5.1.2.4}%
+\contentsline {subsubsection}{\numberline {5.1.2.5}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{19}{subsubsection.5.1.2.5}%
+\contentsline {subsection}{\numberline {5.1.3}Member Data Documentation}{19}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}comm}{19}{subsubsection.5.1.3.1}%
+\contentsline {section}{\numberline {5.2}MPIw\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Group\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}raii Class Reference}{19}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Constructor \& Destructor Documentation}{19}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}Group\_raii()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{19}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}Group\_raii()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{20}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.2.1.3}Group\_raii()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{20}{subsubsection.5.2.1.3}%
+\contentsline {subsubsection}{\numberline {5.2.1.4}$\sim $Group\_raii()}{20}{subsubsection.5.2.1.4}%
+\contentsline {subsection}{\numberline {5.2.2}Member Function Documentation}{20}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}get()}{20}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}operator MPI\_Group()}{20}{subsubsection.5.2.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}operator\&()}{20}{subsubsection.5.2.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.4}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{20}{subsubsection.5.2.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.2.5}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{21}{subsubsection.5.2.2.5}%
+\contentsline {subsection}{\numberline {5.2.3}Member Data Documentation}{21}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}group}{21}{subsubsection.5.2.3.1}%
+\contentsline {section}{\numberline {5.3}MPIw\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}raii Class Reference}{21}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Constructor \& Destructor Documentation}{21}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}Init\_raii()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{21}{subsubsection.5.3.1.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.2}Init\_raii()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{22}{subsubsection.5.3.1.2}%
+\contentsline {subsubsection}{\numberline {5.3.1.3}Init\_raii()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{22}{subsubsection.5.3.1.3}%
+\contentsline {subsubsection}{\numberline {5.3.1.4}$\sim $Init\_raii()}{22}{subsubsection.5.3.1.4}%
+\contentsline {subsection}{\numberline {5.3.2}Member Function Documentation}{22}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{22}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{22}{subsubsection.5.3.2.2}%
+\contentsline {section}{\numberline {5.4}MPIw\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::structs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Recv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}st$<$ T $>$ Struct Template Reference}{22}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Member Data Documentation}{23}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}data}{23}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}status}{23}{subsubsection.5.4.1.2}%
+\contentsline {chapter}{\numberline {6}File Documentation}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}/home/somik/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WSL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Workspace/cpp/mpi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wrapper/src/communication.hpp File Reference}{25}{section.6.1}%
+\contentsline {section}{\numberline {6.2}/home/somik/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WSL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Workspace/cpp/mpi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wrapper/src/getters.hpp File Reference}{27}{section.6.2}%
+\contentsline {section}{\numberline {6.3}/home/somik/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WSL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Workspace/cpp/mpi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wrapper/src/include.hpp File Reference}{29}{section.6.3}%
+\contentsline {section}{\numberline {6.4}/home/somik/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WSL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Workspace/cpp/mpi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wrapper/src/raii.hpp File Reference}{29}{section.6.4}%
+\contentsline {section}{\numberline {6.5}/home/somik/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WSL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Workspace/cpp/mpi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wrapper/src/structs.hpp File Reference}{30}{section.6.5}%
+\contentsline {section}{\numberline {6.6}/home/somik/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WSL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Workspace/cpp/mpi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wrapper/src/types.hpp File Reference}{31}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Macro Definition Documentation}{33}{subsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.1.1}MPIw\_register\_type}{33}{subsubsection.6.6.1.1}%
+\contentsline {subsection}{\numberline {6.6.2}Function Documentation}{33}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [1/17]}}{33}{subsubsection.6.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.6.2.2}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [2/17]}}{33}{subsubsection.6.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.3}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [3/17]}}{33}{subsubsection.6.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.6.2.4}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [4/17]}}{34}{subsubsection.6.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.6.2.5}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [5/17]}}{34}{subsubsection.6.6.2.5}%
+\contentsline {subsubsection}{\numberline {6.6.2.6}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [6/17]}}{34}{subsubsection.6.6.2.6}%
+\contentsline {subsubsection}{\numberline {6.6.2.7}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [7/17]}}{34}{subsubsection.6.6.2.7}%
+\contentsline {subsubsection}{\numberline {6.6.2.8}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [8/17]}}{34}{subsubsection.6.6.2.8}%
+\contentsline {subsubsection}{\numberline {6.6.2.9}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [9/17]}}{34}{subsubsection.6.6.2.9}%
+\contentsline {subsubsection}{\numberline {6.6.2.10}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [10/17]}}{35}{subsubsection.6.6.2.10}%
+\contentsline {subsubsection}{\numberline {6.6.2.11}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [11/17]}}{35}{subsubsection.6.6.2.11}%
+\contentsline {subsubsection}{\numberline {6.6.2.12}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [12/17]}}{35}{subsubsection.6.6.2.12}%
+\contentsline {subsubsection}{\numberline {6.6.2.13}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [13/17]}}{35}{subsubsection.6.6.2.13}%
+\contentsline {subsubsection}{\numberline {6.6.2.14}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [14/17]}}{35}{subsubsection.6.6.2.14}%
+\contentsline {subsubsection}{\numberline {6.6.2.15}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [15/17]}}{35}{subsubsection.6.6.2.15}%
+\contentsline {subsubsection}{\numberline {6.6.2.16}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [16/17]}}{36}{subsubsection.6.6.2.16}%
+\contentsline {subsubsection}{\numberline {6.6.2.17}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [17/17]}}{36}{subsubsection.6.6.2.17}%
+\contentsline {chapter}{Index}{37}{section*.35}%
