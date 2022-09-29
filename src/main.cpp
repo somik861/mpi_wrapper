@@ -1,4 +1,4 @@
-#include "mpi_wrapper/include.hpp"
+#include "include.hpp"
 #include <fmt/core.h>
 #include <iostream>
 #include <mpi.h>
