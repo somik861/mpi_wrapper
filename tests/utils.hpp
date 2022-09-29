@@ -15,6 +15,15 @@ void print_start_test(const std::string& name) {
     std::transform(name.begin(), name.end(), up_name.begin(),
                    [](char ch) { return std::toupper(ch); });
     print("{}", std::string(60, '='));
-    print("{:^60}", up_name);
+    print("STARTED: {:^45}", up_name);
+    print("{}", std::string(60, '='));
+}
+
+void print_end_test(const std::string& name) {
+    std::string up_name(name.size(), '\0');
+    std::transform(name.begin(), name.end(), up_name.begin(),
+                   [](char ch) { return std::toupper(ch); });
+    print("{}", std::string(60, '='));
+    print("ENDED: {:^49}", up_name);
     print("{}", std::string(60, '='));
 }
