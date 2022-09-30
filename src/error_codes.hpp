@@ -2,6 +2,7 @@
 
 #include "structs.hpp"
 #include <mpi.h>
+#include <source_location>
 #include <string>
 
 namespace MPIw::errors {
@@ -88,12 +89,17 @@ inline std::string error_message(int error_code) {
     }
 }
 
-inline void check_code(int error_code) {
+inline void check_code(
+    int error_code,
+    const std::source_location& location = std::source_location::current()) {
     if (error_code == MPI_SUCCESS)
         return;
 
     throw std::runtime_error(std::string("MPI_ERROR: ") +
-                             error_message(error_code));
+                             error_message(error_code) +
+                             "\nCalled by: " + location.file_name() +
+                             "::" + location.function_name() + " at " +
+                             std::to_string(location.line()) + "\n");
 }
 
 } // namespace MPIw::errors

@@ -6,7 +6,7 @@ namespace MPIw {
 class Init_raii {
   public:
     Init_raii(int* argc, char*** argv) {
-        errors::error_message(MPI_Init(argc, argv));
+        errors::check_code(MPI_Init(argc, argv));
     }
 
     Init_raii(const Init_raii&) = delete;
@@ -15,7 +15,7 @@ class Init_raii {
     Init_raii(Init_raii&&) = delete;
     Init_raii&& operator=(Init_raii&&) = delete;
 
-    ~Init_raii() { errors::error_message(MPI_Finalize()); }
+    ~Init_raii() { errors::check_code(MPI_Finalize()); }
 };
 
 class Comm_raii {
@@ -29,7 +29,7 @@ class Comm_raii {
     Comm_raii(Comm_raii&&) = delete;
     Comm_raii&& operator=(Comm_raii&&) = delete;
 
-    ~Comm_raii() { errors::error_message(MPI_Comm_free(&comm)); }
+    ~Comm_raii() { errors::check_code(MPI_Comm_free(&comm)); }
 
     MPI_Comm& get() { return comm; }
     operator MPI_Comm() { return comm; }
@@ -47,7 +47,7 @@ class Group_raii {
     Group_raii(Group_raii&&) = delete;
     Group_raii&& operator=(Group_raii&&) = delete;
 
-    ~Group_raii() { errors::error_message(MPI_Group_free(&group)); }
+    ~Group_raii() { errors::check_code(MPI_Group_free(&group)); }
 
     MPI_Group& get() { return group; }
     operator MPI_Group() { return group; }
