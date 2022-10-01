@@ -305,10 +305,10 @@ std::vector<T> Scatter_send(
            data.size()); // data are equally splitable
 
     std::vector<T> out(count);
-    errors::check_code((data.begin(), count, types::get_mpi_type<T>(),
-                        out.data(), count, types::get_mpi_type<T>(),
-                        Comm_rank(comm), comm),
-                       location);
+    errors::check_code(
+        MPI_Scatter(data.data(), count, types::get_mpi_type<T>(), out.data(),
+                    count, types::get_mpi_type<T>(), Comm_rank(comm), comm),
+        location);
     return out;
 }
 
