@@ -2,8 +2,8 @@
 #include "allgather.hpp"
 #include "broadcast.hpp"
 #include "gather_scatter.hpp"
-#include "send_recv.hpp"
 #include "reduce.hpp"
+#include "send_recv.hpp"
 #include <cassert>
 
 template <typename T>
@@ -11,7 +11,18 @@ void run_all_test();
 
 int main(int argc, char** argv) {
     MPIw::Init_raii _mpi_init(&argc, &argv);
+    run_all_test<char>();
+    run_all_test<short>();
     run_all_test<int>();
+    run_all_test<long>();
+    run_all_test<signed char>();
+    run_all_test<unsigned char>();
+    run_all_test<unsigned short>();
+    run_all_test<unsigned>();
+    run_all_test<unsigned long>();
+    run_all_test<float>();
+    run_all_test<double>();
+    run_all_test<long double>();
 
     if (MPIw::Comm_rank(MPI_COMM_WORLD) == 0)
         print("All tests passed !!!");

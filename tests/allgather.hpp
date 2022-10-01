@@ -12,7 +12,7 @@ void run_allgather_single(MPI_Comm comm) {
     int my_rank = MPIw::Comm_rank(comm);
     int comm_size = MPIw::Comm_size(comm);
 
-    std::vector<T> to_send = {my_rank * 2};
+    std::vector<T> to_send = {T(my_rank * 2)};
     std::vector<T> expected(comm_size);
     std::iota(expected.begin(), expected.end(), 0);
     std::ranges::transform(expected, expected.begin(),

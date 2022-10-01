@@ -9,7 +9,7 @@
 namespace master {
 template <typename T>
 void run_broadcast_single(MPI_Comm comm) {
-    std::vector<T> to_send = {-1};
+    std::vector<T> to_send = {T(-1)};
     MPIw::Bcast_send(comm, to_send);
 }
 
@@ -39,7 +39,7 @@ void run_broadcast_managed(MPI_Comm comm) {
 namespace slave {
 template <typename T>
 void run_broadcast_single(MPI_Comm comm, int root) {
-    std::vector<T> expected = {-1};
+    std::vector<T> expected = {T(-1)};
 
     auto data = MPIw::Bcast_recv<T>(comm, 1, root);
     assert(data == expected);
@@ -61,7 +61,7 @@ template <typename T>
 void run_broadcast_managed(MPI_Comm comm, int root) {
     for (int n = 0; n < 10; ++n) {
         auto data = MPIw::Bcast_recv_managed<T>(comm, root);
-        assert(data.size() == data[0]);
+        assert(data.size() == std::size_t(data[0]));
         std::vector<T> expected(data.size());
         std::iota(expected.begin(), expected.end(), data.size());
         assert(data == expected);

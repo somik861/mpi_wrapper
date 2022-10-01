@@ -15,7 +15,7 @@ namespace MPIw {
 namespace details {
 template <typename T>
 std::vector<std::vector<T>> split_buffer(const std::vector<T>& buffer,
-                                         const std::vector<T>& offsets) {
+                                         const std::vector<int>& offsets) {
     std::vector<std::vector<T>> out(offsets.size());
     for (std::size_t i = 0; i < offsets.size(); ++i) {
         int start = offsets[i];

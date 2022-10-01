@@ -14,13 +14,13 @@ void run_send_recv_single(MPI_Comm comm) {
         if (dest == my_rank)
             continue;
 
-        MPIw::Send<T>(comm, {dest * 3}, dest, dest * 2);
+        MPIw::Send<T>(comm, {T(dest * 3)}, dest, dest * 2);
         const auto [data, status] = MPIw::Recv<T>(comm);
         assert(status.MPI_SOURCE == dest);
         assert(status.MPI_TAG == dest * 5);
         assert(MPIw::Get_count<T>(status) == 1);
         assert(data.size() == 1);
-        assert(data[0] == dest * 4);
+        assert(data[0] == T(dest * 4));
     }
 }
 
@@ -33,7 +33,7 @@ void run_send_recv_multi(MPI_Comm comm) {
         if (dest == my_rank)
             continue;
 
-        MPIw::Send<T>(comm, {dest * 3}, dest, dest * 2);
+        MPIw::Send<T>(comm, {T(dest * 3)}, dest, dest * 2);
     }
 
     std::set<int> seen;
@@ -47,7 +47,7 @@ void run_send_recv_multi(MPI_Comm comm) {
         assert(status.MPI_TAG == src * 5);
         assert(MPIw::Get_count<T>(status) == 1);
         assert(data.size() == 1);
-        assert(data[0] == src * 4);
+        assert(data[0] == T(src * 4));
         seen.insert(src);
     }
 }
@@ -75,7 +75,7 @@ void run_send_recv_range(MPI_Comm comm) {
         std::vector<T> expected(src);
         std::iota(expected.begin(), expected.end(), 0);
         std::ranges::transform(expected, expected.begin(),
-                               [](auto x) { return 2 * x; });
+                               [](auto x) { return T(2) * x; });
 
         assert(!seen.contains(src));
         assert(status.MPI_TAG == src * 5);
@@ -97,8 +97,8 @@ void run_send_recv_single(MPI_Comm comm, int root) {
     assert(status.MPI_TAG == my_rank * 2);
     assert(MPIw::Get_count<T>(status) == 1);
     assert(data.size() == 1);
-    assert(data[0] == my_rank * 3);
-    MPIw::Send<T>(comm, {my_rank * 4}, root, my_rank * 5);
+    assert(data[0] == T(my_rank * 3));
+    MPIw::Send<T>(comm, {T(my_rank * 4)}, root, my_rank * 5);
 }
 
 template <typename T>
@@ -109,8 +109,8 @@ void run_send_recv_multi(MPI_Comm comm, int root) {
     assert(status.MPI_TAG == my_rank * 2);
     assert(MPIw::Get_count<T>(status) == 1);
     assert(data.size() == 1);
-    assert(data[0] == my_rank * 3);
-    MPIw::Send<T>(comm, {my_rank * 4}, root, my_rank * 5);
+    assert(data[0] == T(my_rank * 3));
+    MPIw::Send<T>(comm, {T(my_rank * 4)}, root, my_rank * 5);
 }
 
 template <typename T>
@@ -125,7 +125,7 @@ void run_send_recv_range(MPI_Comm comm, int root) {
     assert(MPIw::Get_count<T>(status) == my_rank);
     assert(data.size() == my_rank);
     assert(data == expected);
-    std::ranges::transform(data, data.begin(), [](auto x) { return x * 2; });
+    std::ranges::transform(data, data.begin(), [](auto x) { return x * T(2); });
     MPIw::Send<T>(comm, data, root, my_rank * 5);
 }
 } // namespace slave

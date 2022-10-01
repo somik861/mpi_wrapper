@@ -23,9 +23,12 @@ std::string get_type_name() {
     }
 
 register_type_name(bool);
+register_type_name(wchar_t);
 register_type_name(char);
 register_type_name(signed char);
 register_type_name(unsigned char);
+register_type_name(short);
+register_type_name(unsigned short);
 register_type_name(int);
 register_type_name(unsigned);
 register_type_name(long);

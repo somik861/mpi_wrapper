@@ -12,7 +12,7 @@ void run_reduce_single(MPI_Comm comm) {
     int my_rank = MPIw::Comm_rank(comm);
     int comm_size = MPIw::Comm_size(comm);
 
-    auto sum = MPIw::Reduce_recv<T>(comm, {my_rank}, MPI_SUM);
+    auto sum = MPIw::Reduce_recv<T>(comm, {T(my_rank)}, MPI_SUM);
     assert(sum.size() == 1);
 
     T expected = (comm_size * (comm_size - 1)) / 2;
@@ -33,7 +33,7 @@ void run_reduce_range(MPI_Comm comm) {
 
     T sum = (comm_size * (comm_size - 1)) / 2;
     for (std::size_t i = 0; i < got.size(); ++i)
-        assert(got[i] == sum * i);
+        assert(got[i] == T(sum * i));
 }
 
 template <typename T>
@@ -41,7 +41,7 @@ void run_allreduce_single(MPI_Comm comm) {
     int my_rank = MPIw::Comm_rank(comm);
     int comm_size = MPIw::Comm_size(comm);
 
-    auto sum = MPIw::AllReduce<T>(comm, {my_rank}, MPI_SUM);
+    auto sum = MPIw::AllReduce<T>(comm, {T(my_rank)}, MPI_SUM);
     assert(sum.size() == 1);
 
     T expected = (comm_size * (comm_size - 1)) / 2;
@@ -62,7 +62,7 @@ void run_allreduce_range(MPI_Comm comm) {
 
     T sum = (comm_size * (comm_size - 1)) / 2;
     for (std::size_t i = 0; i < got.size(); ++i)
-        assert(got[i] == sum * i);
+        assert(got[i] == T(sum * i));
 }
 
 } // namespace master
@@ -71,7 +71,7 @@ namespace slave {
 template <typename T>
 void run_reduce_single(MPI_Comm comm, int root) {
     int my_rank = MPIw::Comm_rank(comm);
-    MPIw::Reduce_send<T>(comm, {my_rank}, MPI_SUM, root);
+    MPIw::Reduce_send<T>(comm, {T(my_rank)}, MPI_SUM, root);
 }
 
 template <typename T>
