@@ -101,7 +101,7 @@ std::vector<T> Bcast_managed(
 template <typename T>
 void Bcast_send(
     MPI_Comm comm,
-    const std::vector<T>& data,
+    std::vector<T> data,
     const std::source_location& location = std::source_location::current()) {
     errors::check_code(MPI_Bcast(data.data(), data.size(),
                                  types::get_mpi_type<T>(), Comm_rank(comm),
@@ -130,7 +130,7 @@ void Bcast_send_managed(
     int count = data.size();
     int my_rank = Comm_rank(comm);
     errors::check_code(MPI_Bcast(&count, 1, MPI_INT, my_rank, comm), location);
-    BCast_send(comm, data, location);
+    Bcast_send(comm, data, location);
 }
 
 template <typename T>

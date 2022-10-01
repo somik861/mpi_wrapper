@@ -1,4 +1,6 @@
 #include "../src/include.hpp"
+#include "broadcast.hpp"
+#include "gather_scatter.hpp"
 #include "send_recv.hpp"
 #include <cassert>
 
@@ -24,6 +26,8 @@ void run_all_test() {
     }
 
     run_send_recv<T>(MPI_COMM_WORLD);
+    run_broadcast<T>(MPI_COMM_WORLD);
+    run_gather_scather<T>(MPI_COMM_WORLD);
 
     if (is_printing)
         print_end_test(test_name);

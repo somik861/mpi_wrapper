@@ -9,5 +9,7 @@
 
 // TODO
 /*
+Bcast recieve single element?
+
 TESTS ???
 */
