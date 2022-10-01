@@ -1,5 +1,6 @@
 <map id="/home/somik/WSL_Workspace/cpp/mpi_wrapper/src/structs.hpp" name="/home/somik/WSL_Workspace/cpp/mpi_wrapper/src/structs.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="126,5,363,47"/>
-<area shape="rect" id="node2" href="$communication_8hpp.html" title=" " alt="" coords="5,95,300,136"/>
-<area shape="rect" id="node3" href="$include_8hpp.html" title=" " alt="" coords="125,184,365,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,243,47"/>
+<area shape="rect" id="node2" href="$communication_8hpp.html" title=" " alt="" coords="45,199,339,240"/>
+<area shape="rect" id="node3" href="$include_8hpp.html" title=" " alt="" coords="72,288,312,329"/>
+<area shape="rect" id="node4" href="$error__codes_8hpp.html" title=" " alt="" coords="162,95,379,151"/>
 </map>

@@ -1,6 +1,7 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "communication.hpp", "communication_8hpp.html", "communication_8hpp" ],
+    [ "error_codes.hpp", "error__codes_8hpp.html", "error__codes_8hpp" ],
     [ "getters.hpp", "getters_8hpp.html", "getters_8hpp" ],
     [ "include.hpp", "include_8hpp.html", null ],
     [ "raii.hpp", "raii_8hpp.html", [

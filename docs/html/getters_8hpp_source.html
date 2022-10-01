@@ -93,56 +93,71 @@ $(document).ready(function(){initNavTree('getters_8hpp_source.html',''); initRes
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_m_p_iw.html">MPIw</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a716e86758cd7994048d11544e62b584d">    9</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#a716e86758cd7994048d11544e62b584d">Get_count</a>(<span class="keyword">const</span> MPI_Status&amp; status, MPI_Datatype type) {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> count;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    MPI_Get_count(&amp;status, type, &amp;count);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">return</span> count;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a25ff201125a2fa3568785066abbee16f">   16</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#a716e86758cd7994048d11544e62b584d">Get_count</a>(<span class="keyword">const</span> MPI_Status&amp; status) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_m_p_iw.html#a716e86758cd7994048d11544e62b584d">Get_count</a>(status, types::get_mpi_type&lt;T&gt;());</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a07f17f76abfc541d9b85c0e151f00cec">   20</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#a07f17f76abfc541d9b85c0e151f00cec">Comm_rank</a>(MPI_Comm comm) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> rank;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    MPI_Comm_rank(comm, &amp;rank);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> rank;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#ac3c1c63a94a3e4a668d837e81e5b0fe1">   26</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#ac3c1c63a94a3e4a668d837e81e5b0fe1">Comm_size</a>(MPI_Comm comm) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> size;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    MPI_Comm_size(comm, &amp;size);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> size;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a7c48be09ef13a2313444ff241d2f9677">   32</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#a7c48be09ef13a2313444ff241d2f9677">Group_rank</a>(MPI_Group group) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> rank;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    MPI_Group_rank(group, &amp;rank);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> rank;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#aca7decda14dc783e5c1392fb274b9bf3">   38</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#aca7decda14dc783e5c1392fb274b9bf3">Group_size</a>(MPI_Group group) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> size;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    MPI_Group_size(group, &amp;size);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> size;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a71751f0410c51a78866e4b437f4d40fc">   44</a></span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="namespace_m_p_iw.html#a71751f0410c51a78866e4b437f4d40fc">Get_processor_name</a>() {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::array&lt;char, MPI_MAX_PROCESSOR_NAME&gt; name;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> count;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    MPI_Get_processor_name(name.begin(), &amp;count);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> std::string(name.begin(), name.begin() + count);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} <span class="comment">// namespace MPIw</span></div>
-<div class="ttc" id="anamespace_m_p_iw_html"><div class="ttname"><a href="namespace_m_p_iw.html">MPIw</a></div><div class="ttdef"><b>Definition:</b> communication.hpp:10</div></div>
-<div class="ttc" id="anamespace_m_p_iw_html_a07f17f76abfc541d9b85c0e151f00cec"><div class="ttname"><a href="namespace_m_p_iw.html#a07f17f76abfc541d9b85c0e151f00cec">MPIw::Comm_rank</a></div><div class="ttdeci">int Comm_rank(MPI_Comm comm)</div><div class="ttdef"><b>Definition:</b> getters.hpp:20</div></div>
-<div class="ttc" id="anamespace_m_p_iw_html_a716e86758cd7994048d11544e62b584d"><div class="ttname"><a href="namespace_m_p_iw.html#a716e86758cd7994048d11544e62b584d">MPIw::Get_count</a></div><div class="ttdeci">int Get_count(const MPI_Status &amp;status, MPI_Datatype type)</div><div class="ttdef"><b>Definition:</b> getters.hpp:9</div></div>
-<div class="ttc" id="anamespace_m_p_iw_html_a71751f0410c51a78866e4b437f4d40fc"><div class="ttname"><a href="namespace_m_p_iw.html#a71751f0410c51a78866e4b437f4d40fc">MPIw::Get_processor_name</a></div><div class="ttdeci">std::string Get_processor_name()</div><div class="ttdef"><b>Definition:</b> getters.hpp:44</div></div>
-<div class="ttc" id="anamespace_m_p_iw_html_a7c48be09ef13a2313444ff241d2f9677"><div class="ttname"><a href="namespace_m_p_iw.html#a7c48be09ef13a2313444ff241d2f9677">MPIw::Group_rank</a></div><div class="ttdeci">int Group_rank(MPI_Group group)</div><div class="ttdef"><b>Definition:</b> getters.hpp:32</div></div>
-<div class="ttc" id="anamespace_m_p_iw_html_ac3c1c63a94a3e4a668d837e81e5b0fe1"><div class="ttname"><a href="namespace_m_p_iw.html#ac3c1c63a94a3e4a668d837e81e5b0fe1">MPIw::Comm_size</a></div><div class="ttdeci">int Comm_size(MPI_Comm comm)</div><div class="ttdef"><b>Definition:</b> getters.hpp:26</div></div>
-<div class="ttc" id="anamespace_m_p_iw_html_aca7decda14dc783e5c1392fb274b9bf3"><div class="ttname"><a href="namespace_m_p_iw.html#aca7decda14dc783e5c1392fb274b9bf3">MPIw::Group_size</a></div><div class="ttdeci">int Group_size(MPI_Group group)</div><div class="ttdef"><b>Definition:</b> getters.hpp:38</div></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a0c5eea252d8230dee97de303b2684a2d">    9</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#a0c5eea252d8230dee97de303b2684a2d">Get_count</a>(</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">const</span> MPI_Status&amp; status,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    MPI_Datatype type,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">const</span> std::source_location&amp; location = std::source_location::current()) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> count;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="namespace_m_p_iw_1_1errors.html#aee4f183b9bb91fea16bf28a69252c180">errors::check_code</a>(MPI_Get_count(&amp;status, type, &amp;count), location);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> count;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a6e2132a58515d54e8c6ce52c42aab411">   19</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#a0c5eea252d8230dee97de303b2684a2d">Get_count</a>(</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">const</span> MPI_Status&amp; status,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">const</span> std::source_location&amp; location = std::source_location::current()) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespace_m_p_iw.html#a0c5eea252d8230dee97de303b2684a2d">Get_count</a>(status, types::get_mpi_type&lt;T&gt;(), location);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#ace813e29b51426b9b51619e3e2bed175">   25</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#ace813e29b51426b9b51619e3e2bed175">Comm_rank</a>(</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    MPI_Comm comm,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">const</span> std::source_location&amp; location = std::source_location::current()) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> rank;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="namespace_m_p_iw_1_1errors.html#aee4f183b9bb91fea16bf28a69252c180">errors::check_code</a>(MPI_Comm_rank(comm, &amp;rank), location);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> rank;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a10d34ea718777587be1fc985a65c5730">   33</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#a10d34ea718777587be1fc985a65c5730">Comm_size</a>(</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    MPI_Comm comm,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> std::source_location&amp; location = std::source_location::current()) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> size;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="namespace_m_p_iw_1_1errors.html#aee4f183b9bb91fea16bf28a69252c180">errors::check_code</a>(MPI_Comm_size(comm, &amp;size), location);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> size;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a1649c51078947cc7f4df44e99cc38100">   41</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#a1649c51078947cc7f4df44e99cc38100">Group_rank</a>(</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    MPI_Group group,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> std::source_location&amp; location = std::source_location::current()) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> rank;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="namespace_m_p_iw_1_1errors.html#aee4f183b9bb91fea16bf28a69252c180">errors::check_code</a>(MPI_Group_rank(group, &amp;rank), location);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> rank;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a35b640838b15d0bd52ace158f91379de">   49</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespace_m_p_iw.html#a35b640838b15d0bd52ace158f91379de">Group_size</a>(</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    MPI_Group group,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> std::source_location&amp; location = std::source_location::current()) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> size;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="namespace_m_p_iw_1_1errors.html#aee4f183b9bb91fea16bf28a69252c180">errors::check_code</a>(MPI_Group_size(group, &amp;size), location);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> size;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="namespace_m_p_iw.html#a095e038c0fa8ceaa36d1c46054f51c62">   57</a></span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="namespace_m_p_iw.html#a095e038c0fa8ceaa36d1c46054f51c62">Get_processor_name</a>(</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">const</span> std::source_location&amp; location = std::source_location::current()) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::array&lt;char, MPI_MAX_PROCESSOR_NAME&gt; name;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> count;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="namespace_m_p_iw_1_1errors.html#aee4f183b9bb91fea16bf28a69252c180">errors::check_code</a>(MPI_Get_processor_name(name.begin(), &amp;count), location);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> std::string(name.begin(), name.begin() + count);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <span class="comment">// namespace MPIw</span></div>
+<div class="ttc" id="anamespace_m_p_iw_1_1errors_html_aee4f183b9bb91fea16bf28a69252c180"><div class="ttname"><a href="namespace_m_p_iw_1_1errors.html#aee4f183b9bb91fea16bf28a69252c180">MPIw::errors::check_code</a></div><div class="ttdeci">void check_code(int error_code, const std::source_location &amp;location=std::source_location::current())</div><div class="ttdef"><b>Definition:</b> error_codes.hpp:92</div></div>
+<div class="ttc" id="anamespace_m_p_iw_html"><div class="ttname"><a href="namespace_m_p_iw.html">MPIw</a></div><div class="ttdef"><b>Definition:</b> communication.hpp:13</div></div>
+<div class="ttc" id="anamespace_m_p_iw_html_a095e038c0fa8ceaa36d1c46054f51c62"><div class="ttname"><a href="namespace_m_p_iw.html#a095e038c0fa8ceaa36d1c46054f51c62">MPIw::Get_processor_name</a></div><div class="ttdeci">std::string Get_processor_name(const std::source_location &amp;location=std::source_location::current())</div><div class="ttdef"><b>Definition:</b> getters.hpp:57</div></div>
+<div class="ttc" id="anamespace_m_p_iw_html_a0c5eea252d8230dee97de303b2684a2d"><div class="ttname"><a href="namespace_m_p_iw.html#a0c5eea252d8230dee97de303b2684a2d">MPIw::Get_count</a></div><div class="ttdeci">int Get_count(const MPI_Status &amp;status, MPI_Datatype type, const std::source_location &amp;location=std::source_location::current())</div><div class="ttdef"><b>Definition:</b> getters.hpp:9</div></div>
+<div class="ttc" id="anamespace_m_p_iw_html_a10d34ea718777587be1fc985a65c5730"><div class="ttname"><a href="namespace_m_p_iw.html#a10d34ea718777587be1fc985a65c5730">MPIw::Comm_size</a></div><div class="ttdeci">int Comm_size(MPI_Comm comm, const std::source_location &amp;location=std::source_location::current())</div><div class="ttdef"><b>Definition:</b> getters.hpp:33</div></div>
+<div class="ttc" id="anamespace_m_p_iw_html_a1649c51078947cc7f4df44e99cc38100"><div class="ttname"><a href="namespace_m_p_iw.html#a1649c51078947cc7f4df44e99cc38100">MPIw::Group_rank</a></div><div class="ttdeci">int Group_rank(MPI_Group group, const std::source_location &amp;location=std::source_location::current())</div><div class="ttdef"><b>Definition:</b> getters.hpp:41</div></div>
+<div class="ttc" id="anamespace_m_p_iw_html_a35b640838b15d0bd52ace158f91379de"><div class="ttname"><a href="namespace_m_p_iw.html#a35b640838b15d0bd52ace158f91379de">MPIw::Group_size</a></div><div class="ttdeci">int Group_size(MPI_Group group, const std::source_location &amp;location=std::source_location::current())</div><div class="ttdef"><b>Definition:</b> getters.hpp:49</div></div>
+<div class="ttc" id="anamespace_m_p_iw_html_ace813e29b51426b9b51619e3e2bed175"><div class="ttname"><a href="namespace_m_p_iw.html#ace813e29b51426b9b51619e3e2bed175">MPIw::Comm_rank</a></div><div class="ttdeci">int Comm_rank(MPI_Comm comm, const std::source_location &amp;location=std::source_location::current())</div><div class="ttdef"><b>Definition:</b> getters.hpp:25</div></div>
 <div class="ttc" id="atypes_8hpp_html"><div class="ttname"><a href="types_8hpp.html">types.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

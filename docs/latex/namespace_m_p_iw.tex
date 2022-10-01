@@ -5,6 +5,8 @@
 \item 
  \mbox{\hyperlink{namespace_m_p_iw_1_1details}{details}}
 \item 
+ \mbox{\hyperlink{namespace_m_p_iw_1_1errors}{errors}}
+\item 
  \mbox{\hyperlink{namespace_m_p_iw_1_1structs}{structs}}
 \item 
  \mbox{\hyperlink{namespace_m_p_iw_1_1types}{types}}
@@ -21,323 +23,323 @@ class \mbox{\hyperlink{class_m_p_iw_1_1_group__raii}{Group\+\_\+raii}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_m_p_iw_1_1structs_1_1_recv__st}{structs\+::\+Recv\+\_\+st}}$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a637fb6d5e7f3c8e87b5e1b193b9d955b}{Recv}} (MPI\+\_\+\+Comm comm, int source=MPI\+\_\+\+ANY\+\_\+\+SOURCE, int tag=MPI\+\_\+\+ANY\+\_\+\+TAG)
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_m_p_iw_1_1structs_1_1_recv__st}{structs\+::\+Recv\+\_\+st}}$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a8de7b8598a652a660e8aa80c998274ce}{Recv}} (MPI\+\_\+\+Comm comm, int source=MPI\+\_\+\+ANY\+\_\+\+SOURCE, int tag=MPI\+\_\+\+ANY\+\_\+\+TAG, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_aabe981f7485fc2e9cbda49674ef2995a}{Send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int dest, int tag)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a5d562e163cdff3f3681aab67be429df8}{Send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int dest, int tag, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_ad984133071871b74f35ec325916efb9e}{Bcast}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int count, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_ae0072a48661de7bfb28459922f9b338e}{Bcast}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a355d0d961221f5ee5d9066d2c8a1a854}{Bcast\+\_\+managed}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int count, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a839c05b44db6eab76bbe1bb5f6a7280d}{Bcast\+\_\+managed}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_ab4936227f1330b1c744af9c9a37340c5}{Bcast\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a44661325c53e0390d4da141b6d3e922b}{Bcast\+\_\+send}} (MPI\+\_\+\+Comm comm, std\+::vector$<$ T $>$ data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_ad6b018dfda7625d7f1bfbee1e20deb79}{Bcast\+\_\+recv}} (MPI\+\_\+\+Comm comm, int count, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a9c3c54ee389d7ef416c36d18ee779efc}{Bcast\+\_\+recv}} (MPI\+\_\+\+Comm comm, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a844ef56e9cbed6099defbe93cede1a58}{Bcast\+\_\+send\+\_\+managed}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a472feaa0d564a07ca74c5408dd298df9}{Bcast\+\_\+send\+\_\+managed}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a059d4dd831e4075bd5860eefa6053bc3}{Bcast\+\_\+recv\+\_\+managed}} (MPI\+\_\+\+Comm comm, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_af88732ffd8f69de36f78f3c31bf4f5f2}{Bcast\+\_\+recv\+\_\+managed}} (MPI\+\_\+\+Comm comm, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_af710f6267fc9b7ba971d078c2de8ed02}{Gather}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_ae3ade4aa2b05dbf88e5905a3f7c25868}{Gather}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_ad487a719eeb964c75463da5387d3cbc9}{Gather\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a368df30b46e846b1e50baa77852e468a}{Gather\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a4f28162a1d256a4aaec356eb5a783881}{Gather\+\_\+recv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_af73700d18587b2f6e85ec30cc00ae232}{Gather\+\_\+recv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_aae29f5164beca0afae8158cb28348b61}{Allgather}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ data)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a55987f5c279cdd5da85520f2dc1c8b23}{Allgather}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_a5810f6348cba8b0db9d58a45eac4af00}{Gatherv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_aadea288080309db76b957df739a487e8}{Gatherv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a6e938f09a2f80481fe124697f76fdab6}{Gatherv\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a2891c7003540515aacea0784af17b411}{Gatherv\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_a5279a2b889022806c2a7d507112c0a08}{Gatherv\+\_\+recv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_a80cbcf2d6524aa52a488e33626e01dbc}{Gatherv\+\_\+recv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_a450d4c48aac469be9479275005cc8d9a}{Allgatherv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_ab6885e7472e8af8e95255a5591ce3eb5}{Allgatherv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a878501e6a3b05b0c797ebf02aed36a41}{Scatter}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int count, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_ac4d2a6f6a6df9e682ace86967606e89a}{Scatter}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a9f55171f26e008945030175afb7223a3}{Scatter\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a1d129b36c52621830f01dc513ac4cbf1}{Scatter\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a7d55e75602819b0fe2b9c39583544482}{Scatter\+\_\+recv}} (MPI\+\_\+\+Comm comm, int count, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a38e976f33e9eb7e98ee9e6b79164f9bc}{Scatter\+\_\+recv}} (MPI\+\_\+\+Comm comm, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_aac4e73b208c99ea535f4424eed658f28}{Scatter\+\_\+send\+\_\+managed}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a4f04428ee9abe04ce1e48d9de4739b8d}{Scatter\+\_\+send\+\_\+managed}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a83be7f6b78df5c2b0b347d40dc4b0445}{Scatter\+\_\+recv\+\_\+managed}} (MPI\+\_\+\+Comm comm, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_abe450ab1a36441e28b449ab42b5d08f5}{Scatter\+\_\+recv\+\_\+managed}} (MPI\+\_\+\+Comm comm, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a5fd7404cc6968ae68221dbb190fabeed}{Scatterv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ std\+::vector$<$ T $>$$>$ \&data, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_af1a42168d102c1616895cacfb441c90d}{Scatterv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ std\+::vector$<$ T $>$$>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a47d0f193ed7d2ce9cf5a84c1bc2f084d}{Scatterv\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ std\+::vector$<$ T $>$$>$ \&data)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a71542ec11923b5216b7fb6424c687bab}{Scatterv\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ std\+::vector$<$ T $>$$>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_ab3f8134fab28cddc172edc17c6577f02}{Scatterv\+\_\+recv}} (MPI\+\_\+\+Comm comm, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_add75cd72eaade07be21eaee3b771653d}{Scatterv\+\_\+recv}} (MPI\+\_\+\+Comm comm, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a01c1354757131ddb40db83acd30341d6}{Reduce}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, int root)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a8be3ff76b4f773f29168b2ce02be331b}{Reduce}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_aa0111645654a90e1782b5d984a531a85}{Reduce\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, int root)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_af12b2eac4dbb4e1d4dfbbc9a547ed294}{Reduce\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_aabc4a069717f86070cccd6af8b79183d}{Reduce\+\_\+recv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a54cc3502e78f06cec45a535b4b97ef95}{Reduce\+\_\+recv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_ae0440561206945dd06198a90fadbe32a}{All\+Reduce}} (MPI\+\_\+\+Comm comm, std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a5a8d6304f3cb518fe03a95736208f163}{All\+Reduce}} (MPI\+\_\+\+Comm comm, std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-void \mbox{\hyperlink{namespace_m_p_iw_a79a1cb4585c01d96ea3a3ba14a5a0385}{Barrier}} (MPI\+\_\+\+Comm comm)
+void \mbox{\hyperlink{namespace_m_p_iw_ae98cf6ceb5f12511a6d3cb7fa0174b3b}{Barrier}} (MPI\+\_\+\+Comm comm, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-int \mbox{\hyperlink{namespace_m_p_iw_a716e86758cd7994048d11544e62b584d}{Get\+\_\+count}} (const MPI\+\_\+\+Status \&status, MPI\+\_\+\+Datatype type)
+int \mbox{\hyperlink{namespace_m_p_iw_a0c5eea252d8230dee97de303b2684a2d}{Get\+\_\+count}} (const MPI\+\_\+\+Status \&status, MPI\+\_\+\+Datatype type, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespace_m_p_iw_a25ff201125a2fa3568785066abbee16f}{Get\+\_\+count}} (const MPI\+\_\+\+Status \&status)
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespace_m_p_iw_a6e2132a58515d54e8c6ce52c42aab411}{Get\+\_\+count}} (const MPI\+\_\+\+Status \&status, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-int \mbox{\hyperlink{namespace_m_p_iw_a07f17f76abfc541d9b85c0e151f00cec}{Comm\+\_\+rank}} (MPI\+\_\+\+Comm comm)
+int \mbox{\hyperlink{namespace_m_p_iw_ace813e29b51426b9b51619e3e2bed175}{Comm\+\_\+rank}} (MPI\+\_\+\+Comm comm, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-int \mbox{\hyperlink{namespace_m_p_iw_ac3c1c63a94a3e4a668d837e81e5b0fe1}{Comm\+\_\+size}} (MPI\+\_\+\+Comm comm)
+int \mbox{\hyperlink{namespace_m_p_iw_a10d34ea718777587be1fc985a65c5730}{Comm\+\_\+size}} (MPI\+\_\+\+Comm comm, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-int \mbox{\hyperlink{namespace_m_p_iw_a7c48be09ef13a2313444ff241d2f9677}{Group\+\_\+rank}} (MPI\+\_\+\+Group group)
+int \mbox{\hyperlink{namespace_m_p_iw_a1649c51078947cc7f4df44e99cc38100}{Group\+\_\+rank}} (MPI\+\_\+\+Group group, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-int \mbox{\hyperlink{namespace_m_p_iw_aca7decda14dc783e5c1392fb274b9bf3}{Group\+\_\+size}} (MPI\+\_\+\+Group group)
+int \mbox{\hyperlink{namespace_m_p_iw_a35b640838b15d0bd52ace158f91379de}{Group\+\_\+size}} (MPI\+\_\+\+Group group, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-std\+::string \mbox{\hyperlink{namespace_m_p_iw_a71751f0410c51a78866e4b437f4d40fc}{Get\+\_\+processor\+\_\+name}} ()
+std\+::string \mbox{\hyperlink{namespace_m_p_iw_a095e038c0fa8ceaa36d1c46054f51c62}{Get\+\_\+processor\+\_\+name}} (const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespace_m_p_iw_aae29f5164beca0afae8158cb28348b61}\label{namespace_m_p_iw_aae29f5164beca0afae8158cb28348b61}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a55987f5c279cdd5da85520f2dc1c8b23}\label{namespace_m_p_iw_a55987f5c279cdd5da85520f2dc1c8b23}} 
 \index{MPIw@{MPIw}!Allgather@{Allgather}}
 \index{Allgather@{Allgather}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Allgather()}{Allgather()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Allgather (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$}]{data }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Allgather (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$}]{data,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a450d4c48aac469be9479275005cc8d9a}\label{namespace_m_p_iw_a450d4c48aac469be9479275005cc8d9a}} 
+\mbox{\Hypertarget{namespace_m_p_iw_ab6885e7472e8af8e95255a5591ce3eb5}\label{namespace_m_p_iw_ab6885e7472e8af8e95255a5591ce3eb5}} 
 \index{MPIw@{MPIw}!Allgatherv@{Allgatherv}}
 \index{Allgatherv@{Allgatherv}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Allgatherv()}{Allgatherv()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$std\+::vector$<$T$>$ $>$ MPIw\+::\+Allgatherv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+std\+::vector$<$std\+::vector$<$T$>$ $>$ MPIw\+::\+Allgatherv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_ae0440561206945dd06198a90fadbe32a}\label{namespace_m_p_iw_ae0440561206945dd06198a90fadbe32a}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a5a8d6304f3cb518fe03a95736208f163}\label{namespace_m_p_iw_a5a8d6304f3cb518fe03a95736208f163}} 
 \index{MPIw@{MPIw}!AllReduce@{AllReduce}}
 \index{AllReduce@{AllReduce}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{AllReduce()}{AllReduce()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+All\+Reduce (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{std\+::vector$<$ T $>$ \&}]{data,  }\item[{MPI\+\_\+\+Op}]{op }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+All\+Reduce (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{std\+::vector$<$ T $>$ \&}]{data,  }\item[{MPI\+\_\+\+Op}]{op,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a79a1cb4585c01d96ea3a3ba14a5a0385}\label{namespace_m_p_iw_a79a1cb4585c01d96ea3a3ba14a5a0385}} 
+\mbox{\Hypertarget{namespace_m_p_iw_ae98cf6ceb5f12511a6d3cb7fa0174b3b}\label{namespace_m_p_iw_ae98cf6ceb5f12511a6d3cb7fa0174b3b}} 
 \index{MPIw@{MPIw}!Barrier@{Barrier}}
 \index{Barrier@{Barrier}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Barrier()}{Barrier()}}
-{\footnotesize\ttfamily void MPIw\+::\+Barrier (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void MPIw\+::\+Barrier (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{namespace_m_p_iw_ad984133071871b74f35ec325916efb9e}\label{namespace_m_p_iw_ad984133071871b74f35ec325916efb9e}} 
+\mbox{\Hypertarget{namespace_m_p_iw_ae0072a48661de7bfb28459922f9b338e}\label{namespace_m_p_iw_ae0072a48661de7bfb28459922f9b338e}} 
 \index{MPIw@{MPIw}!Bcast@{Bcast}}
 \index{Bcast@{Bcast}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Bcast()}{Bcast()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Bcast (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{count,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Bcast (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{count,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a355d0d961221f5ee5d9066d2c8a1a854}\label{namespace_m_p_iw_a355d0d961221f5ee5d9066d2c8a1a854}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a839c05b44db6eab76bbe1bb5f6a7280d}\label{namespace_m_p_iw_a839c05b44db6eab76bbe1bb5f6a7280d}} 
 \index{MPIw@{MPIw}!Bcast\_managed@{Bcast\_managed}}
 \index{Bcast\_managed@{Bcast\_managed}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Bcast\_managed()}{Bcast\_managed()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Bcast\+\_\+managed (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{count,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Bcast\+\_\+managed (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{count,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_ad6b018dfda7625d7f1bfbee1e20deb79}\label{namespace_m_p_iw_ad6b018dfda7625d7f1bfbee1e20deb79}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a9c3c54ee389d7ef416c36d18ee779efc}\label{namespace_m_p_iw_a9c3c54ee389d7ef416c36d18ee779efc}} 
 \index{MPIw@{MPIw}!Bcast\_recv@{Bcast\_recv}}
 \index{Bcast\_recv@{Bcast\_recv}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Bcast\_recv()}{Bcast\_recv()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Bcast\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{count,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Bcast\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{count,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a059d4dd831e4075bd5860eefa6053bc3}\label{namespace_m_p_iw_a059d4dd831e4075bd5860eefa6053bc3}} 
+\mbox{\Hypertarget{namespace_m_p_iw_af88732ffd8f69de36f78f3c31bf4f5f2}\label{namespace_m_p_iw_af88732ffd8f69de36f78f3c31bf4f5f2}} 
 \index{MPIw@{MPIw}!Bcast\_recv\_managed@{Bcast\_recv\_managed}}
 \index{Bcast\_recv\_managed@{Bcast\_recv\_managed}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Bcast\_recv\_managed()}{Bcast\_recv\_managed()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Bcast\+\_\+recv\+\_\+managed (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Bcast\+\_\+recv\+\_\+managed (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_ab4936227f1330b1c744af9c9a37340c5}\label{namespace_m_p_iw_ab4936227f1330b1c744af9c9a37340c5}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a44661325c53e0390d4da141b6d3e922b}\label{namespace_m_p_iw_a44661325c53e0390d4da141b6d3e922b}} 
 \index{MPIw@{MPIw}!Bcast\_send@{Bcast\_send}}
 \index{Bcast\_send@{Bcast\_send}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Bcast\_send()}{Bcast\_send()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void MPIw\+::\+Bcast\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+void MPIw\+::\+Bcast\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{std\+::vector$<$ T $>$}]{data,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a844ef56e9cbed6099defbe93cede1a58}\label{namespace_m_p_iw_a844ef56e9cbed6099defbe93cede1a58}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a472feaa0d564a07ca74c5408dd298df9}\label{namespace_m_p_iw_a472feaa0d564a07ca74c5408dd298df9}} 
 \index{MPIw@{MPIw}!Bcast\_send\_managed@{Bcast\_send\_managed}}
 \index{Bcast\_send\_managed@{Bcast\_send\_managed}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Bcast\_send\_managed()}{Bcast\_send\_managed()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void MPIw\+::\+Bcast\+\_\+send\+\_\+managed (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+void MPIw\+::\+Bcast\+\_\+send\+\_\+managed (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a07f17f76abfc541d9b85c0e151f00cec}\label{namespace_m_p_iw_a07f17f76abfc541d9b85c0e151f00cec}} 
+\mbox{\Hypertarget{namespace_m_p_iw_ace813e29b51426b9b51619e3e2bed175}\label{namespace_m_p_iw_ace813e29b51426b9b51619e3e2bed175}} 
 \index{MPIw@{MPIw}!Comm\_rank@{Comm\_rank}}
 \index{Comm\_rank@{Comm\_rank}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Comm\_rank()}{Comm\_rank()}}
-{\footnotesize\ttfamily int MPIw\+::\+Comm\+\_\+rank (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily int MPIw\+::\+Comm\+\_\+rank (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{namespace_m_p_iw_ac3c1c63a94a3e4a668d837e81e5b0fe1}\label{namespace_m_p_iw_ac3c1c63a94a3e4a668d837e81e5b0fe1}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a10d34ea718777587be1fc985a65c5730}\label{namespace_m_p_iw_a10d34ea718777587be1fc985a65c5730}} 
 \index{MPIw@{MPIw}!Comm\_size@{Comm\_size}}
 \index{Comm\_size@{Comm\_size}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Comm\_size()}{Comm\_size()}}
-{\footnotesize\ttfamily int MPIw\+::\+Comm\+\_\+size (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily int MPIw\+::\+Comm\+\_\+size (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{namespace_m_p_iw_af710f6267fc9b7ba971d078c2de8ed02}\label{namespace_m_p_iw_af710f6267fc9b7ba971d078c2de8ed02}} 
+\mbox{\Hypertarget{namespace_m_p_iw_ae3ade4aa2b05dbf88e5905a3f7c25868}\label{namespace_m_p_iw_ae3ade4aa2b05dbf88e5905a3f7c25868}} 
 \index{MPIw@{MPIw}!Gather@{Gather}}
 \index{Gather@{Gather}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Gather()}{Gather()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Gather (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Gather (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a4f28162a1d256a4aaec356eb5a783881}\label{namespace_m_p_iw_a4f28162a1d256a4aaec356eb5a783881}} 
+\mbox{\Hypertarget{namespace_m_p_iw_af73700d18587b2f6e85ec30cc00ae232}\label{namespace_m_p_iw_af73700d18587b2f6e85ec30cc00ae232}} 
 \index{MPIw@{MPIw}!Gather\_recv@{Gather\_recv}}
 \index{Gather\_recv@{Gather\_recv}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Gather\_recv()}{Gather\_recv()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Gather\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Gather\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_ad487a719eeb964c75463da5387d3cbc9}\label{namespace_m_p_iw_ad487a719eeb964c75463da5387d3cbc9}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a368df30b46e846b1e50baa77852e468a}\label{namespace_m_p_iw_a368df30b46e846b1e50baa77852e468a}} 
 \index{MPIw@{MPIw}!Gather\_send@{Gather\_send}}
 \index{Gather\_send@{Gather\_send}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Gather\_send()}{Gather\_send()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void MPIw\+::\+Gather\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{root }\end{DoxyParamCaption})}
+void MPIw\+::\+Gather\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a5810f6348cba8b0db9d58a45eac4af00}\label{namespace_m_p_iw_a5810f6348cba8b0db9d58a45eac4af00}} 
+\mbox{\Hypertarget{namespace_m_p_iw_aadea288080309db76b957df739a487e8}\label{namespace_m_p_iw_aadea288080309db76b957df739a487e8}} 
 \index{MPIw@{MPIw}!Gatherv@{Gatherv}}
 \index{Gatherv@{Gatherv}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Gatherv()}{Gatherv()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$std\+::vector$<$T$>$ $>$ MPIw\+::\+Gatherv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$std\+::vector$<$T$>$ $>$ MPIw\+::\+Gatherv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a5279a2b889022806c2a7d507112c0a08}\label{namespace_m_p_iw_a5279a2b889022806c2a7d507112c0a08}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a80cbcf2d6524aa52a488e33626e01dbc}\label{namespace_m_p_iw_a80cbcf2d6524aa52a488e33626e01dbc}} 
 \index{MPIw@{MPIw}!Gatherv\_recv@{Gatherv\_recv}}
 \index{Gatherv\_recv@{Gatherv\_recv}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Gatherv\_recv()}{Gatherv\_recv()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$std\+::vector$<$T$>$ $>$ MPIw\+::\+Gatherv\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+std\+::vector$<$std\+::vector$<$T$>$ $>$ MPIw\+::\+Gatherv\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a6e938f09a2f80481fe124697f76fdab6}\label{namespace_m_p_iw_a6e938f09a2f80481fe124697f76fdab6}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a2891c7003540515aacea0784af17b411}\label{namespace_m_p_iw_a2891c7003540515aacea0784af17b411}} 
 \index{MPIw@{MPIw}!Gatherv\_send@{Gatherv\_send}}
 \index{Gatherv\_send@{Gatherv\_send}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Gatherv\_send()}{Gatherv\_send()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void MPIw\+::\+Gatherv\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{root }\end{DoxyParamCaption})}
+void MPIw\+::\+Gatherv\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a25ff201125a2fa3568785066abbee16f}\label{namespace_m_p_iw_a25ff201125a2fa3568785066abbee16f}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a6e2132a58515d54e8c6ce52c42aab411}\label{namespace_m_p_iw_a6e2132a58515d54e8c6ce52c42aab411}} 
 \index{MPIw@{MPIw}!Get\_count@{Get\_count}}
 \index{Get\_count@{Get\_count}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Get\_count()}{Get\_count()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-int MPIw\+::\+Get\+\_\+count (\begin{DoxyParamCaption}\item[{const MPI\+\_\+\+Status \&}]{status }\end{DoxyParamCaption})}
+int MPIw\+::\+Get\+\_\+count (\begin{DoxyParamCaption}\item[{const MPI\+\_\+\+Status \&}]{status,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a716e86758cd7994048d11544e62b584d}\label{namespace_m_p_iw_a716e86758cd7994048d11544e62b584d}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a0c5eea252d8230dee97de303b2684a2d}\label{namespace_m_p_iw_a0c5eea252d8230dee97de303b2684a2d}} 
 \index{MPIw@{MPIw}!Get\_count@{Get\_count}}
 \index{Get\_count@{Get\_count}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Get\_count()}{Get\_count()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily int MPIw\+::\+Get\+\_\+count (\begin{DoxyParamCaption}\item[{const MPI\+\_\+\+Status \&}]{status,  }\item[{MPI\+\_\+\+Datatype}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily int MPIw\+::\+Get\+\_\+count (\begin{DoxyParamCaption}\item[{const MPI\+\_\+\+Status \&}]{status,  }\item[{MPI\+\_\+\+Datatype}]{type,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a71751f0410c51a78866e4b437f4d40fc}\label{namespace_m_p_iw_a71751f0410c51a78866e4b437f4d40fc}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a095e038c0fa8ceaa36d1c46054f51c62}\label{namespace_m_p_iw_a095e038c0fa8ceaa36d1c46054f51c62}} 
 \index{MPIw@{MPIw}!Get\_processor\_name@{Get\_processor\_name}}
 \index{Get\_processor\_name@{Get\_processor\_name}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Get\_processor\_name()}{Get\_processor\_name()}}
-{\footnotesize\ttfamily std\+::string MPIw\+::\+Get\+\_\+processor\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily std\+::string MPIw\+::\+Get\+\_\+processor\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a7c48be09ef13a2313444ff241d2f9677}\label{namespace_m_p_iw_a7c48be09ef13a2313444ff241d2f9677}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a1649c51078947cc7f4df44e99cc38100}\label{namespace_m_p_iw_a1649c51078947cc7f4df44e99cc38100}} 
 \index{MPIw@{MPIw}!Group\_rank@{Group\_rank}}
 \index{Group\_rank@{Group\_rank}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Group\_rank()}{Group\_rank()}}
-{\footnotesize\ttfamily int MPIw\+::\+Group\+\_\+rank (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Group}]{group }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily int MPIw\+::\+Group\+\_\+rank (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Group}]{group,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{namespace_m_p_iw_aca7decda14dc783e5c1392fb274b9bf3}\label{namespace_m_p_iw_aca7decda14dc783e5c1392fb274b9bf3}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a35b640838b15d0bd52ace158f91379de}\label{namespace_m_p_iw_a35b640838b15d0bd52ace158f91379de}} 
 \index{MPIw@{MPIw}!Group\_size@{Group\_size}}
 \index{Group\_size@{Group\_size}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Group\_size()}{Group\_size()}}
-{\footnotesize\ttfamily int MPIw\+::\+Group\+\_\+size (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Group}]{group }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily int MPIw\+::\+Group\+\_\+size (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Group}]{group,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a637fb6d5e7f3c8e87b5e1b193b9d955b}\label{namespace_m_p_iw_a637fb6d5e7f3c8e87b5e1b193b9d955b}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a8de7b8598a652a660e8aa80c998274ce}\label{namespace_m_p_iw_a8de7b8598a652a660e8aa80c998274ce}} 
 \index{MPIw@{MPIw}!Recv@{Recv}}
 \index{Recv@{Recv}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Recv()}{Recv()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{struct_m_p_iw_1_1structs_1_1_recv__st}{structs\+::\+Recv\+\_\+st}}$<$T$>$ MPIw\+::\+Recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{source = {\ttfamily MPI\+\_\+ANY\+\_\+SOURCE},  }\item[{int}]{tag = {\ttfamily MPI\+\_\+ANY\+\_\+TAG} }\end{DoxyParamCaption})}
+\mbox{\hyperlink{struct_m_p_iw_1_1structs_1_1_recv__st}{structs\+::\+Recv\+\_\+st}}$<$T$>$ MPIw\+::\+Recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{source = {\ttfamily MPI\+\_\+ANY\+\_\+SOURCE},  }\item[{int}]{tag = {\ttfamily MPI\+\_\+ANY\+\_\+TAG},  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a01c1354757131ddb40db83acd30341d6}\label{namespace_m_p_iw_a01c1354757131ddb40db83acd30341d6}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a8be3ff76b4f773f29168b2ce02be331b}\label{namespace_m_p_iw_a8be3ff76b4f773f29168b2ce02be331b}} 
 \index{MPIw@{MPIw}!Reduce@{Reduce}}
 \index{Reduce@{Reduce}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Reduce()}{Reduce()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Reduce (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{MPI\+\_\+\+Op}]{op,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Reduce (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{MPI\+\_\+\+Op}]{op,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_aabc4a069717f86070cccd6af8b79183d}\label{namespace_m_p_iw_aabc4a069717f86070cccd6af8b79183d}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a54cc3502e78f06cec45a535b4b97ef95}\label{namespace_m_p_iw_a54cc3502e78f06cec45a535b4b97ef95}} 
 \index{MPIw@{MPIw}!Reduce\_recv@{Reduce\_recv}}
 \index{Reduce\_recv@{Reduce\_recv}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Reduce\_recv()}{Reduce\_recv()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Reduce\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{MPI\+\_\+\+Op}]{op }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Reduce\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{MPI\+\_\+\+Op}]{op,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_aa0111645654a90e1782b5d984a531a85}\label{namespace_m_p_iw_aa0111645654a90e1782b5d984a531a85}} 
+\mbox{\Hypertarget{namespace_m_p_iw_af12b2eac4dbb4e1d4dfbbc9a547ed294}\label{namespace_m_p_iw_af12b2eac4dbb4e1d4dfbbc9a547ed294}} 
 \index{MPIw@{MPIw}!Reduce\_send@{Reduce\_send}}
 \index{Reduce\_send@{Reduce\_send}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Reduce\_send()}{Reduce\_send()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void MPIw\+::\+Reduce\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{MPI\+\_\+\+Op}]{op,  }\item[{int}]{root }\end{DoxyParamCaption})}
+void MPIw\+::\+Reduce\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{MPI\+\_\+\+Op}]{op,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a878501e6a3b05b0c797ebf02aed36a41}\label{namespace_m_p_iw_a878501e6a3b05b0c797ebf02aed36a41}} 
+\mbox{\Hypertarget{namespace_m_p_iw_ac4d2a6f6a6df9e682ace86967606e89a}\label{namespace_m_p_iw_ac4d2a6f6a6df9e682ace86967606e89a}} 
 \index{MPIw@{MPIw}!Scatter@{Scatter}}
 \index{Scatter@{Scatter}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Scatter()}{Scatter()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Scatter (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{count,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Scatter (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{count,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a7d55e75602819b0fe2b9c39583544482}\label{namespace_m_p_iw_a7d55e75602819b0fe2b9c39583544482}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a38e976f33e9eb7e98ee9e6b79164f9bc}\label{namespace_m_p_iw_a38e976f33e9eb7e98ee9e6b79164f9bc}} 
 \index{MPIw@{MPIw}!Scatter\_recv@{Scatter\_recv}}
 \index{Scatter\_recv@{Scatter\_recv}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Scatter\_recv()}{Scatter\_recv()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Scatter\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{count,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Scatter\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{count,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a83be7f6b78df5c2b0b347d40dc4b0445}\label{namespace_m_p_iw_a83be7f6b78df5c2b0b347d40dc4b0445}} 
+\mbox{\Hypertarget{namespace_m_p_iw_abe450ab1a36441e28b449ab42b5d08f5}\label{namespace_m_p_iw_abe450ab1a36441e28b449ab42b5d08f5}} 
 \index{MPIw@{MPIw}!Scatter\_recv\_managed@{Scatter\_recv\_managed}}
 \index{Scatter\_recv\_managed@{Scatter\_recv\_managed}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Scatter\_recv\_managed()}{Scatter\_recv\_managed()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Scatter\+\_\+recv\+\_\+managed (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Scatter\+\_\+recv\+\_\+managed (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a9f55171f26e008945030175afb7223a3}\label{namespace_m_p_iw_a9f55171f26e008945030175afb7223a3}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a1d129b36c52621830f01dc513ac4cbf1}\label{namespace_m_p_iw_a1d129b36c52621830f01dc513ac4cbf1}} 
 \index{MPIw@{MPIw}!Scatter\_send@{Scatter\_send}}
 \index{Scatter\_send@{Scatter\_send}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Scatter\_send()}{Scatter\_send()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Scatter\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Scatter\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_aac4e73b208c99ea535f4424eed658f28}\label{namespace_m_p_iw_aac4e73b208c99ea535f4424eed658f28}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a4f04428ee9abe04ce1e48d9de4739b8d}\label{namespace_m_p_iw_a4f04428ee9abe04ce1e48d9de4739b8d}} 
 \index{MPIw@{MPIw}!Scatter\_send\_managed@{Scatter\_send\_managed}}
 \index{Scatter\_send\_managed@{Scatter\_send\_managed}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Scatter\_send\_managed()}{Scatter\_send\_managed()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Scatter\+\_\+send\+\_\+managed (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Scatter\+\_\+send\+\_\+managed (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a5fd7404cc6968ae68221dbb190fabeed}\label{namespace_m_p_iw_a5fd7404cc6968ae68221dbb190fabeed}} 
+\mbox{\Hypertarget{namespace_m_p_iw_af1a42168d102c1616895cacfb441c90d}\label{namespace_m_p_iw_af1a42168d102c1616895cacfb441c90d}} 
 \index{MPIw@{MPIw}!Scatterv@{Scatterv}}
 \index{Scatterv@{Scatterv}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Scatterv()}{Scatterv()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Scatterv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ std\+::vector$<$ T $>$$>$ \&}]{data,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Scatterv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ std\+::vector$<$ T $>$$>$ \&}]{data,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_ab3f8134fab28cddc172edc17c6577f02}\label{namespace_m_p_iw_ab3f8134fab28cddc172edc17c6577f02}} 
+\mbox{\Hypertarget{namespace_m_p_iw_add75cd72eaade07be21eaee3b771653d}\label{namespace_m_p_iw_add75cd72eaade07be21eaee3b771653d}} 
 \index{MPIw@{MPIw}!Scatterv\_recv@{Scatterv\_recv}}
 \index{Scatterv\_recv@{Scatterv\_recv}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Scatterv\_recv()}{Scatterv\_recv()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Scatterv\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{root }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Scatterv\+\_\+recv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{int}]{root,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a47d0f193ed7d2ce9cf5a84c1bc2f084d}\label{namespace_m_p_iw_a47d0f193ed7d2ce9cf5a84c1bc2f084d}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a71542ec11923b5216b7fb6424c687bab}\label{namespace_m_p_iw_a71542ec11923b5216b7fb6424c687bab}} 
 \index{MPIw@{MPIw}!Scatterv\_send@{Scatterv\_send}}
 \index{Scatterv\_send@{Scatterv\_send}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Scatterv\_send()}{Scatterv\_send()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+Scatterv\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ std\+::vector$<$ T $>$$>$ \&}]{data }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+Scatterv\+\_\+send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ std\+::vector$<$ T $>$$>$ \&}]{data,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_aabe981f7485fc2e9cbda49674ef2995a}\label{namespace_m_p_iw_aabe981f7485fc2e9cbda49674ef2995a}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a5d562e163cdff3f3681aab67be429df8}\label{namespace_m_p_iw_a5d562e163cdff3f3681aab67be429df8}} 
 \index{MPIw@{MPIw}!Send@{Send}}
 \index{Send@{Send}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{Send()}{Send()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void MPIw\+::\+Send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{dest,  }\item[{int}]{tag }\end{DoxyParamCaption})}
+void MPIw\+::\+Send (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{int}]{dest,  }\item[{int}]{tag,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 

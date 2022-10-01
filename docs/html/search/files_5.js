@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['types_2ehpp_77',['types.hpp',['../types_8hpp.html',1,'']]]
+  ['structs_2ehpp_82',['structs.hpp',['../structs_8hpp.html',1,'']]]
 ];
