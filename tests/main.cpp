@@ -11,10 +11,8 @@ void run_all_test();
 
 int main(int argc, char** argv) {
     MPIw::Init_raii _mpi_init(&argc, &argv);
-    run_all_test<short>();
     run_all_test<int>();
     run_all_test<long>();
-    run_all_test<unsigned short>();
     run_all_test<unsigned>();
     run_all_test<unsigned long>();
     run_all_test<float>();
