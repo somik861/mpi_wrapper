@@ -68,3 +68,13 @@ void print_local_info(MPI_Comm comm) {
           MPIw::Comm_size(comm), MPIw::Comm_rank(comm),
           MPIw::Get_processor_name());
 }
+
+void print_cont(auto cont) {
+    std::cout << "[ ";
+    const char* delim = "";
+    for (auto v : cont) {
+        std::cout << delim << v;
+        delim = ", ";
+    }
+    std::cout << " ]" << std::endl;
+}

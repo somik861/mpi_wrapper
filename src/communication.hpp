@@ -191,11 +191,11 @@ std::vector<T> Allgather(
     MPI_Comm comm,
     const std::vector<T> data,
     const std::source_location& location = std::source_location::current()) {
-    std::vector<T> out(Comm_size(comm));
+    std::vector<T> out(Comm_size(comm) * data.size());
 
     errors::check_code(
         MPI_Allgather(data.data(), data.size(), types::get_mpi_type<T>(),
-                      out.data(), out.size(), types::get_mpi_type<T>(), comm),
+                      out.data(), data.size(), types::get_mpi_type<T>(), comm),
         location);
     return out;
 }

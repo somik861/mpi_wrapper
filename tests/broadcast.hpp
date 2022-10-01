@@ -27,7 +27,7 @@ void run_broadcast_range(MPI_Comm comm) {
 template <typename T>
 void run_broadcast_managed(MPI_Comm comm) {
     for (int n = 0; n < 10; ++n) {
-        int size = std::random_device{}() % 100;
+        int size = std::random_device{}() % 100 + 1;
         std::vector<T> to_send(size);
         std::iota(to_send.begin(), to_send.end(), size);
 
