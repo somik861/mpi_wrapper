@@ -3,6 +3,7 @@
 #include "broadcast.hpp"
 #include "gather_scatter.hpp"
 #include "send_recv.hpp"
+#include "reduce.hpp"
 #include <cassert>
 
 template <typename T>
@@ -30,6 +31,7 @@ void run_all_test() {
     run_broadcast<T>(MPI_COMM_WORLD);
     run_gather_scather<T>(MPI_COMM_WORLD);
     run_allgather<T>(MPI_COMM_WORLD);
+    run_reduce<T>(MPI_COMM_WORLD);
 
     if (is_printing)
         print_end_test(test_name);

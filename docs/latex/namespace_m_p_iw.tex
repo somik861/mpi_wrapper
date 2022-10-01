@@ -77,7 +77,7 @@ class \mbox{\hyperlink{class_m_p_iw_1_1_group__raii}{Group\+\_\+raii}}
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a54cc3502e78f06cec45a535b4b97ef95}{Reduce\+\_\+recv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a5a8d6304f3cb518fe03a95736208f163}{All\+Reduce}} (MPI\+\_\+\+Comm comm, std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a3500a67bffd652ea74eef41c3617faeb}{All\+Reduce}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
 void \mbox{\hyperlink{namespace_m_p_iw_ae98cf6ceb5f12511a6d3cb7fa0174b3b}{Barrier}} (MPI\+\_\+\+Comm comm, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
@@ -112,12 +112,12 @@ std\+::vector$<$T$>$ MPIw\+::\+Allgather (\begin{DoxyParamCaption}\item[{MPI\+\_
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 std\+::vector$<$std\+::vector$<$T$>$ $>$ MPIw\+::\+Allgatherv (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespace_m_p_iw_a5a8d6304f3cb518fe03a95736208f163}\label{namespace_m_p_iw_a5a8d6304f3cb518fe03a95736208f163}} 
+\mbox{\Hypertarget{namespace_m_p_iw_a3500a67bffd652ea74eef41c3617faeb}\label{namespace_m_p_iw_a3500a67bffd652ea74eef41c3617faeb}} 
 \index{MPIw@{MPIw}!AllReduce@{AllReduce}}
 \index{AllReduce@{AllReduce}!MPIw@{MPIw}}
 \doxysubsubsection{\texorpdfstring{AllReduce()}{AllReduce()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$T$>$ MPIw\+::\+All\+Reduce (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{std\+::vector$<$ T $>$ \&}]{data,  }\item[{MPI\+\_\+\+Op}]{op,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
+std\+::vector$<$T$>$ MPIw\+::\+All\+Reduce (\begin{DoxyParamCaption}\item[{MPI\+\_\+\+Comm}]{comm,  }\item[{const std\+::vector$<$ T $>$ \&}]{data,  }\item[{MPI\+\_\+\+Op}]{op,  }\item[{const std\+::source\+\_\+location \&}]{location = {\ttfamily std\+:\+:source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{namespace_m_p_iw_ae98cf6ceb5f12511a6d3cb7fa0174b3b}\label{namespace_m_p_iw_ae98cf6ceb5f12511a6d3cb7fa0174b3b}} 
 \index{MPIw@{MPIw}!Barrier@{Barrier}}

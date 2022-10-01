@@ -457,7 +457,7 @@ std::vector<T> Reduce_recv(
 template <typename T>
 std::vector<T> AllReduce(
     MPI_Comm comm,
-    std::vector<T>& data,
+    const std::vector<T>& data,
     MPI_Op op,
     const std::source_location& location = std::source_location::current()) {
     std::vector<T> out(data.size());

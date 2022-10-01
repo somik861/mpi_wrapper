@@ -2,7 +2,7 @@ var communication_8hpp =
 [
     [ "Allgather", "communication_8hpp.html#a55987f5c279cdd5da85520f2dc1c8b23", null ],
     [ "Allgatherv", "communication_8hpp.html#ab6885e7472e8af8e95255a5591ce3eb5", null ],
-    [ "AllReduce", "communication_8hpp.html#a5a8d6304f3cb518fe03a95736208f163", null ],
+    [ "AllReduce", "communication_8hpp.html#a3500a67bffd652ea74eef41c3617faeb", null ],
     [ "Barrier", "communication_8hpp.html#ae98cf6ceb5f12511a6d3cb7fa0174b3b", null ],
     [ "Bcast", "communication_8hpp.html#ae0072a48661de7bfb28459922f9b338e", null ],
     [ "Bcast_managed", "communication_8hpp.html#a839c05b44db6eab76bbe1bb5f6a7280d", null ],
