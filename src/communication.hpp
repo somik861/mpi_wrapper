@@ -32,12 +32,12 @@ std::vector<std::vector<T>> split_buffer(const std::vector<T>& buffer,
 // ===================== BASIC Send/Recv =====================
 
 template <typename T>
-structs::Recv_st<T>
+structs::Recv_st<std::vector<T>>
 Recv(MPI_Comm comm,
      int source = MPI_ANY_SOURCE,
      int tag = MPI_ANY_TAG,
      const std::source_location& location = std::source_location::current()) {
-    structs::Recv_st<T> out;
+    structs::Recv_st<std::vector<T>> out;
     MPI_Status stat;
     MPI_Datatype type = types::get_mpi_type<T>();
 
@@ -57,6 +57,20 @@ Recv(MPI_Comm comm,
 }
 
 template <typename T>
+structs::Recv_st<T> Recv_one(
+    MPI_Comm comm,
+    int source = MPI_ANY_SOURCE,
+    int tag = MPI_ANY_TAG,
+    const std::source_location& location = std::source_location::current()) {
+    structs::Recv_st<T> out;
+
+    errors::check_code(MPI_Recv(&out.data, 1, types::get_mpi_type<T>(), source,
+                                tag, comm, &out.status),
+                       location);
+    return out;
+}
+
+template <typename T>
 void Send(
     MPI_Comm comm,
     const std::vector<T>& data,
@@ -66,6 +80,18 @@ void Send(
     errors::check_code(MPI_Send(data.data(), data.size(),
                                 types::get_mpi_type<T>(), dest, tag, comm),
                        location);
+}
+
+template <typename T>
+void Send_one(
+    MPI_Comm comm,
+    T data,
+    int dest,
+    int tag,
+    const std::source_location& location = std::source_location::current()) {
+    errors::check_code(
+        MPI_Send(&data, 1, types::get_mpi_type<T>(), dest, tag, comm),
+        location);
 }
 
 // ===================== Bcast =====================
@@ -110,6 +136,16 @@ void Bcast_send(
 }
 
 template <typename T>
+void Bcast_send_one(
+    MPI_Comm comm,
+    T data,
+    const std::source_location& location = std::source_location::current()) {
+    errors::check_code(
+        MPI_Bcast(&data, 1, types::get_mpi_type<T>(), Comm_rank(comm), comm),
+        location);
+}
+
+template <typename T>
 std::vector<T> Bcast_recv(
     MPI_Comm comm,
     int count,
@@ -119,6 +155,17 @@ std::vector<T> Bcast_recv(
     errors::check_code(
         MPI_Bcast(out.data(), count, types::get_mpi_type<T>(), root, comm),
         location);
+    return out;
+}
+
+template <typename T>
+T Bcast_recv_one(
+    MPI_Comm comm,
+    int root,
+    const std::source_location& location = std::source_location::current()) {
+    T out;
+    errors::check_code(MPI_Bcast(&out, 1, types::get_mpi_type<T>(), root, comm),
+                       location);
     return out;
 }
 
@@ -305,10 +352,10 @@ std::vector<T> Scatter_send(
            data.size()); // data are equally splitable
 
     std::vector<T> out(count);
-    errors::check_code(
-        MPI_Scatter(data.data(), count, types::get_mpi_type<T>(), out.data(),
-                    count, types::get_mpi_type<T>(), Comm_rank(comm), comm),
-        location);
+    errors::check_code(MPI_Scatter(data.data(), count, types::get_mpi_type<T>(),
+                                   out.data(), count, types::get_mpi_type<T>(),
+                                   Comm_rank(comm), comm),
+                       location);
     return out;
 }
 

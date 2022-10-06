@@ -7,7 +7,7 @@
 namespace MPIw::structs {
 template <typename T>
 struct Recv_st {
-    std::vector<T> data;
+    T data;
     MPI_Status status;
 };
 

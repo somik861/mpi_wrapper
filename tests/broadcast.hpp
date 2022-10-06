@@ -8,6 +8,12 @@
 
 namespace master {
 template <typename T>
+void run_broadcast_one(MPI_Comm comm) {
+    T to_send = T(-1);
+    MPIw::Bcast_send_one(comm, to_send);
+}
+
+template <typename T>
 void run_broadcast_single(MPI_Comm comm) {
     std::vector<T> to_send = {T(-1)};
     MPIw::Bcast_send(comm, to_send);
@@ -37,6 +43,14 @@ void run_broadcast_managed(MPI_Comm comm) {
 } // namespace master
 
 namespace slave {
+template <typename T>
+void run_broadcast_one(MPI_Comm comm, int root) {
+    T expected = T(-1);
+
+    auto data = MPIw::Bcast_recv_one<T>(comm, root);
+    assert(data == expected);
+}
+
 template <typename T>
 void run_broadcast_single(MPI_Comm comm, int root) {
     std::vector<T> expected = {T(-1)};
@@ -74,6 +88,19 @@ void run_broadcast(MPI_Comm comm) {
     int rank = MPIw::Comm_rank(comm);
     int size = MPIw::Comm_size(comm);
     bool is_printing = (rank == 0);
+
+    for (int root = 0; root < size; ++root) {
+        if (is_printing)
+            print_start_section(fmt::format("broadcast one (root: {})", root));
+        if (root != rank)
+            slave::run_broadcast_one<T>(comm, root);
+        else {
+            master::run_broadcast_one<T>(comm);
+        }
+        MPIw::Barrier(comm);
+        if (is_printing)
+            print_end_section("broadcast one");
+    }
 
     for (int root = 0; root < size; ++root) {
         if (is_printing)
