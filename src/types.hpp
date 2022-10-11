@@ -7,7 +7,7 @@
 #define MPIw_register_type(cpp_type, mpi_type)                                 \
     namespace MPIw::types {                                                    \
     template <>                                                                \
-    MPI_Datatype get_mpi_type<cpp_type>(cpp_type) {                            \
+    inline MPI_Datatype get_mpi_type<cpp_type>(cpp_type) {                     \
         return mpi_type;                                                       \
     }                                                                          \
     }

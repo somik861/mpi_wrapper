@@ -7,9 +7,3 @@
 #include "types.hpp"
 #include "error_codes.hpp"
 
-// TODO
-/*
-Bcast recieve single element?
-
-TESTS ???
-*/
