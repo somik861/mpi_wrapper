@@ -19,7 +19,7 @@ void run_gather_scather_single(MPI_Comm comm) {
 
     auto part = MPIw::Scatter_send(comm, to_send);
     assert(part.size() == 1);
-    assert(part[0] == my_rank * 2);
+    assert(int(part[0]) == my_rank * 2);
 
     auto full = MPIw::Gather_recv(comm, part);
     assert(full == to_send);
@@ -27,7 +27,6 @@ void run_gather_scather_single(MPI_Comm comm) {
 
 template <typename T>
 void run_gather_scather_managed(MPI_Comm comm) {
-    int my_rank = MPIw::Comm_rank(comm);
     int comm_size = MPIw::Comm_size(comm);
 
     for (int n = 0; n < 10; ++n) {
@@ -46,7 +45,6 @@ void run_gather_scather_managed(MPI_Comm comm) {
 
 template <typename T>
 void run_gather_scather_variable(MPI_Comm comm) {
-    int my_rank = MPIw::Comm_rank(comm);
     int comm_size = MPIw::Comm_size(comm);
 
     for (int n = 0; n < 10; ++n) {
@@ -72,15 +70,13 @@ void run_gather_scather_single(MPI_Comm comm, int root) {
 
     auto part = MPIw::Scatter_recv<T>(comm, 1, root);
     assert(part.size() == 1);
-    assert(part[0] == my_rank * 2);
+    assert(int(part[0]) == my_rank * 2);
 
     MPIw::Gather_send(comm, part, root);
 }
 
 template <typename T>
 void run_gather_scather_managed(MPI_Comm comm, int root) {
-    int my_rank = MPIw::Comm_rank(comm);
-
     for (int n = 0; n < 10; ++n) {
         auto part = MPIw::Scatter_recv_managed<T>(comm, root);
         MPIw::Gather_send(comm, part, root);
@@ -89,8 +85,6 @@ void run_gather_scather_managed(MPI_Comm comm, int root) {
 
 template <typename T>
 void run_gather_scather_variable(MPI_Comm comm, int root) {
-    int my_rank = MPIw::Comm_rank(comm);
-
     for (int n = 0; n < 10; ++n) {
         auto part = MPIw::Scatterv_recv<T>(comm, root);
         MPIw::Gatherv_send(comm, part, root);

@@ -61,7 +61,6 @@ void run_broadcast_single(MPI_Comm comm, int root) {
 
 template <typename T>
 void run_broadcast_range(MPI_Comm comm, int root) {
-    int my_rank = MPIw::Comm_rank(comm);
     int comm_size = MPIw::Comm_size(comm);
 
     std::vector<T> expected(comm_size);

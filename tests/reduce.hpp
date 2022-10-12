@@ -15,7 +15,7 @@ void run_reduce_single(MPI_Comm comm) {
     auto sum = MPIw::Reduce_recv<T>(comm, {T(my_rank)}, MPI_SUM);
     assert(sum.size() == 1);
 
-    T expected = (comm_size * (comm_size - 1)) / 2;
+    T expected = T((comm_size * (comm_size - 1)) / 2);
     assert(sum[0] == expected);
 }
 
@@ -24,16 +24,16 @@ void run_reduce_range(MPI_Comm comm) {
     int my_rank = MPIw::Comm_rank(comm);
     int comm_size = MPIw::Comm_size(comm);
 
-    std::vector<T> to_send(comm_size, my_rank);
+    std::vector<T> to_send(comm_size, T(my_rank));
     for (std::size_t i = 0; i < to_send.size(); ++i)
-        to_send[i] *= i;
+        to_send[i] *= T(i);
 
     auto got = MPIw::Reduce_recv<T>(comm, to_send, MPI_SUM);
-    assert(got.size() == comm_size);
+    assert(got.size() == std::size_t(comm_size));
 
-    T sum = (comm_size * (comm_size - 1)) / 2;
+    T sum = T((comm_size * (comm_size - 1)) / 2);
     for (std::size_t i = 0; i < got.size(); ++i)
-        assert(got[i] == T(sum * i));
+        assert(got[i] == sum * T(i));
 }
 
 template <typename T>
@@ -44,7 +44,7 @@ void run_allreduce_single(MPI_Comm comm) {
     auto sum = MPIw::AllReduce<T>(comm, {T(my_rank)}, MPI_SUM);
     assert(sum.size() == 1);
 
-    T expected = (comm_size * (comm_size - 1)) / 2;
+    T expected = T((comm_size * (comm_size - 1)) / 2);
     assert(sum[0] == expected);
 }
 
@@ -53,16 +53,16 @@ void run_allreduce_range(MPI_Comm comm) {
     int my_rank = MPIw::Comm_rank(comm);
     int comm_size = MPIw::Comm_size(comm);
 
-    std::vector<T> to_send(comm_size, my_rank);
+    std::vector<T> to_send(comm_size, T(my_rank));
     for (std::size_t i = 0; i < to_send.size(); ++i)
-        to_send[i] *= i;
+        to_send[i] *= T(i);
 
     auto got = MPIw::AllReduce<T>(comm, to_send, MPI_SUM);
-    assert(got.size() == comm_size);
+    assert(got.size() == std::size_t(comm_size));
 
-    T sum = (comm_size * (comm_size - 1)) / 2;
+    T sum = T((comm_size * (comm_size - 1)) / 2);
     for (std::size_t i = 0; i < got.size(); ++i)
-        assert(got[i] == T(sum * i));
+        assert(got[i] == sum * T(i));
 }
 
 } // namespace master
@@ -79,9 +79,9 @@ void run_reduce_range(MPI_Comm comm, int root) {
     int my_rank = MPIw::Comm_rank(comm);
     int comm_size = MPIw::Comm_size(comm);
 
-    std::vector<T> to_send(comm_size, my_rank);
+    std::vector<T> to_send(comm_size, T(my_rank));
     for (std::size_t i = 0; i < to_send.size(); ++i)
-        to_send[i] *= i;
+        to_send[i] *= T(i);
 
     MPIw::Reduce_send<T>(comm, to_send, MPI_SUM, root);
 }

@@ -40,7 +40,6 @@ void run_allgather_range(MPI_Comm comm) {
 template <typename T>
 void run_allgather_variable(MPI_Comm comm) {
     int my_rank = MPIw::Comm_rank(comm);
-    int comm_size = MPIw::Comm_size(comm);
 
     for (int n = 0; n < 10; ++n) {
         int size = std::random_device{}() % 100;
@@ -56,7 +55,6 @@ void run_allgather_variable(MPI_Comm comm) {
 template <typename T>
 void run_allgather(MPI_Comm comm) {
     int rank = MPIw::Comm_rank(comm);
-    int size = MPIw::Comm_size(comm);
     bool is_printing = (rank == 0);
 
     if (is_printing)

@@ -57,7 +57,7 @@ void run_send_recv_multi(MPI_Comm comm) {
     std::set<int> seen;
     seen.insert(my_rank);
 
-    while (seen.size() != comm_size) {
+    while (seen.size() != std::size_t(comm_size)) {
         const auto [data, status] = MPIw::Recv<T>(comm);
         int src = status.MPI_SOURCE;
 
@@ -87,7 +87,7 @@ void run_send_recv_range(MPI_Comm comm) {
     std::set<int> seen;
     seen.insert(my_rank);
 
-    while (seen.size() != comm_size) {
+    while (seen.size() != std::size_t(comm_size)) {
         const auto [data, status] = MPIw::Recv<T>(comm);
         int src = status.MPI_SOURCE;
         std::vector<T> expected(src);
@@ -98,7 +98,7 @@ void run_send_recv_range(MPI_Comm comm) {
         assert(!seen.contains(src));
         assert(status.MPI_TAG == src * 5);
         assert(MPIw::Get_count<T>(status) == src);
-        assert(data.size() == src);
+        assert(data.size() == std::size_t(src));
         assert(data == expected);
         seen.insert(src);
     }
@@ -152,7 +152,7 @@ void run_send_recv_range(MPI_Comm comm, int root) {
     assert(status.MPI_SOURCE == root);
     assert(status.MPI_TAG == my_rank * 2);
     assert(MPIw::Get_count<T>(status) == my_rank);
-    assert(data.size() == my_rank);
+    assert(data.size() == std::size_t(my_rank));
     assert(data == expected);
     std::ranges::transform(data, data.begin(), [](auto x) { return x * T(2); });
     MPIw::Send<T>(comm, data, root, my_rank * 5);

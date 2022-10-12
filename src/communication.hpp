@@ -19,7 +19,7 @@ std::vector<std::vector<T>> split_buffer(const std::vector<T>& buffer,
     std::vector<std::vector<T>> out(offsets.size());
     for (std::size_t i = 0; i < offsets.size(); ++i) {
         int start = offsets[i];
-        int end = (i + 1 == offsets.size()) ? buffer.size() : offsets[i + 1];
+        int end = (i + 1 == offsets.size()) ? int(buffer.size()) : offsets[i + 1];
 
         out[i].insert(out[i].begin(), buffer.begin() + start,
                       buffer.begin() + end);
@@ -44,14 +44,14 @@ Recv(MPI_Comm comm,
     errors::check_code(MPI_Probe(source, tag, comm, &stat), location);
 
     out.data.resize(Get_count<T>(stat));
-    errors::check_code(MPI_Recv(out.data.data(), out.data.size(), type,
+    errors::check_code(MPI_Recv(out.data.data(), int(out.data.size()), type,
                                 stat.MPI_SOURCE, stat.MPI_TAG, comm,
                                 &out.status),
                        location);
 
     assert(stat.MPI_SOURCE == out.status.MPI_SOURCE);
     assert(stat.MPI_TAG == out.status.MPI_TAG);
-    assert(out.data.size() == Get_count<T>(out.status));
+    assert(int(out.data.size()) == Get_count<T>(out.status));
 
     return out;
 }
@@ -77,7 +77,7 @@ void Send(
     int dest,
     int tag,
     const std::source_location& location = std::source_location::current()) {
-    errors::check_code(MPI_Send(data.data(), data.size(),
+    errors::check_code(MPI_Send(data.data(), int(data.size()),
                                 types::get_mpi_type<T>(), dest, tag, comm),
                        location);
 }
@@ -129,7 +129,7 @@ void Bcast_send(
     MPI_Comm comm,
     std::vector<T> data,
     const std::source_location& location = std::source_location::current()) {
-    errors::check_code(MPI_Bcast(data.data(), data.size(),
+    errors::check_code(MPI_Bcast(data.data(), int(data.size()),
                                  types::get_mpi_type<T>(), Comm_rank(comm),
                                  comm),
                        location);
@@ -174,7 +174,7 @@ void Bcast_send_managed(
     MPI_Comm comm,
     const std::vector<T>& data,
     const std::source_location& location = std::source_location::current()) {
-    int count = data.size();
+    int count = int(data.size());
     int my_rank = Comm_rank(comm);
     errors::check_code(MPI_Bcast(&count, 1, MPI_INT, my_rank, comm), location);
     Bcast_send(comm, data, location);
@@ -210,7 +210,7 @@ void Gather_send(
     const std::vector<T>& data,
     int root,
     const std::source_location& location = std::source_location::current()) {
-    errors::check_code(MPI_Gather(data.data(), data.size(),
+    errors::check_code(MPI_Gather(data.data(), int(data.size()),
                                   types::get_mpi_type<T>(), nullptr, -1,
                                   MPI_DATATYPE_NULL, root, comm),
                        location);
@@ -223,9 +223,9 @@ std::vector<T> Gather_recv(
     const std::source_location& location = std::source_location::current()) {
     std::vector<T> out(Comm_size(comm) * data.size());
 
-    errors::check_code(MPI_Gather(data.data(), data.size(),
+    errors::check_code(MPI_Gather(data.data(), int(data.size()),
                                   types::get_mpi_type<T>(), out.data(),
-                                  data.size(), types::get_mpi_type<T>(),
+                                  int(data.size()), types::get_mpi_type<T>(),
                                   Comm_rank(comm), comm),
                        location);
 
@@ -241,8 +241,8 @@ std::vector<T> Allgather(
     std::vector<T> out(Comm_size(comm) * data.size());
 
     errors::check_code(
-        MPI_Allgather(data.data(), data.size(), types::get_mpi_type<T>(),
-                      out.data(), data.size(), types::get_mpi_type<T>(), comm),
+        MPI_Allgather(data.data(), int(data.size()), types::get_mpi_type<T>(),
+                      out.data(), int(data.size()), types::get_mpi_type<T>(), comm),
         location);
     return out;
 }
@@ -267,12 +267,12 @@ void Gatherv_send(
     const std::vector<T>& data,
     int root,
     const std::source_location& location = std::source_location::current()) {
-    int my_count = data.size();
+    int my_count = int(data.size());
     errors::check_code(MPI_Gather(&my_count, 1, MPI_INT, nullptr, -1,
                                   MPI_DATATYPE_NULL, root, comm),
                        location);
 
-    errors::check_code(MPI_Gatherv(data.data(), data.size(),
+    errors::check_code(MPI_Gatherv(data.data(), int(data.size()),
                                    types::get_mpi_type<T>(), nullptr, nullptr,
                                    nullptr, MPI_DATATYPE_NULL, root, comm),
                        location);
@@ -284,7 +284,7 @@ std::vector<std::vector<T>> Gatherv_recv(
     const std::vector<T>& data,
     const std::source_location& location = std::source_location::current()) {
     std::vector<int> counts(Comm_size(comm));
-    int my_count = data.size();
+    int my_count = int(data.size());
     int my_rank = Comm_rank(comm);
 
     errors::check_code(MPI_Gather(&my_count, 1, MPI_INT, counts.data(), 1,
@@ -295,7 +295,7 @@ std::vector<std::vector<T>> Gatherv_recv(
     std::vector<int> displs(counts.size());
     std::exclusive_scan(counts.begin(), counts.end(), displs.begin(), 0);
 
-    errors::check_code(MPI_Gatherv(data.data(), data.size(),
+    errors::check_code(MPI_Gatherv(data.data(), int(data.size()),
                                    types::get_mpi_type<T>(), buffer.data(),
                                    counts.data(), displs.data(),
                                    types::get_mpi_type<T>(), my_rank, comm),
@@ -309,7 +309,7 @@ std::vector<std::vector<T>> Allgatherv(
     MPI_Comm comm,
     const std::vector<T>& data,
     const std::source_location& location = std::source_location::current()) {
-    int my_count = data.size();
+    int my_count = int(data.size());
     std::vector<int> counts(Comm_size(comm));
 
     errors::check_code(
@@ -320,7 +320,7 @@ std::vector<std::vector<T>> Allgatherv(
     std::exclusive_scan(counts.begin(), counts.end(), displs.begin(), 0);
     std::vector<T> buffer(std::accumulate(counts.begin(), counts.end(), 0));
 
-    errors::check_code(MPI_Allgatherv(data.data(), data.size(),
+    errors::check_code(MPI_Allgatherv(data.data(), int(data.size()),
                                       types::get_mpi_type<T>(), buffer.data(),
                                       counts.data(), displs.data(),
                                       types::get_mpi_type<T>(), comm),
@@ -347,9 +347,9 @@ std::vector<T> Scatter_send(
     MPI_Comm comm,
     const std::vector<T>& data,
     const std::source_location& location = std::source_location::current()) {
-    int count = data.size() / Comm_size(comm);
+    int count = int(data.size()) / Comm_size(comm);
     assert(Comm_size(comm) * count ==
-           data.size()); // data are equally splitable
+           int(data.size())); // data are equally splitable
 
     std::vector<T> out(count);
     errors::check_code(MPI_Scatter(data.data(), count, types::get_mpi_type<T>(),
@@ -367,7 +367,7 @@ std::vector<T> Scatter_recv(
     const std::source_location& location = std::source_location::current()) {
     std::vector<T> out(count);
     errors::check_code(MPI_Scatter(nullptr, -1, MPI_DATATYPE_NULL, out.data(),
-                                   out.size(), types::get_mpi_type<T>(), root,
+                                   int(out.size()), types::get_mpi_type<T>(), root,
                                    comm),
                        location);
     return out;
@@ -378,7 +378,7 @@ std::vector<T> Scatter_send_managed(
     MPI_Comm comm,
     const std::vector<T>& data,
     const std::source_location& location = std::source_location::current()) {
-    int count = data.size() / Comm_size(comm);
+    int count = int(data.size()) / Comm_size(comm);
     errors::check_code(MPI_Bcast(&count, 1, MPI_INT, Comm_rank(comm), comm),
                        location);
 
@@ -412,7 +412,7 @@ std::vector<T> Scatterv_send(
     MPI_Comm comm,
     const std::vector<std::vector<T>>& data,
     const std::source_location& location = std::source_location::current()) {
-    assert(data.size() == Comm_size(comm));
+    assert(int(data.size()) == Comm_size(comm));
 
     std::vector<int> counts(data.size());
     std::vector<T> buffer;
@@ -452,7 +452,7 @@ std::vector<T> Scatterv_recv(
 
     std::vector<T> out(my_count);
     errors::check_code(MPI_Scatterv(nullptr, nullptr, nullptr,
-                                    MPI_DATATYPE_NULL, out.data(), out.size(),
+                                    MPI_DATATYPE_NULL, out.data(), int(out.size()),
                                     types::get_mpi_type<T>(), root, comm),
                        location);
 
@@ -480,7 +480,7 @@ void Reduce_send(
     MPI_Op op,
     int root,
     const std::source_location& location = std::source_location::current()) {
-    errors::check_code(MPI_Reduce(data.data(), nullptr, data.size(),
+    errors::check_code(MPI_Reduce(data.data(), nullptr, int(data.size()),
                                   types::get_mpi_type<T>(), op, root, comm),
                        location);
 }
@@ -493,7 +493,7 @@ std::vector<T> Reduce_recv(
     const std::source_location& location = std::source_location::current()) {
     std::vector<T> out(data.size());
 
-    errors::check_code(MPI_Reduce(data.data(), out.data(), data.size(),
+    errors::check_code(MPI_Reduce(data.data(), out.data(), int(data.size()),
                                   types::get_mpi_type<T>(), op, Comm_rank(comm),
                                   comm),
                        location);
@@ -509,7 +509,7 @@ std::vector<T> AllReduce(
     const std::source_location& location = std::source_location::current()) {
     std::vector<T> out(data.size());
 
-    errors::check_code(MPI_Allreduce(data.data(), out.data(), data.size(),
+    errors::check_code(MPI_Allreduce(data.data(), out.data(), int(data.size()),
                                      types::get_mpi_type<T>(), op, comm),
                        location);
     return out;
