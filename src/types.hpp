@@ -5,19 +5,19 @@
 #include <stdexcept>
 
 #define MPIw_register_type(cpp_type, mpi_type)                                 \
-    namespace MPIw::types {                                                    \
-    template <>                                                                \
-    inline MPI_Datatype get_mpi_type<cpp_type>(cpp_type) {                     \
-        return mpi_type;                                                       \
-    }                                                                          \
-    }
+	namespace MPIw::types {                                                    \
+	template <>                                                                \
+	inline MPI_Datatype get_mpi_type<cpp_type>(cpp_type) {                     \
+		return mpi_type;                                                       \
+	}                                                                          \
+	}
 
 namespace MPIw::types {
 
 template <typename T>
 MPI_Datatype get_mpi_type(T = T{}) {
-    throw std::runtime_error(
-        "Type is not known by wrapper, please register it in MPIw::types");
+	throw std::runtime_error(
+	    "Type is not known by wrapper, please register it in MPIw::types");
 }
 } // namespace MPIw::types
 
