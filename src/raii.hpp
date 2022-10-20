@@ -59,4 +59,25 @@ class Group_raii {
 	operator MPI_Group() { return group; }
 	MPI_Group* operator&() { return &group; }
 };
+
+class Type_raii {
+  public:
+	MPI_Datatype type = MPI_DATATYPE_NULL;
+
+	Type_raii() = default;
+	Type_raii(const Type_raii&) = delete;
+	Type_raii& operator=(const Type_raii&) = delete;
+
+	Type_raii(Type_raii&&) = delete;
+	Type_raii&& operator=(Type_raii&&) = delete;
+
+	~Type_raii() {
+		if (type != MPI_DATATYPE_NULL)
+			errors::check_code(MPI_Type_free(&type));
+	}
+
+	MPI_Datatype& get() { return type; }
+	operator MPI_Datatype() { return type; }
+	MPI_Datatype* operator&() { return &type; }
+};
 } // namespace MPIw
