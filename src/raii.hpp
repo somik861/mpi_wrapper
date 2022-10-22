@@ -18,6 +18,26 @@ class Init_raii {
 	~Init_raii() { errors::check_code(MPI_Finalize()); }
 };
 
+class Init_threads_raii {
+  public:
+	Init_threads_raii(int* argc, char*** argv, int required) {
+		errors::check_code(MPI_Init_thread(argc, argv, required, &_provided));
+	}
+
+	Init_threads_raii(const Init_threads_raii&) = delete;
+	Init_threads_raii& operator=(const Init_threads_raii&) = delete;
+
+	Init_threads_raii(Init_threads_raii&&) = delete;
+	Init_threads_raii&& operator=(Init_threads_raii&&) = delete;
+
+	~Init_threads_raii() { errors::check_code(MPI_Finalize()); }
+
+	int support_level() const { return _provided; }
+
+  private:
+	int _provided;
+};
+
 class Comm_raii {
   public:
 	MPI_Comm comm = MPI_COMM_NULL;
