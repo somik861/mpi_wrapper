@@ -44,7 +44,7 @@ Recv(MPI_Comm comm,
 	MPI_Status stat;
 
 	errors::check_code(MPI_Recv(dest, count, types::get_mpi_type<T>(), source,
-	                            tag, comm, &stat),
+	                            static_cast<int>(tag), comm, &stat),
 	                   location);
 
 	return stat;
