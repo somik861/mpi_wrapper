@@ -1,5 +1,6 @@
 #pragma once
 
+#include "concepts.hpp"
 #include "error_codes.hpp"
 #include "getters.hpp"
 #include "structs.hpp"
@@ -32,17 +33,18 @@ std::vector<std::vector<T>> split_buffer(const std::vector<T>& buffer,
 
 // ===================== BASIC Send/Recv =====================
 
-template <typename T>
+template <typename T, details::cnpts::EnumOrInt U = int>
 structs::Recv_st<std::vector<T>>
 Recv(MPI_Comm comm,
      int source = MPI_ANY_SOURCE,
-     int tag = MPI_ANY_TAG,
+     U tag = MPI_ANY_TAG,
      const std::source_location& location = std::source_location::current()) {
 	structs::Recv_st<std::vector<T>> out;
 	MPI_Status stat;
 	MPI_Datatype type = types::get_mpi_type<T>();
 
-	errors::check_code(MPI_Probe(source, tag, comm, &stat), location);
+	errors::check_code(MPI_Probe(source, static_cast<int>(tag), comm, &stat),
+	                   location);
 
 	out.data.resize(Get_count<T>(stat));
 	errors::check_code(MPI_Recv(out.data.data(), int(out.data.size()), type,
@@ -57,42 +59,43 @@ Recv(MPI_Comm comm,
 	return out;
 }
 
-template <typename T>
+template <typename T, details::cnpts::EnumOrInt U = int>
 structs::Recv_st<T> Recv_one(
     MPI_Comm comm,
     int source = MPI_ANY_SOURCE,
-    int tag = MPI_ANY_TAG,
+    U tag = MPI_ANY_TAG,
     const std::source_location& location = std::source_location::current()) {
 	structs::Recv_st<T> out;
 
 	errors::check_code(MPI_Recv(&out.data, 1, types::get_mpi_type<T>(), source,
-	                            tag, comm, &out.status),
+	                            static_cast<int>(tag), comm, &out.status),
 	                   location);
 	return out;
 }
 
-template <typename T>
+template <typename T, details::cnpts::EnumOrInt U>
 void Send(
     MPI_Comm comm,
     const std::vector<T>& data,
     int dest,
-    int tag,
+    U tag,
     const std::source_location& location = std::source_location::current()) {
 	errors::check_code(MPI_Send(data.data(), int(data.size()),
-	                            types::get_mpi_type<T>(), dest, tag, comm),
+	                            types::get_mpi_type<T>(), dest,
+	                            static_cast<int>(tag), comm),
 	                   location);
 }
 
-template <typename T>
+template <typename T, details::cnpts::EnumOrInt U>
 void Send_one(
     MPI_Comm comm,
     T data,
     int dest,
-    int tag,
+    U tag,
     const std::source_location& location = std::source_location::current()) {
-	errors::check_code(
-	    MPI_Send(&data, 1, types::get_mpi_type<T>(), dest, tag, comm),
-	    location);
+	errors::check_code(MPI_Send(&data, 1, types::get_mpi_type<T>(), dest,
+	                            static_cast<int>(tag), comm),
+	                   location);
 }
 
 // ===================== Bcast =====================
