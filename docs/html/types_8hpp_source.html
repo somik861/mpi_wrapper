@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MPI Wrapper: /home/somik/WSL_Workspace/cpp/mpi_wrapper/src/types.hpp Source File</title>
+<title>MPI Wrapper: /home/somik/Workspace/cpp/mpi_wrapper/src/types.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('types_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="types_8hpp.html#a6bd8b5c79d07ba85512391bc48a48ed5">    7</a></span>&#160;<span class="preprocessor">#define MPIw_register_type(cpp_type, mpi_type)                                 \</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">    namespace MPIw::types {                                                    \</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">    template &lt;&gt;                                                                \</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">    MPI_Datatype get_mpi_type&lt;cpp_type&gt;(cpp_type) {                            \</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">    inline MPI_Datatype get_mpi_type&lt;cpp_type&gt;(cpp_type) {                     \</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">        return mpi_type;                                                       \</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">    }                                                                          \</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">    }</span></div>

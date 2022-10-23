@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['allgather_84',['Allgather',['../namespace_m_p_iw.html#a55987f5c279cdd5da85520f2dc1c8b23',1,'MPIw']]],
-  ['allgatherv_85',['Allgatherv',['../namespace_m_p_iw.html#ab6885e7472e8af8e95255a5591ce3eb5',1,'MPIw']]],
-  ['allreduce_86',['AllReduce',['../namespace_m_p_iw.html#a3500a67bffd652ea74eef41c3617faeb',1,'MPIw']]]
+  ['allgather_106',['Allgather',['../namespace_m_p_iw.html#ad460fa562bd243874af42c257bf7a366',1,'MPIw::Allgather(MPI_Comm comm, const T *data, T *dest, int count, const std::source_location &amp;location=std::source_location::current())'],['../namespace_m_p_iw.html#ac25967a2cc03873faa0a0e0fc80c0229',1,'MPIw::Allgather(MPI_Comm comm, const T &amp;data, const std::source_location &amp;location=std::source_location::current())']]],
+  ['allgatherv_107',['Allgatherv',['../namespace_m_p_iw.html#a82370d7bed78f319be8e351cd9a8b59b',1,'MPIw']]],
+  ['allreduce_108',['AllReduce',['../namespace_m_p_iw.html#a42f4f687c903cc807dd8d2160205717c',1,'MPIw::AllReduce(MPI_Comm comm, const T *data, T *dest, int count, MPI_Op op, const std::source_location &amp;location=std::source_location::current())'],['../namespace_m_p_iw.html#a1eb5acbd4acd503838303247efbebcc7',1,'MPIw::AllReduce(MPI_Comm comm, const T &amp;data, MPI_Op op, const std::source_location &amp;location=std::source_location::current())']]]
 ];

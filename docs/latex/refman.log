@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.14)  1 OCT 2022 15:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.15)  23 OCT 2022 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,6 +874,9 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 6.29996pt on input line 169.
  [2] [3] [4]
+[5] [6
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 171.
 
 Chapter 1.
@@ -893,7 +896,6 @@ LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 ) [1
-
 
 ] [2
 
@@ -919,55 +921,89 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 6.
 
-Underfull \hbox (badness 3118) in paragraph at lines 36--38
-\T1/phv/m/n/10 std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 T $\OML/cmm/m/i
-t/10 >$ [] \T1/phv/m/n/10 (MPI[]_[][]Comm comm, int count, int root, const std[
-]::source[]_[]location
- []
-
-
-Underfull \hbox (badness 4846) in paragraph at lines 40--42
-\T1/phv/m/n/10 std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 T $\OML/cmm/m/i
-t/10 >$ [] \T1/phv/m/n/10 (MPI[]_[][]Comm comm, int root, const std[]::source[]
-_[]location
+Underfull \hbox (badness 857) in paragraph at lines 32--34
+[]$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv
+/m/n/10 T $\OML/cmm/m/it/10 >$ $>$ [] \T1/phv/m/n/10 (MPI[]_[][]Comm comm, int 
+source=MPI[]_[][]ANY[]_[][]SOURCE, U
  []
 
 [7]
-Underfull \hbox (badness 2213) in paragraph at lines 62--64
+Underfull \hbox (badness 3118) in paragraph at lines 54--56
 \T1/phv/m/n/10 std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 T $\OML/cmm/m/i
 t/10 >$ [] \T1/phv/m/n/10 (MPI[]_[][]Comm comm, int count, int root, const std[
 ]::source[]_[]location
  []
 
 
-Underfull \hbox (badness 3354) in paragraph at lines 66--68
+Underfull \hbox (badness 972) in paragraph at lines 58--60
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, const T $\OMS/cmsy/m/n/10 ^^C$\T1/
+phv/m/n/10 data, int count, const std[]::source[]_[]location
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 62--64
 \T1/phv/m/n/10 std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 T $\OML/cmm/m/i
 t/10 >$ [] \T1/phv/m/n/10 (MPI[]_[][]Comm comm, int root, const std[]::source[]
 _[]location
  []
 
+
+Underfull \hbox (badness 828) in paragraph at lines 66--68
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, const T $\OMS/cmsy/m/n/10 ^^C$\T1/
+phv/m/n/10 data, int count, int root, const std[]::source[]_[]location
+ []
+
+
+Underfull \hbox (badness 828) in paragraph at lines 72--74
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, const T $\OMS/cmsy/m/n/10 ^^C$\T1/
+phv/m/n/10 data, T $\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10 dest, int count, const 
+std[]::source[]_[]location
+ []
+
+
+Underfull \hbox (badness 2065) in paragraph at lines 78--80
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, const T $\OMS/cmsy/m/n/10 ^^C$\T1/
+phv/m/n/10 data, T $\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10 dest, int count, const 
+std[]::source[]_[]location
+ []
+
 [8]
-Underfull \hbox (badness 1297) in paragraph at lines 86--88
+Underfull \hbox (badness 2213) in paragraph at lines 98--100
+\T1/phv/m/n/10 std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 T $\OML/cmm/m/i
+t/10 >$ [] \T1/phv/m/n/10 (MPI[]_[][]Comm comm, int count, int root, const std[
+]::source[]_[]location
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 106--108
+\T1/phv/m/n/10 std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 T $\OML/cmm/m/i
+t/10 >$ [] \T1/phv/m/n/10 (MPI[]_[][]Comm comm, int root, const std[]::source[]
+_[]location
+ []
+
+[9]
+Underfull \hbox (badness 1297) in paragraph at lines 132--134
 \T1/phv/m/n/10 int [] (const MPI[]_[][]Status &sta-tus, const std[]::source[]_[
 ]location &location=std[]::source[]_[]location[]
  []
 
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 106.
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 106.
-[9] [10] [11]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 227.
- [12] [13] [14] [15]) (./namespace_m_p_iw_1_1details.tex)
-(./namespace_m_p_iw_1_1errors.tex [16]) (./namespace_m_p_iw_1_1structs.tex)
-(./namespace_m_p_iw_1_1types.tex) [17] [18
-
-]
+(Font)              scaled to size 7.19995pt on input line 152.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 154.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 154.
+[10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21])
+(./namespace_m_p_iw_1_1details.tex) (./namespace_m_p_iw_1_1details_1_1cnpts.tex
+[22]) (./namespace_m_p_iw_1_1errors.tex [23])
+(./namespace_m_p_iw_1_1structs.tex) (./namespace_m_p_iw_1_1types.tex) [24]
 Chapter 5.
-(./class_m_p_iw_1_1_comm__raii.tex [19] [20])
-(./class_m_p_iw_1_1_group__raii.tex [21] [22])
-(./class_m_p_iw_1_1_init__raii.tex [23])
+(./class_m_p_iw_1_1_comm__raii.tex [25
+
+] [26])
+(./class_m_p_iw_1_1_group__raii.tex [27] [28])
+(./class_m_p_iw_1_1_init__raii.tex [29])
+(./class_m_p_iw_1_1_init__threads__raii.tex [30] [31])
 (./struct_m_p_iw_1_1structs_1_1_recv__st.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -985,79 +1021,149 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[24]) [25] [26
-
-]
+) (./class_m_p_iw_1_1_type__raii.tex [32] [33]) [34]
 Chapter 6.
 (./communication_8hpp.tex <./communication_8hpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./communication_8hpp__incl.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >
-<communication_8hpp__incl.pdf, id=1038, 748.7975pt x 280.04625pt>
+<communication_8hpp__incl.pdf, id=1465, 1028.84375pt x 291.0875pt>
 File: communication_8hpp__incl.pdf Graphic file (type pdf)
 <use communication_8hpp__incl.pdf>
-Package pdftex.def Info: communication_8hpp__incl.pdf  used on input line 16.
-(pdftex.def)             Requested size: 350.0pt x 130.89958pt.
+Package pdftex.def Info: communication_8hpp__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 99.02617pt.
  <./communication_8hpp__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./communication_8hpp__dep__incl.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >
-<communication_8hpp__dep__incl.pdf, id=1046, 302.12875pt x 178.6675pt>
+<communication_8hpp__dep__incl.pdf, id=1473, 217.81375pt x 200.75pt>
 File: communication_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use communication_8hpp__dep__incl.pdf>
 Package pdftex.def Info: communication_8hpp__dep__incl.pdf  used on input line 
-23.
-(pdftex.def)             Requested size: 301.0pt x 177.99911pt.
- [27]
-Underfull \hbox (badness 5970) in paragraph at lines 46--48
-\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, std[]::vector$\OML/cmm/m/it/10 <$ 
-\T1/phv/m/n/10 T $\OML/cmm/m/it/10 >$ \T1/phv/m/n/10 data, const std[]::source[
-]_[]location
+24.
+(pdftex.def)             Requested size: 217.0pt x 199.99901pt.
+ [35
+
+]
+Underfull \hbox (badness 1067) in paragraph at lines 39--41
+\T1/phv/m/n/10 MPI[]_[][]Status [] (MPI[]_[][]Comm comm, T $\OMS/cmsy/m/n/10 ^^
+C$\T1/phv/m/n/10 dest, int count, int source=MPI[]_[][]ANY[]_[][]SOURCE, U
  []
 
-[28]
-Underfull \hbox (badness 6141) in paragraph at lines 84--86
+
+Underfull \hbox (badness 2012) in paragraph at lines 47--49
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, const T &data, int dest, U tag, co
+nst std[]::source[]_[]location
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 55--57
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, const T $\OMS/cmsy/m/n/10 ^^C$\T1/
+phv/m/n/10 data, int count, const std[]::source[]_[]location
+ []
+
+[36]
+Underfull \hbox (badness 1460) in paragraph at lines 61--63
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, T $\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/
+n/10 dest, int count, int root, const std[]::source[]_[]location
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 69--71
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, const T &data, const std[]::source
+[]_[]location
+ []
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 77--79
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, const T &data, int root, const std
+[]::source[]_[]location
+ []
+
+
+Underfull \hbox (badness 2932) in paragraph at lines 85--87
+\T1/phv/m/n/10 std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 T $\OML/cmm/m/i
+t/10 >$ [] \T1/phv/m/n/10 (MPI[]_[][]Comm comm, T data, const std[]::source[]_[
+]location
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 93--95
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, const T &data, int root, const std
+[]::source[]_[]location
+ []
+
+[37]
+Underfull \hbox (badness 936) in paragraph at lines 105--107
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, T $\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/
+n/10 dest, int count, int root, const std[]::source[]_[]location
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 113--115
+\T1/phv/m/n/10 void [] (MPI[]_[][]Comm comm, T $\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/
+n/10 dest, int root, const std[]::source[]_[]location
+ []
+
+
+Underfull \hbox (badness 6141) in paragraph at lines 121--123
 \T1/phv/m/n/10 std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 T $\OML/cmm/m/i
 t/10 >$ [] \T1/phv/m/n/10 (MPI[]_[][]Comm comm, int root, const std[]::source[]
 _[]location
  []
 
-) (./error__codes_8hpp.tex <./error__codes_8hpp__incl.pdf>
-<error__codes_8hpp__incl.pdf, id=1100, 382.42876pt x 234.8775pt>
+[38]) (./concepts_8hpp.tex <./concepts_8hpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./concepts_8hpp__incl.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>
+<concepts_8hpp__incl.pdf, id=1558, 300.12125pt x 178.6675pt>
+File: concepts_8hpp__incl.pdf Graphic file (type pdf)
+<use concepts_8hpp__incl.pdf>
+Package pdftex.def Info: concepts_8hpp__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 299.0pt x 178.01547pt.
+ <./concepts_8hpp__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./concepts_8hpp__dep__incl.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>
+<concepts_8hpp__dep__incl.pdf, id=1566, 217.81375pt x 279.0425pt>
+File: concepts_8hpp__dep__incl.pdf Graphic file (type pdf)
+<use concepts_8hpp__dep__incl.pdf>
+Package pdftex.def Info: concepts_8hpp__dep__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 217.0pt x 277.99863pt.
+ [39]) (./error__codes_8hpp.tex <./error__codes_8hpp__incl.pdf>
+<error__codes_8hpp__incl.pdf, id=1585, 382.42876pt x 234.8775pt>
 File: error__codes_8hpp__incl.pdf Graphic file (type pdf)
 <use error__codes_8hpp__incl.pdf>
 Package pdftex.def Info: error__codes_8hpp__incl.pdf  used on input line 11.
 (pdftex.def)             Requested size: 350.0pt x 214.97173pt.
- [29] <./error__codes_8hpp__dep__incl.pdf
-
-pdfTeX warning: pdflatex (file ./error__codes_8hpp__dep__incl.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
->
-<error__codes_8hpp__dep__incl.pdf, id=1112, 351.3125pt x 256.96pt>
+ [40] <./error__codes_8hpp__dep__incl.pdf>
+<error__codes_8hpp__dep__incl.pdf, id=1601, 265.99374pt x 279.0425pt>
 File: error__codes_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use error__codes_8hpp__dep__incl.pdf>
 Package pdftex.def Info: error__codes_8hpp__dep__incl.pdf  used on input line 1
 8.
-(pdftex.def)             Requested size: 350.0pt x 256.01834pt.
- [30]) (./getters_8hpp.tex <./getters_8hpp__incl.pdf>
-<getters_8hpp__incl.pdf, id=1131, 465.74pt x 223.83624pt>
+(pdftex.def)             Requested size: 265.0pt x 278.02419pt.
+ [41]) (./getters_8hpp.tex <./getters_8hpp__incl.pdf>
+<getters_8hpp__incl.pdf, id=1623, 465.74pt x 234.8775pt>
 File: getters_8hpp__incl.pdf Graphic file (type pdf)
 <use getters_8hpp__incl.pdf>
 Package pdftex.def Info: getters_8hpp__incl.pdf  used on input line 12.
-(pdftex.def)             Requested size: 350.0pt x 168.2183pt.
+(pdftex.def)             Requested size: 350.0pt x 176.51608pt.
  <./getters_8hpp__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./getters_8hpp__dep__incl.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >
-<getters_8hpp__dep__incl.pdf, id=1139, 351.3125pt x 245.91875pt>
+<getters_8hpp__dep__incl.pdf, id=1631, 265.99374pt x 279.0425pt>
 File: getters_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use getters_8hpp__dep__incl.pdf>
 Package pdftex.def Info: getters_8hpp__dep__incl.pdf  used on input line 19.
-(pdftex.def)             Requested size: 350.0pt x 245.01755pt.
- [31]
+(pdftex.def)             Requested size: 265.0pt x 278.02419pt.
+ [42]
 Underfull \hbox (badness 6220) in paragraph at lines 30--32
 []\T1/phv/m/n/10 int [] (const MPI[]_[][]Status &sta-tus, MPI[]_[][]Datatype ty
 pe, const std[]::source[]_[]location
@@ -1087,109 +1193,101 @@ Underfull \hbox (badness 2005) in paragraph at lines 40--42
 n &location=std[]::source[]_[]location[]
  []
 
+
+Underfull \hbox (badness 2205) in paragraph at lines 44--45
+[]\T1/phv/m/n/10 int [] (MPI[]_[][]Datatype type, const std[]::source[]_[]locat
+ion &location=std[]::source[]_[]location[]
+ []
+
 ) (./include_8hpp.tex <./include_8hpp__incl.pdf>
-<include_8hpp__incl.pdf, id=1165, 742.775pt x 336.25626pt>
+<include_8hpp__incl.pdf, id=1655, 934.49126pt x 347.2975pt>
 File: include_8hpp__incl.pdf Graphic file (type pdf)
 <use include_8hpp__incl.pdf>
 Package pdftex.def Info: include_8hpp__incl.pdf  used on input line 13.
-(pdftex.def)             Requested size: 350.0pt x 158.44579pt.
-) (./raii_8hpp.tex [32] <./raii_8hpp__incl.pdf>
-<raii_8hpp__incl.pdf, id=1181, 243.91125pt x 167.62625pt>
+(pdftex.def)             Requested size: 350.0pt x 130.07726pt.
+ [43]) (./raii_8hpp.tex <./raii_8hpp__incl.pdf>
+<raii_8hpp__incl.pdf, id=1671, 217.81375pt x 178.6675pt>
 File: raii_8hpp__incl.pdf Graphic file (type pdf)
 <use raii_8hpp__incl.pdf>
 Package pdftex.def Info: raii_8hpp__incl.pdf  used on input line 8.
-(pdftex.def)             Requested size: 243.0pt x 167.00172pt.
+(pdftex.def)             Requested size: 217.0pt x 177.99911pt.
  <./raii_8hpp__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./raii_8hpp__dep__incl.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >
-<raii_8hpp__dep__incl.pdf, id=1189, 260.975pt x 178.6675pt>
+<raii_8hpp__dep__incl.pdf, id=1679, 217.81375pt x 200.75pt>
 File: raii_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use raii_8hpp__dep__incl.pdf>
 Package pdftex.def Info: raii_8hpp__dep__incl.pdf  used on input line 15.
-(pdftex.def)             Requested size: 260.0pt x 178.00185pt.
- [33]) (./structs_8hpp.tex <./structs_8hpp__incl.pdf>
-<structs_8hpp__incl.pdf, id=1208, 274.02374pt x 167.62625pt>
+(pdftex.def)             Requested size: 217.0pt x 199.99901pt.
+ [44]) (./structs_8hpp.tex <./structs_8hpp__incl.pdf>
+<structs_8hpp__incl.pdf, id=1700, 274.02374pt x 178.6675pt>
 File: structs_8hpp__incl.pdf Graphic file (type pdf)
 <use structs_8hpp__incl.pdf>
 Package pdftex.def Info: structs_8hpp__incl.pdf  used on input line 10.
-(pdftex.def)             Requested size: 273.0pt x 167.01195pt.
+(pdftex.def)             Requested size: 273.0pt x 178.01274pt.
  <./structs_8hpp__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./structs_8hpp__dep__incl.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >
-<structs_8hpp__dep__incl.pdf, id=1216, 362.35374pt x 324.21124pt>
+<structs_8hpp__dep__incl.pdf, id=1708, 315.1775pt x 357.335pt>
 File: structs_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use structs_8hpp__dep__incl.pdf>
 Package pdftex.def Info: structs_8hpp__dep__incl.pdf  used on input line 17.
-(pdftex.def)             Requested size: 350.0pt x 313.16367pt.
- [34]) (./types_8hpp.tex <./types_8hpp__incl.pdf>
-<types_8hpp__incl.pdf, id=1236, 286.06876pt x 167.62625pt>
+(pdftex.def)             Requested size: 314.0pt x 356.02007pt.
+ [45]) (./types_8hpp.tex <./types_8hpp__incl.pdf>
+<types_8hpp__incl.pdf, id=1728, 286.06876pt x 178.6675pt>
 File: types_8hpp__incl.pdf Graphic file (type pdf)
 <use types_8hpp__incl.pdf>
 Package pdftex.def Info: types_8hpp__incl.pdf  used on input line 10.
-(pdftex.def)             Requested size: 285.0pt x 167.00172pt.
- [35] <./types_8hpp__dep__incl.pdf>
-<types_8hpp__dep__incl.pdf, id=1252, 375.4025pt x 313.17pt>
+(pdftex.def)             Requested size: 285.0pt x 178.00185pt.
+ [46] <./types_8hpp__dep__incl.pdf>
+<types_8hpp__dep__incl.pdf, id=1745, 315.1775pt x 357.335pt>
 File: types_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use types_8hpp__dep__incl.pdf>
 Package pdftex.def Info: types_8hpp__dep__incl.pdf  used on input line 17.
-(pdftex.def)             Requested size: 350.0pt x 291.99532pt.
- [36] [37] [38] [39]) [40] (./refman.ind
-Overfull \hbox (69.14363pt too wide) in paragraph at lines 3--5
-[]\T1/phv/m/n/10 /home/somik/WSL_Workspace/cpp/mpi_wrapper/src/communication.hp
-p,
+(pdftex.def)             Requested size: 314.0pt x 356.02007pt.
+ [47] [48] [49] [50]) [51] [52
+
+] (./refman.ind
+Overfull \hbox (44.63705pt too wide) in paragraph at lines 3--5
+[]\T1/phv/m/n/10 /home/somik/Workspace/cpp/mpi_wrapper/src/communication.hpp,
  []
 
 
-Overfull \hbox (56.5979pt too wide) in paragraph at lines 5--7
-[]\T1/phv/m/n/10 /home/somik/WSL_Workspace/cpp/mpi_wrapper/src/error_codes.hpp,
-
+Overfull \hbox (20.09457pt too wide) in paragraph at lines 5--7
+[]\T1/phv/m/n/10 /home/somik/Workspace/cpp/mpi_wrapper/src/concepts.hpp,
  []
 
 
-Overfull \hbox (36.09613pt too wide) in paragraph at lines 7--9
-[]\T1/phv/m/n/10 /home/somik/WSL_Workspace/cpp/mpi_wrapper/src/getters.hpp,
+Overfull \hbox (32.09132pt too wide) in paragraph at lines 7--9
+[]\T1/phv/m/n/10 /home/somik/Workspace/cpp/mpi_wrapper/src/error_codes.hpp,
  []
 
 
-Overfull \hbox (37.09523pt too wide) in paragraph at lines 9--11
-[]\T1/phv/m/n/10 /home/somik/WSL_Workspace/cpp/mpi_wrapper/src/include.hpp,
+Underfull \hbox (badness 10000) in paragraph at lines 13--15
+[]\T1/phv/m/n/10 /home/somik/Workspace/cpp/mpi_wrapper/src/raii.hpp,
  []
 
-
-Overfull \hbox (20.6254pt too wide) in paragraph at lines 11--13
-[]\T1/phv/m/n/10 /home/somik/WSL_Workspace/cpp/mpi_wrapper/src/raii.hpp,
- []
+[53
 
 
-Overfull \hbox (35.22316pt too wide) in paragraph at lines 13--15
-[]\T1/phv/m/n/10 /home/somik/WSL_Workspace/cpp/mpi_wrapper/src/structs.hpp,
- []
+] [54] [55
 
-
-Overfull \hbox (30.09337pt too wide) in paragraph at lines 15--17
-[]\T1/phv/m/n/10 /home/somik/WSL_Workspace/cpp/mpi_wrapper/src/types.hpp,
- []
-
-[41
-
-
-
-] [42]) (./refman.aux)
+]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: FC727466636B2714DF17806A3CF1ADEA;28312.
+(rerunfilecheck)             Checksum: 79BE784DA33F8FF3F7FDCE390DA6019A;40194.
  ) 
 Here is how much of TeX's memory you used:
- 17931 strings out of 478287
- 296103 string characters out of 5849289
- 636844 words of memory out of 5000000
- 35457 multiletter control sequences out of 15000+600000
+ 18181 strings out of 478287
+ 304709 string characters out of 5849288
+ 654277 words of memory out of 5000000
+ 35581 multiletter control sequences out of 15000+600000
  519745 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,16n,117p,699b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,16n,117p,516b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
@@ -1203,10 +1301,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share
 mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /helvetic/uhvr8a.pfb>
-Output written on refman.pdf (48 pages, 310384 bytes).
+Output written on refman.pdf (63 pages, 355446 bytes).
 PDF statistics:
- 1608 PDF objects out of 1728 (max. 8388607)
- 1476 compressed objects within 15 object streams
- 312 named destinations out of 1000 (max. 500000)
- 1082 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2182 PDF objects out of 2487 (max. 8388607)
+ 2022 compressed objects within 21 object streams
+ 430 named destinations out of 1000 (max. 500000)
+ 1500 words of extra memory for PDF output out of 10000 (max. 10000000)
 

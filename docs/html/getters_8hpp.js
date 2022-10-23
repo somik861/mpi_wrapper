@@ -6,5 +6,6 @@ var getters_8hpp =
     [ "Get_count", "getters_8hpp.html#a0c5eea252d8230dee97de303b2684a2d", null ],
     [ "Get_processor_name", "getters_8hpp.html#a095e038c0fa8ceaa36d1c46054f51c62", null ],
     [ "Group_rank", "getters_8hpp.html#a1649c51078947cc7f4df44e99cc38100", null ],
-    [ "Group_size", "getters_8hpp.html#a35b640838b15d0bd52ace158f91379de", null ]
+    [ "Group_size", "getters_8hpp.html#a35b640838b15d0bd52ace158f91379de", null ],
+    [ "Type_size", "getters_8hpp.html#a501addcc162fcd698fec9d3fbc546b11", null ]
 ];

@@ -1,5 +1,6 @@
-\hypertarget{communication_8hpp}{}\doxysection{/home/somik/\+WSL\+\_\+\+Workspace/cpp/mpi\+\_\+wrapper/src/communication.hpp File Reference}
-\label{communication_8hpp}\index{/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/communication.hpp@{/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/communication.hpp}}
+\hypertarget{communication_8hpp}{}\doxysection{/home/somik/\+Workspace/cpp/mpi\+\_\+wrapper/src/communication.hpp File Reference}
+\label{communication_8hpp}\index{/home/somik/Workspace/cpp/mpi\_wrapper/src/communication.hpp@{/home/somik/Workspace/cpp/mpi\_wrapper/src/communication.hpp}}
+{\ttfamily \#include \char`\"{}concepts.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}error\+\_\+codes.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}getters.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}structs.\+hpp\char`\"{}}\newline
@@ -20,7 +21,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=301pt]{communication_8hpp__dep__incl}
+\includegraphics[width=217pt]{communication_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Namespaces}
@@ -33,63 +34,105 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_1_1details_a215d35f13d53f0f8085cc1e43112c1f8}{MPIw\+::details\+::split\+\_\+buffer}} (const std\+::vector$<$ T $>$ \&buffer, const std\+::vector$<$ T $>$ \&offsets)
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_1_1details_a9e0291db3b1c5262202121a2b7853407}{MPIw\+::details\+::split\+\_\+buffer}} (const std\+::vector$<$ T $>$ \&buffer, const std\+::vector$<$ int $>$ \&offsets)
 \item 
-{\footnotesize template$<$typename T $>$ }\\structs\+::\+Recv\+\_\+st$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a8de7b8598a652a660e8aa80c998274ce}{MPIw\+::\+Recv}} (MPI\+\_\+\+Comm comm, int source=MPI\+\_\+\+ANY\+\_\+\+SOURCE, int tag=MPI\+\_\+\+ANY\+\_\+\+TAG, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T , details\+::cnpts\+::\+Enum\+Or\+Int U = int$>$ }\\MPI\+\_\+\+Status \mbox{\hyperlink{namespace_m_p_iw_af767ae6daff3be8b31fcd651000f7437}{MPIw\+::\+Recv}} (MPI\+\_\+\+Comm comm, T $\ast$dest, int count, int source=MPI\+\_\+\+ANY\+\_\+\+SOURCE, U tag=MPI\+\_\+\+ANY\+\_\+\+TAG, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a5d562e163cdff3f3681aab67be429df8}{MPIw\+::\+Send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int dest, int tag, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T , details\+::cnpts\+::\+Enum\+Or\+Int U = int$>$ }\\structs\+::\+Recv\+\_\+st$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_a4bd1a6c0e22ccf64e69d866575965fd2}{MPIw\+::\+Recv}} (MPI\+\_\+\+Comm comm, int source=MPI\+\_\+\+ANY\+\_\+\+SOURCE, U tag=MPI\+\_\+\+ANY\+\_\+\+TAG, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_ae0072a48661de7bfb28459922f9b338e}{MPIw\+::\+Bcast}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T , details\+::cnpts\+::\+Enum\+Or\+Int U = int$>$ }\\structs\+::\+Recv\+\_\+st$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a96f9cf85b5cfca44666bc349efbd8d2d}{MPIw\+::\+Recv\+\_\+one}} (MPI\+\_\+\+Comm comm, int source=MPI\+\_\+\+ANY\+\_\+\+SOURCE, U tag=MPI\+\_\+\+ANY\+\_\+\+TAG, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a839c05b44db6eab76bbe1bb5f6a7280d}{MPIw\+::\+Bcast\+\_\+managed}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T , details\+::cnpts\+::\+Enum\+Or\+Int U = int$>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_aeb7e3aa4bb1b60f3ac0392d00157a959}{MPIw\+::\+Send}} (MPI\+\_\+\+Comm comm, const T $\ast$data, int count, int dest, U tag, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a44661325c53e0390d4da141b6d3e922b}{MPIw\+::\+Bcast\+\_\+send}} (MPI\+\_\+\+Comm comm, std\+::vector$<$ T $>$ data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$details\+::cnpts\+::\+Container T, details\+::cnpts\+::\+Enum\+Or\+Int U = int$>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a2c33d5461a0e0c894feee8b211f9cd53}{MPIw\+::\+Send}} (MPI\+\_\+\+Comm comm, const T \&data, int dest, U tag, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$typename T , details\+::cnpts\+::\+Enum\+Or\+Int U = int$>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a19e7136e5062a719e6078a144156c5ea}{MPIw\+::\+Send\+\_\+one}} (MPI\+\_\+\+Comm comm, T data, int dest, U tag, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_a50c705b5961955355370866a26447569}{MPIw\+::\+Bcast}} (MPI\+\_\+\+Comm comm, const T \&data, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_aaf78046218f03e6d5cc6a35dc9048a75}{MPIw\+::\+Bcast\+\_\+managed}} (MPI\+\_\+\+Comm comm, const T \&data, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a9bb206f8ea6a1ab08d56a2cb6be58106}{MPIw\+::\+Bcast\+\_\+send}} (MPI\+\_\+\+Comm comm, const T $\ast$data, int count, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a713cefcd5d6db952c576575d25c1a609}{MPIw\+::\+Bcast\+\_\+send}} (MPI\+\_\+\+Comm comm, const T \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_ac21245f451621cdab3454ef00594394a}{MPIw\+::\+Bcast\+\_\+send\+\_\+one}} (MPI\+\_\+\+Comm comm, T data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_ab6d70d5f48e871cf5dbe507ba63bf701}{MPIw\+::\+Bcast\+\_\+recv}} (MPI\+\_\+\+Comm comm, T $\ast$dest, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a9c3c54ee389d7ef416c36d18ee779efc}{MPIw\+::\+Bcast\+\_\+recv}} (MPI\+\_\+\+Comm comm, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a472feaa0d564a07ca74c5408dd298df9}{MPIw\+::\+Bcast\+\_\+send\+\_\+managed}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespace_m_p_iw_accfc3552ca4f22049b2cde9075105e0e}{MPIw\+::\+Bcast\+\_\+recv\+\_\+one}} (MPI\+\_\+\+Comm comm, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_ae037fafd5f3831364e03f997c317961d}{MPIw\+::\+Bcast\+\_\+send\+\_\+managed}} (MPI\+\_\+\+Comm comm, const T $\ast$data, int count, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_ad657a211c60a04cd383de0f7efcb410e}{MPIw\+::\+Bcast\+\_\+send\+\_\+managed}} (MPI\+\_\+\+Comm comm, const T \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_af88732ffd8f69de36f78f3c31bf4f5f2}{MPIw\+::\+Bcast\+\_\+recv\+\_\+managed}} (MPI\+\_\+\+Comm comm, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_ae3ade4aa2b05dbf88e5905a3f7c25868}{MPIw\+::\+Gather}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_a1dbc7b8f152dd7c69622f69f2f36bdf9}{MPIw\+::\+Gather}} (MPI\+\_\+\+Comm comm, const T \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a368df30b46e846b1e50baa77852e468a}{MPIw\+::\+Gather\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a40e58b0bf4b7db279b69472930c6fd62}{MPIw\+::\+Gather\+\_\+send}} (MPI\+\_\+\+Comm comm, const T $\ast$data, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_af73700d18587b2f6e85ec30cc00ae232}{MPIw\+::\+Gather\+\_\+recv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a750aa7c3b170acf637805a8bb94805fe}{MPIw\+::\+Gather\+\_\+send}} (MPI\+\_\+\+Comm comm, const T \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a55987f5c279cdd5da85520f2dc1c8b23}{MPIw\+::\+Allgather}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_aae2105089173af251418371c207db82a}{MPIw\+::\+Gather\+\_\+send\+\_\+one}} (MPI\+\_\+\+Comm comm, T data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_aadea288080309db76b957df739a487e8}{MPIw\+::\+Gatherv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a4c0c6eef96f107a1c57569bacba1f0d7}{MPIw\+::\+Gather\+\_\+recv}} (MPI\+\_\+\+Comm comm, const T $\ast$data, T $\ast$dest, int count, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a2891c7003540515aacea0784af17b411}{MPIw\+::\+Gatherv\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_a0d2b81ac671a3e21c9b90ec18654d71a}{MPIw\+::\+Gather\+\_\+recv}} (MPI\+\_\+\+Comm comm, const T \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_a80cbcf2d6524aa52a488e33626e01dbc}{MPIw\+::\+Gatherv\+\_\+recv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a94d207570f0a9d228252bc3e7ced031c}{MPIw\+::\+Gather\+\_\+recv\+\_\+one}} (MPI\+\_\+\+Comm comm, T data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_ab6885e7472e8af8e95255a5591ce3eb5}{MPIw\+::\+Allgatherv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_ad460fa562bd243874af42c257bf7a366}{MPIw\+::\+Allgather}} (MPI\+\_\+\+Comm comm, const T $\ast$data, T $\ast$dest, int count, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_ac4d2a6f6a6df9e682ace86967606e89a}{MPIw\+::\+Scatter}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_ac25967a2cc03873faa0a0e0fc80c0229}{MPIw\+::\+Allgather}} (MPI\+\_\+\+Comm comm, const T \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a1d129b36c52621830f01dc513ac4cbf1}{MPIw\+::\+Scatter\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ std\+::vector$<$ typename T\+::value\+\_\+type $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_a6825d4442864808fcb72189ac6aeafc1}{MPIw\+::\+Gatherv}} (MPI\+\_\+\+Comm comm, const T \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a0a197a719959b53f7ac2752005ac3e62}{MPIw\+::\+Gatherv\+\_\+send}} (MPI\+\_\+\+Comm comm, const T \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ std\+::vector$<$ typename T\+::value\+\_\+type $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_a058a41df546353db93a75ac2abd548da}{MPIw\+::\+Gatherv\+\_\+recv}} (MPI\+\_\+\+Comm comm, const T \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ std\+::vector$<$ typename T\+::value\+\_\+type $>$ $>$ \mbox{\hyperlink{namespace_m_p_iw_a82370d7bed78f319be8e351cd9a8b59b}{MPIw\+::\+Allgatherv}} (MPI\+\_\+\+Comm comm, const T \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_a98c1890566ade1fdc5f23d0831e00ef0}{MPIw\+::\+Scatter}} (MPI\+\_\+\+Comm comm, const T \&data, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a8ba3ada51bbbf5767b9adee90e5307a4}{MPIw\+::\+Scatter\+\_\+send}} (MPI\+\_\+\+Comm comm, const T $\ast$data, T $\ast$dest, int total\+\_\+count, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_aba96f18577fbc3f16451e403265ce7ef}{MPIw\+::\+Scatter\+\_\+send}} (MPI\+\_\+\+Comm comm, const T \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a816820ac7a8eb264ecee368dceb1d7d6}{MPIw\+::\+Scatter\+\_\+recv}} (MPI\+\_\+\+Comm comm, T $\ast$dest, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a38e976f33e9eb7e98ee9e6b79164f9bc}{MPIw\+::\+Scatter\+\_\+recv}} (MPI\+\_\+\+Comm comm, int count, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a4f04428ee9abe04ce1e48d9de4739b8d}{MPIw\+::\+Scatter\+\_\+send\+\_\+managed}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_ade359e0a831e4457506fe823b0d9eac3}{MPIw\+::\+Scatter\+\_\+send\+\_\+managed}} (MPI\+\_\+\+Comm comm, const T $\ast$data, T $\ast$dest, int total\+\_\+count, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_a2311465779c473e8d7a1cc01e6f81bb7}{MPIw\+::\+Scatter\+\_\+send\+\_\+managed}} (MPI\+\_\+\+Comm comm, const T \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a34864fcb4228b4254e6521711d507abf}{MPIw\+::\+Scatter\+\_\+recv\+\_\+managed}} (MPI\+\_\+\+Comm comm, T $\ast$dest, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_abe450ab1a36441e28b449ab42b5d08f5}{MPIw\+::\+Scatter\+\_\+recv\+\_\+managed}} (MPI\+\_\+\+Comm comm, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_af1a42168d102c1616895cacfb441c90d}{MPIw\+::\+Scatterv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ std\+::vector$<$ T $>$$>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_aad481b24c82920128904a12e94422d63}{MPIw\+::\+Scatterv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a71542ec11923b5216b7fb6424c687bab}{MPIw\+::\+Scatterv\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ std\+::vector$<$ T $>$$>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_a9f1bd5c8cd9838d7186f48e6fc561746}{MPIw\+::\+Scatterv\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_add75cd72eaade07be21eaee3b771653d}{MPIw\+::\+Scatterv\+\_\+recv}} (MPI\+\_\+\+Comm comm, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a8be3ff76b4f773f29168b2ce02be331b}{MPIw\+::\+Reduce}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_a620428c334c540f800336d5edb8db565}{MPIw\+::\+Reduce}} (MPI\+\_\+\+Comm comm, const T \&data, MPI\+\_\+\+Op op, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_af12b2eac4dbb4e1d4dfbbc9a547ed294}{MPIw\+::\+Reduce\+\_\+send}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_aeac202ca5ab6ca61a2a93ec9eddd0e4a}{MPIw\+::\+Reduce\+\_\+send}} (MPI\+\_\+\+Comm comm, const T $\ast$data, int count, MPI\+\_\+\+Op op, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a54cc3502e78f06cec45a535b4b97ef95}{MPIw\+::\+Reduce\+\_\+recv}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a76f961b87ac8c4ace491e420633094aa}{MPIw\+::\+Reduce\+\_\+send}} (MPI\+\_\+\+Comm comm, const T \&data, MPI\+\_\+\+Op op, int root, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespace_m_p_iw_a3500a67bffd652ea74eef41c3617faeb}{MPIw\+::\+All\+Reduce}} (MPI\+\_\+\+Comm comm, const std\+::vector$<$ T $>$ \&data, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_abb0fd7021ca5cc90cd07a846cf0a9a6f}{MPIw\+::\+Reduce\+\_\+recv}} (MPI\+\_\+\+Comm comm, const T $\ast$data, T $\ast$dest, int count, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_ae8c737604337770c05562dc10cfa0649}{MPIw\+::\+Reduce\+\_\+recv}} (MPI\+\_\+\+Comm comm, const T \&data, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespace_m_p_iw_a42f4f687c903cc807dd8d2160205717c}{MPIw\+::\+All\+Reduce}} (MPI\+\_\+\+Comm comm, const T $\ast$data, T $\ast$dest, int count, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
+\item 
+{\footnotesize template$<$details\+::cnpts\+::\+Container T$>$ }\\std\+::vector$<$ typename T\+::value\+\_\+type $>$ \mbox{\hyperlink{namespace_m_p_iw_a1eb5acbd4acd503838303247efbebcc7}{MPIw\+::\+All\+Reduce}} (MPI\+\_\+\+Comm comm, const T \&data, MPI\+\_\+\+Op op, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \item 
 void \mbox{\hyperlink{namespace_m_p_iw_ae98cf6ceb5f12511a6d3cb7fa0174b3b}{MPIw\+::\+Barrier}} (MPI\+\_\+\+Comm comm, const std\+::source\+\_\+location \&location=std\+::source\+\_\+location\+::current())
 \end{DoxyCompactItemize}

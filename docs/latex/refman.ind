@@ -1,237 +1,298 @@
 \begin{theindex}
 
-  \item {/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/communication.hpp}, 
-		\hyperpage{27}
-  \item {/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/error\_codes.hpp}, 
-		\hyperpage{30}
-  \item {/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/getters.hpp}, 
-		\hyperpage{31}
-  \item {/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/include.hpp}, 
-		\hyperpage{32}
-  \item {/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/raii.hpp}, 
-		\hyperpage{33}
-  \item {/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/structs.hpp}, 
-		\hyperpage{34}
-  \item {/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/types.hpp}, 
+  \item {/home/somik/Workspace/cpp/mpi\_wrapper/src/communication.hpp}, 
 		\hyperpage{35}
+  \item {/home/somik/Workspace/cpp/mpi\_wrapper/src/concepts.hpp}, 
+		\hyperpage{39}
+  \item {/home/somik/Workspace/cpp/mpi\_wrapper/src/error\_codes.hpp}, 
+		\hyperpage{40}
+  \item {/home/somik/Workspace/cpp/mpi\_wrapper/src/getters.hpp}, 
+		\hyperpage{42}
+  \item {/home/somik/Workspace/cpp/mpi\_wrapper/src/include.hpp}, 
+		\hyperpage{44}
+  \item {/home/somik/Workspace/cpp/mpi\_wrapper/src/raii.hpp}, 
+		\hyperpage{44}
+  \item {/home/somik/Workspace/cpp/mpi\_wrapper/src/structs.hpp}, 
+		\hyperpage{45}
+  \item {/home/somik/Workspace/cpp/mpi\_wrapper/src/types.hpp}, 
+		\hyperpage{46}
   \item {$\sim$Comm\_raii}
-    \subitem {MPIw::Comm\_raii}, \hyperpage{20}
+    \subitem {MPIw::Comm\_raii}, \hyperpage{26}
   \item {$\sim$Group\_raii}
-    \subitem {MPIw::Group\_raii}, \hyperpage{22}
+    \subitem {MPIw::Group\_raii}, \hyperpage{28}
   \item {$\sim$Init\_raii}
-    \subitem {MPIw::Init\_raii}, \hyperpage{24}
+    \subitem {MPIw::Init\_raii}, \hyperpage{30}
+  \item {$\sim$Init\_threads\_raii}
+    \subitem {MPIw::Init\_threads\_raii}, \hyperpage{31}
+  \item {$\sim$Type\_raii}
+    \subitem {MPIw::Type\_raii}, \hyperpage{34}
 
   \indexspace
 
   \item {Allgather}
-    \subitem {MPIw}, \hyperpage{9}
+    \subitem {MPIw}, \hyperpage{10}
   \item {Allgatherv}
-    \subitem {MPIw}, \hyperpage{9}
+    \subitem {MPIw}, \hyperpage{10}
   \item {AllReduce}
-    \subitem {MPIw}, \hyperpage{9}
+    \subitem {MPIw}, \hyperpage{11}
 
   \indexspace
 
   \item {Barrier}
-    \subitem {MPIw}, \hyperpage{9}
-  \item {Bcast}
-    \subitem {MPIw}, \hyperpage{10}
-  \item {Bcast\_managed}
-    \subitem {MPIw}, \hyperpage{10}
-  \item {Bcast\_recv}
-    \subitem {MPIw}, \hyperpage{10}
-  \item {Bcast\_recv\_managed}
-    \subitem {MPIw}, \hyperpage{10}
-  \item {Bcast\_send}
-    \subitem {MPIw}, \hyperpage{10}
-  \item {Bcast\_send\_managed}
     \subitem {MPIw}, \hyperpage{11}
+  \item {Bcast}
+    \subitem {MPIw}, \hyperpage{11}
+  \item {Bcast\_managed}
+    \subitem {MPIw}, \hyperpage{11}
+  \item {Bcast\_recv}
+    \subitem {MPIw}, \hyperpage{12}
+  \item {Bcast\_recv\_managed}
+    \subitem {MPIw}, \hyperpage{12}
+  \item {Bcast\_recv\_one}
+    \subitem {MPIw}, \hyperpage{12}
+  \item {Bcast\_send}
+    \subitem {MPIw}, \hyperpage{12, 13}
+  \item {Bcast\_send\_managed}
+    \subitem {MPIw}, \hyperpage{13}
+  \item {Bcast\_send\_one}
+    \subitem {MPIw}, \hyperpage{13}
 
   \indexspace
 
   \item {check\_code}
-    \subitem {MPIw::errors}, \hyperpage{17}
+    \subitem {MPIw::errors}, \hyperpage{24}
   \item {comm}
-    \subitem {MPIw::Comm\_raii}, \hyperpage{21}
+    \subitem {MPIw::Comm\_raii}, \hyperpage{27}
   \item {Comm\_raii}
-    \subitem {MPIw::Comm\_raii}, \hyperpage{19, 20}
+    \subitem {MPIw::Comm\_raii}, \hyperpage{25, 26}
   \item {Comm\_rank}
-    \subitem {MPIw}, \hyperpage{11}
+    \subitem {MPIw}, \hyperpage{13}
   \item {Comm\_size}
-    \subitem {MPIw}, \hyperpage{11}
+    \subitem {MPIw}, \hyperpage{14}
+  \item {Container}
+    \subitem {MPIw::details::cnpts}, \hyperpage{23}
 
   \indexspace
 
   \item {data}
-    \subitem {MPIw::structs::Recv\_st$<$ T $>$}, \hyperpage{25}
+    \subitem {MPIw::structs::Recv\_st$<$ T $>$}, \hyperpage{32}
 
   \indexspace
 
+  \item {EnumOrInt}
+    \subitem {MPIw::details::cnpts}, \hyperpage{23}
   \item {error\_message}
-    \subitem {MPIw::errors}, \hyperpage{17}
+    \subitem {MPIw::errors}, \hyperpage{24}
 
   \indexspace
 
   \item {Gather}
-    \subitem {MPIw}, \hyperpage{11}
+    \subitem {MPIw}, \hyperpage{14}
   \item {Gather\_recv}
-    \subitem {MPIw}, \hyperpage{11}
+    \subitem {MPIw}, \hyperpage{14}
+  \item {Gather\_recv\_one}
+    \subitem {MPIw}, \hyperpage{14}
   \item {Gather\_send}
-    \subitem {MPIw}, \hyperpage{12}
+    \subitem {MPIw}, \hyperpage{15}
+  \item {Gather\_send\_one}
+    \subitem {MPIw}, \hyperpage{15}
   \item {Gatherv}
-    \subitem {MPIw}, \hyperpage{12}
+    \subitem {MPIw}, \hyperpage{15}
   \item {Gatherv\_recv}
-    \subitem {MPIw}, \hyperpage{12}
+    \subitem {MPIw}, \hyperpage{15}
   \item {Gatherv\_send}
-    \subitem {MPIw}, \hyperpage{12}
+    \subitem {MPIw}, \hyperpage{16}
   \item {get}
-    \subitem {MPIw::Comm\_raii}, \hyperpage{20}
-    \subitem {MPIw::Group\_raii}, \hyperpage{22}
+    \subitem {MPIw::Comm\_raii}, \hyperpage{26}
+    \subitem {MPIw::Group\_raii}, \hyperpage{28}
+    \subitem {MPIw::Type\_raii}, \hyperpage{34}
   \item {Get\_count}
-    \subitem {MPIw}, \hyperpage{12, 13}
+    \subitem {MPIw}, \hyperpage{16}
   \item {get\_mpi\_type}
-    \subitem {MPIw::types}, \hyperpage{17}
+    \subitem {MPIw::types}, \hyperpage{24}
   \item {Get\_processor\_name}
-    \subitem {MPIw}, \hyperpage{13}
+    \subitem {MPIw}, \hyperpage{16}
   \item {group}
-    \subitem {MPIw::Group\_raii}, \hyperpage{23}
+    \subitem {MPIw::Group\_raii}, \hyperpage{29}
   \item {Group\_raii}
-    \subitem {MPIw::Group\_raii}, \hyperpage{21, 22}
+    \subitem {MPIw::Group\_raii}, \hyperpage{27, 28}
   \item {Group\_rank}
-    \subitem {MPIw}, \hyperpage{13}
+    \subitem {MPIw}, \hyperpage{16}
   \item {Group\_size}
-    \subitem {MPIw}, \hyperpage{13}
+    \subitem {MPIw}, \hyperpage{17}
 
   \indexspace
 
   \item {Init\_raii}
-    \subitem {MPIw::Init\_raii}, \hyperpage{23, 24}
+    \subitem {MPIw::Init\_raii}, \hyperpage{29, 30}
+  \item {Init\_threads\_raii}
+    \subitem {MPIw::Init\_threads\_raii}, \hyperpage{31}
 
   \indexspace
 
   \item {MPIw}, \hyperpage{7}
-    \subitem {Allgather}, \hyperpage{9}
-    \subitem {Allgatherv}, \hyperpage{9}
-    \subitem {AllReduce}, \hyperpage{9}
-    \subitem {Barrier}, \hyperpage{9}
-    \subitem {Bcast}, \hyperpage{10}
-    \subitem {Bcast\_managed}, \hyperpage{10}
-    \subitem {Bcast\_recv}, \hyperpage{10}
-    \subitem {Bcast\_recv\_managed}, \hyperpage{10}
-    \subitem {Bcast\_send}, \hyperpage{10}
-    \subitem {Bcast\_send\_managed}, \hyperpage{11}
-    \subitem {Comm\_rank}, \hyperpage{11}
-    \subitem {Comm\_size}, \hyperpage{11}
-    \subitem {Gather}, \hyperpage{11}
-    \subitem {Gather\_recv}, \hyperpage{11}
-    \subitem {Gather\_send}, \hyperpage{12}
-    \subitem {Gatherv}, \hyperpage{12}
-    \subitem {Gatherv\_recv}, \hyperpage{12}
-    \subitem {Gatherv\_send}, \hyperpage{12}
-    \subitem {Get\_count}, \hyperpage{12, 13}
-    \subitem {Get\_processor\_name}, \hyperpage{13}
-    \subitem {Group\_rank}, \hyperpage{13}
-    \subitem {Group\_size}, \hyperpage{13}
-    \subitem {Recv}, \hyperpage{13}
-    \subitem {Reduce}, \hyperpage{13}
-    \subitem {Reduce\_recv}, \hyperpage{14}
-    \subitem {Reduce\_send}, \hyperpage{14}
-    \subitem {Scatter}, \hyperpage{14}
-    \subitem {Scatter\_recv}, \hyperpage{14}
-    \subitem {Scatter\_recv\_managed}, \hyperpage{15}
-    \subitem {Scatter\_send}, \hyperpage{15}
-    \subitem {Scatter\_send\_managed}, \hyperpage{15}
-    \subitem {Scatterv}, \hyperpage{15}
-    \subitem {Scatterv\_recv}, \hyperpage{15}
-    \subitem {Scatterv\_send}, \hyperpage{16}
-    \subitem {Send}, \hyperpage{16}
-  \item {MPIw::Comm\_raii}, \hyperpage{19}
-    \subitem {$\sim$Comm\_raii}, \hyperpage{20}
-    \subitem {comm}, \hyperpage{21}
-    \subitem {Comm\_raii}, \hyperpage{19, 20}
-    \subitem {get}, \hyperpage{20}
-    \subitem {operator MPI\_Comm}, \hyperpage{20}
-    \subitem {operator=}, \hyperpage{20}
-    \subitem {operator\&}, \hyperpage{20}
-  \item {MPIw::details}, \hyperpage{16}
-    \subitem {split\_buffer}, \hyperpage{16}
-  \item {MPIw::errors}, \hyperpage{17}
-    \subitem {check\_code}, \hyperpage{17}
-    \subitem {error\_message}, \hyperpage{17}
-  \item {MPIw::Group\_raii}, \hyperpage{21}
-    \subitem {$\sim$Group\_raii}, \hyperpage{22}
-    \subitem {get}, \hyperpage{22}
-    \subitem {group}, \hyperpage{23}
-    \subitem {Group\_raii}, \hyperpage{21, 22}
-    \subitem {operator MPI\_Group}, \hyperpage{22}
-    \subitem {operator=}, \hyperpage{22}
-    \subitem {operator\&}, \hyperpage{22}
-  \item {MPIw::Init\_raii}, \hyperpage{23}
-    \subitem {$\sim$Init\_raii}, \hyperpage{24}
-    \subitem {Init\_raii}, \hyperpage{23, 24}
-    \subitem {operator=}, \hyperpage{24}
-  \item {MPIw::structs}, \hyperpage{17}
-  \item {MPIw::structs::Recv\_st$<$ T $>$}, \hyperpage{24}
-    \subitem {data}, \hyperpage{25}
-    \subitem {status}, \hyperpage{25}
-  \item {MPIw::types}, \hyperpage{17}
-    \subitem {get\_mpi\_type}, \hyperpage{17}
+    \subitem {Allgather}, \hyperpage{10}
+    \subitem {Allgatherv}, \hyperpage{10}
+    \subitem {AllReduce}, \hyperpage{11}
+    \subitem {Barrier}, \hyperpage{11}
+    \subitem {Bcast}, \hyperpage{11}
+    \subitem {Bcast\_managed}, \hyperpage{11}
+    \subitem {Bcast\_recv}, \hyperpage{12}
+    \subitem {Bcast\_recv\_managed}, \hyperpage{12}
+    \subitem {Bcast\_recv\_one}, \hyperpage{12}
+    \subitem {Bcast\_send}, \hyperpage{12, 13}
+    \subitem {Bcast\_send\_managed}, \hyperpage{13}
+    \subitem {Bcast\_send\_one}, \hyperpage{13}
+    \subitem {Comm\_rank}, \hyperpage{13}
+    \subitem {Comm\_size}, \hyperpage{14}
+    \subitem {Gather}, \hyperpage{14}
+    \subitem {Gather\_recv}, \hyperpage{14}
+    \subitem {Gather\_recv\_one}, \hyperpage{14}
+    \subitem {Gather\_send}, \hyperpage{15}
+    \subitem {Gather\_send\_one}, \hyperpage{15}
+    \subitem {Gatherv}, \hyperpage{15}
+    \subitem {Gatherv\_recv}, \hyperpage{15}
+    \subitem {Gatherv\_send}, \hyperpage{16}
+    \subitem {Get\_count}, \hyperpage{16}
+    \subitem {Get\_processor\_name}, \hyperpage{16}
+    \subitem {Group\_rank}, \hyperpage{16}
+    \subitem {Group\_size}, \hyperpage{17}
+    \subitem {Recv}, \hyperpage{17}
+    \subitem {Recv\_one}, \hyperpage{17}
+    \subitem {Reduce}, \hyperpage{17}
+    \subitem {Reduce\_recv}, \hyperpage{18}
+    \subitem {Reduce\_send}, \hyperpage{18}
+    \subitem {Scatter}, \hyperpage{19}
+    \subitem {Scatter\_recv}, \hyperpage{19}
+    \subitem {Scatter\_recv\_managed}, \hyperpage{19, 20}
+    \subitem {Scatter\_send}, \hyperpage{20}
+    \subitem {Scatter\_send\_managed}, \hyperpage{20}
+    \subitem {Scatterv}, \hyperpage{21}
+    \subitem {Scatterv\_recv}, \hyperpage{21}
+    \subitem {Scatterv\_send}, \hyperpage{21}
+    \subitem {Send}, \hyperpage{21}
+    \subitem {Send\_one}, \hyperpage{22}
+    \subitem {Type\_size}, \hyperpage{22}
+  \item {MPIw::Comm\_raii}, \hyperpage{25}
+    \subitem {$\sim$Comm\_raii}, \hyperpage{26}
+    \subitem {comm}, \hyperpage{27}
+    \subitem {Comm\_raii}, \hyperpage{25, 26}
+    \subitem {get}, \hyperpage{26}
+    \subitem {operator MPI\_Comm}, \hyperpage{26}
+    \subitem {operator=}, \hyperpage{26}
+    \subitem {operator\&}, \hyperpage{26}
+  \item {MPIw::details}, \hyperpage{22}
+    \subitem {split\_buffer}, \hyperpage{22}
+  \item {MPIw::details::cnpts}, \hyperpage{23}
+    \subitem {Container}, \hyperpage{23}
+    \subitem {EnumOrInt}, \hyperpage{23}
+  \item {MPIw::errors}, \hyperpage{23}
+    \subitem {check\_code}, \hyperpage{24}
+    \subitem {error\_message}, \hyperpage{24}
+  \item {MPIw::Group\_raii}, \hyperpage{27}
+    \subitem {$\sim$Group\_raii}, \hyperpage{28}
+    \subitem {get}, \hyperpage{28}
+    \subitem {group}, \hyperpage{29}
+    \subitem {Group\_raii}, \hyperpage{27, 28}
+    \subitem {operator MPI\_Group}, \hyperpage{28}
+    \subitem {operator=}, \hyperpage{28}
+    \subitem {operator\&}, \hyperpage{28}
+  \item {MPIw::Init\_raii}, \hyperpage{29}
+    \subitem {$\sim$Init\_raii}, \hyperpage{30}
+    \subitem {Init\_raii}, \hyperpage{29, 30}
+    \subitem {operator=}, \hyperpage{30}
+  \item {MPIw::Init\_threads\_raii}, \hyperpage{30}
+    \subitem {$\sim$Init\_threads\_raii}, \hyperpage{31}
+    \subitem {Init\_threads\_raii}, \hyperpage{31}
+    \subitem {operator=}, \hyperpage{31, 32}
+    \subitem {support\_level}, \hyperpage{32}
+  \item {MPIw::structs}, \hyperpage{24}
+  \item {MPIw::structs::Recv\_st$<$ T $>$}, \hyperpage{32}
+    \subitem {data}, \hyperpage{32}
+    \subitem {status}, \hyperpage{32}
+  \item {MPIw::Type\_raii}, \hyperpage{33}
+    \subitem {$\sim$Type\_raii}, \hyperpage{34}
+    \subitem {get}, \hyperpage{34}
+    \subitem {operator MPI\_Datatype}, \hyperpage{34}
+    \subitem {operator=}, \hyperpage{34}
+    \subitem {operator\&}, \hyperpage{34}
+    \subitem {type}, \hyperpage{34}
+    \subitem {Type\_raii}, \hyperpage{33}
+  \item {MPIw::types}, \hyperpage{24}
+    \subitem {get\_mpi\_type}, \hyperpage{24}
   \item {MPIw\_register\_type}
-    \subitem {types.hpp}, \hyperpage{37--40}
+    \subitem {types.hpp}, \hyperpage{48--51}
 
   \indexspace
 
   \item {operator MPI\_Comm}
-    \subitem {MPIw::Comm\_raii}, \hyperpage{20}
+    \subitem {MPIw::Comm\_raii}, \hyperpage{26}
+  \item {operator MPI\_Datatype}
+    \subitem {MPIw::Type\_raii}, \hyperpage{34}
   \item {operator MPI\_Group}
-    \subitem {MPIw::Group\_raii}, \hyperpage{22}
+    \subitem {MPIw::Group\_raii}, \hyperpage{28}
   \item {operator=}
-    \subitem {MPIw::Comm\_raii}, \hyperpage{20}
-    \subitem {MPIw::Group\_raii}, \hyperpage{22}
-    \subitem {MPIw::Init\_raii}, \hyperpage{24}
+    \subitem {MPIw::Comm\_raii}, \hyperpage{26}
+    \subitem {MPIw::Group\_raii}, \hyperpage{28}
+    \subitem {MPIw::Init\_raii}, \hyperpage{30}
+    \subitem {MPIw::Init\_threads\_raii}, \hyperpage{31, 32}
+    \subitem {MPIw::Type\_raii}, \hyperpage{34}
   \item {operator\&}
-    \subitem {MPIw::Comm\_raii}, \hyperpage{20}
-    \subitem {MPIw::Group\_raii}, \hyperpage{22}
+    \subitem {MPIw::Comm\_raii}, \hyperpage{26}
+    \subitem {MPIw::Group\_raii}, \hyperpage{28}
+    \subitem {MPIw::Type\_raii}, \hyperpage{34}
 
   \indexspace
 
   \item {Recv}
-    \subitem {MPIw}, \hyperpage{13}
+    \subitem {MPIw}, \hyperpage{17}
+  \item {Recv\_one}
+    \subitem {MPIw}, \hyperpage{17}
   \item {Reduce}
-    \subitem {MPIw}, \hyperpage{13}
+    \subitem {MPIw}, \hyperpage{17}
   \item {Reduce\_recv}
-    \subitem {MPIw}, \hyperpage{14}
+    \subitem {MPIw}, \hyperpage{18}
   \item {Reduce\_send}
-    \subitem {MPIw}, \hyperpage{14}
+    \subitem {MPIw}, \hyperpage{18}
 
   \indexspace
 
   \item {Scatter}
-    \subitem {MPIw}, \hyperpage{14}
+    \subitem {MPIw}, \hyperpage{19}
   \item {Scatter\_recv}
-    \subitem {MPIw}, \hyperpage{14}
+    \subitem {MPIw}, \hyperpage{19}
   \item {Scatter\_recv\_managed}
-    \subitem {MPIw}, \hyperpage{15}
+    \subitem {MPIw}, \hyperpage{19, 20}
   \item {Scatter\_send}
-    \subitem {MPIw}, \hyperpage{15}
+    \subitem {MPIw}, \hyperpage{20}
   \item {Scatter\_send\_managed}
-    \subitem {MPIw}, \hyperpage{15}
+    \subitem {MPIw}, \hyperpage{20}
   \item {Scatterv}
-    \subitem {MPIw}, \hyperpage{15}
+    \subitem {MPIw}, \hyperpage{21}
   \item {Scatterv\_recv}
-    \subitem {MPIw}, \hyperpage{15}
+    \subitem {MPIw}, \hyperpage{21}
   \item {Scatterv\_send}
-    \subitem {MPIw}, \hyperpage{16}
+    \subitem {MPIw}, \hyperpage{21}
   \item {Send}
-    \subitem {MPIw}, \hyperpage{16}
+    \subitem {MPIw}, \hyperpage{21}
+  \item {Send\_one}
+    \subitem {MPIw}, \hyperpage{22}
   \item {split\_buffer}
-    \subitem {MPIw::details}, \hyperpage{16}
+    \subitem {MPIw::details}, \hyperpage{22}
   \item {status}
-    \subitem {MPIw::structs::Recv\_st$<$ T $>$}, \hyperpage{25}
+    \subitem {MPIw::structs::Recv\_st$<$ T $>$}, \hyperpage{32}
+  \item {support\_level}
+    \subitem {MPIw::Init\_threads\_raii}, \hyperpage{32}
 
   \indexspace
 
+  \item {type}
+    \subitem {MPIw::Type\_raii}, \hyperpage{34}
+  \item {Type\_raii}
+    \subitem {MPIw::Type\_raii}, \hyperpage{33}
+  \item {Type\_size}
+    \subitem {MPIw}, \hyperpage{22}
   \item {types.hpp}
-    \subitem {MPIw\_register\_type}, \hyperpage{37--40}
+    \subitem {MPIw\_register\_type}, \hyperpage{48--51}
 
 \end{theindex}

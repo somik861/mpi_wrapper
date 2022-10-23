@@ -1,5 +1,5 @@
-\hypertarget{types_8hpp}{}\doxysection{/home/somik/\+WSL\+\_\+\+Workspace/cpp/mpi\+\_\+wrapper/src/types.hpp File Reference}
-\label{types_8hpp}\index{/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/types.hpp@{/home/somik/WSL\_Workspace/cpp/mpi\_wrapper/src/types.hpp}}
+\hypertarget{types_8hpp}{}\doxysection{/home/somik/\+Workspace/cpp/mpi\+\_\+wrapper/src/types.hpp File Reference}
+\label{types_8hpp}\index{/home/somik/Workspace/cpp/mpi\_wrapper/src/types.hpp@{/home/somik/Workspace/cpp/mpi\_wrapper/src/types.hpp}}
 {\ttfamily \#include $<$complex$>$}\newline
 {\ttfamily \#include $<$mpi.\+h$>$}\newline
 {\ttfamily \#include $<$stdexcept$>$}\newline
@@ -14,7 +14,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{types_8hpp__dep__incl}
+\includegraphics[width=314pt]{types_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Namespaces}
@@ -81,7 +81,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCode}{0}
 \DoxyCodeLine{    \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_m_p_iw_1_1types}{MPIw::types}} \{                                                    \(\backslash\)}
 \DoxyCodeLine{    template <>                                                                \(\backslash\)}
-\DoxyCodeLine{    MPI\_Datatype get\_mpi\_type<cpp\_type>(cpp\_type) \{                            \(\backslash\)}
+\DoxyCodeLine{    inline MPI\_Datatype get\_mpi\_type<cpp\_type>(cpp\_type) \{                     \(\backslash\)}
 \DoxyCodeLine{        return mpi\_type;                                                       \(\backslash\)}
 \DoxyCodeLine{    \}                                                                          \(\backslash\)}
 \DoxyCodeLine{    \}}

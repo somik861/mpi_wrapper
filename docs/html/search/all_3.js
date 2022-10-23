@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_16',['data',['../struct_m_p_iw_1_1structs_1_1_recv__st.html#a0fcbb6c3b455cd9d92ae1570157eaa3d',1,'MPIw::structs::Recv_st']]]
+  ['data_20',['data',['../struct_m_p_iw_1_1structs_1_1_recv__st.html#a9a5744e3ef3b9b9e5c04704b51ba4b92',1,'MPIw::structs::Recv_st']]]
 ];

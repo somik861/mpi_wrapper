@@ -1,0 +1,43 @@
+\hypertarget{namespace_m_p_iw_1_1details_1_1cnpts}{}\doxysection{MPIw\+::details\+::cnpts Namespace Reference}
+\label{namespace_m_p_iw_1_1details_1_1cnpts}\index{MPIw::details::cnpts@{MPIw::details::cnpts}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespace_m_p_iw_1_1details_1_1cnpts_a8d7053ca01d16057ef2b4d4c1a6a6950}{Enum\+Or\+Int}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\concept \mbox{\hyperlink{namespace_m_p_iw_1_1details_1_1cnpts_a9660876470beb85494c1bb2792cd5872}{Container}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_m_p_iw_1_1details_1_1cnpts_a9660876470beb85494c1bb2792cd5872}\label{namespace_m_p_iw_1_1details_1_1cnpts_a9660876470beb85494c1bb2792cd5872}} 
+\index{MPIw::details::cnpts@{MPIw::details::cnpts}!Container@{Container}}
+\index{Container@{Container}!MPIw::details::cnpts@{MPIw::details::cnpts}}
+\doxysubsubsection{\texorpdfstring{Container}{Container}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept MPIw\+::details\+::cnpts\+::\+Container}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= requires(T a) \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \{ a.begin() \} -\/> std::contiguous\_iterator;}
+\DoxyCodeLine{    \{ a.size() \} -\/> std::same\_as<std::size\_t>;}
+\DoxyCodeLine{    \{ \textcolor{keyword}{sizeof}(\textcolor{keyword}{typename} T::value\_type) \} -\/> std::same\_as<std::size\_t>;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespace_m_p_iw_1_1details_1_1cnpts_a8d7053ca01d16057ef2b4d4c1a6a6950}\label{namespace_m_p_iw_1_1details_1_1cnpts_a8d7053ca01d16057ef2b4d4c1a6a6950}} 
+\index{MPIw::details::cnpts@{MPIw::details::cnpts}!EnumOrInt@{EnumOrInt}}
+\index{EnumOrInt@{EnumOrInt}!MPIw::details::cnpts@{MPIw::details::cnpts}}
+\doxysubsubsection{\texorpdfstring{EnumOrInt}{EnumOrInt}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+concept MPIw\+::details\+::cnpts\+::\+Enum\+Or\+Int}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= requires(T) \{}
+\DoxyCodeLine{    requires std::is\_enum\_v<T> || std::is\_same\_v<T, int>;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
