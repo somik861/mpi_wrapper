@@ -3,6 +3,7 @@
 #include <complex>
 #include <mpi.h>
 #include <stdexcept>
+#include <cstddef>
 
 #define MPIw_register_type(cpp_type, mpi_type)                                 \
 	namespace MPIw::types {                                                    \
@@ -21,6 +22,7 @@ MPI_Datatype get_mpi_type(T = T{}) {
 }
 } // namespace MPIw::types
 
+MPIw_register_type(std::byte, MPI_BYTE);
 MPIw_register_type(char, MPI_CHAR);
 MPIw_register_type(wchar_t, MPI_WCHAR);
 MPIw_register_type(short, MPI_SHORT);
