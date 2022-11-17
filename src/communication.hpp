@@ -17,14 +17,15 @@ namespace details {
 template <typename T>
 std::vector<std::vector<T>> split_buffer(const std::vector<T>& buffer,
                                          const std::vector<int>& offsets) {
+	using std::begin;
 	std::vector<std::vector<T>> out(offsets.size());
 	for (std::size_t i = 0; i < offsets.size(); ++i) {
 		int start = offsets[i];
 		int end =
 		    (i + 1 == offsets.size()) ? int(buffer.size()) : offsets[i + 1];
 
-		out[i].insert(out[i].begin(), buffer.begin() + start,
-		              buffer.begin() + end);
+		out[i].insert(begin(out[i]), begin(buffer) + start,
+		              begin(buffer) + end);
 	}
 
 	return out;
@@ -106,7 +107,8 @@ void Send(
     int dest,
     U tag,
     const std::source_location& location = std::source_location::current()) {
-	Send(comm, &*data.begin(), int(data.size()), dest, tag, location);
+	using std::begin;
+	Send(comm, &*begin(data), int(data.size()), dest, tag, location);
 }
 
 template <typename T, details::cnpts::EnumOrInt U = int>
@@ -166,7 +168,8 @@ void Bcast_send(
     MPI_Comm comm,
     const T& data,
     const std::source_location& location = std::source_location::current()) {
-	Bcast_send(comm, &*data.begin(), int(data.size()), location);
+	using std::begin;
+	Bcast_send(comm, &*begin(data), int(data.size()), location);
 }
 
 template <typename T>
@@ -224,7 +227,8 @@ void Bcast_send_managed(
     MPI_Comm comm,
     const T& data,
     const std::source_location& location = std::source_location::current()) {
-	Bcast_send_managed(comm, &*data.begin(), int(data.size()), location);
+	using std::begin;
+	Bcast_send_managed(comm, &*begin(data), int(data.size()), location);
 }
 
 template <typename T>
@@ -268,7 +272,8 @@ void Gather_send(
     const T& data,
     int root,
     const std::source_location& location = std::source_location::current()) {
-	Gather_send(comm, &*data.begin(), int(data.size()), root, location);
+	using std::begin;
+	Gather_send(comm, &*begin(data), int(data.size()), root, location);
 }
 
 template <typename T>
@@ -301,7 +306,7 @@ std::vector<typename T::value_type> Gather_recv(
     const std::source_location& location = std::source_location::current()) {
 	std::vector<typename T::value_type> out(Comm_size(comm) * data.size());
 
-	Gather_recv(comm, &*data.begin(), out.data(), int(data.size()), location);
+	Gather_recv(comm, &*begin(data), out.data(), int(data.size()), location);
 	return out;
 }
 
@@ -337,7 +342,7 @@ std::vector<typename T::value_type> Allgather(
     const std::source_location& location = std::source_location::current()) {
 	std::vector<typename T::value_type> out(Comm_size(comm) * data.size());
 
-	Allgather(comm, &*data.begin(), out.data(), int(data.size()), location);
+	Allgather(comm, &*begin(data), out.data(), int(data.size()), location);
 	return out;
 }
 
@@ -364,7 +369,7 @@ void Gatherv_send(
 	Gather_send_one(comm, int(data.size()), root, location);
 
 	errors::check_code(
-	    MPI_Gatherv(&*data.begin(), int(data.size()),
+	    MPI_Gatherv(&*begin(data), int(data.size()),
 	                types::get_mpi_type<typename T::value_type>(), nullptr,
 	                nullptr, nullptr, MPI_DATATYPE_NULL, root, comm),
 	    location);
@@ -377,15 +382,16 @@ std::vector<std::vector<typename T::value_type>> Gatherv_recv(
     const std::source_location& location = std::source_location::current()) {
 	int my_rank = Comm_rank(comm);
 	using value_type = typename T::value_type;
+	using std::begin;
 
 	auto counts = Gather_recv_one(comm, int(data.size()), location);
 
 	std::vector<value_type> buffer(
-	    std::accumulate(counts.begin(), counts.end(), 0));
+	    std::accumulate(begin(counts), counts.end(), 0));
 	std::vector<int> displs(counts.size());
-	std::exclusive_scan(counts.begin(), counts.end(), displs.begin(), 0);
+	std::exclusive_scan(begin(counts), counts.end(), begin(displs), 0);
 
-	errors::check_code(MPI_Gatherv(&*data.begin(), int(data.size()),
+	errors::check_code(MPI_Gatherv(&*begin(data), int(data.size()),
 	                               types::get_mpi_type<value_type>(),
 	                               buffer.data(), counts.data(), displs.data(),
 	                               types::get_mpi_type<value_type>(), my_rank,
@@ -404,15 +410,16 @@ std::vector<std::vector<typename T::value_type>> Allgatherv(
 	std::vector<int> counts(Comm_size(comm));
 
 	using value_type = typename T::value_type;
+	using std::begin;
 
 	Allgather(comm, &my_count, counts.data(), 1, location);
 
 	std::vector<int> displs(counts.size());
-	std::exclusive_scan(counts.begin(), counts.end(), displs.begin(), 0);
+	std::exclusive_scan(begin(counts), counts.end(), begin(displs), 0);
 	std::vector<value_type> buffer(
-	    std::accumulate(counts.begin(), counts.end(), 0));
+	    std::accumulate(begin(counts), counts.end(), 0));
 
-	errors::check_code(MPI_Allgatherv(&*data.begin(), int(data.size()),
+	errors::check_code(MPI_Allgatherv(&*begin(data), int(data.size()),
 	                                  types::get_mpi_type<value_type>(),
 	                                  buffer.data(), counts.data(),
 	                                  displs.data(),
@@ -457,12 +464,13 @@ std::vector<typename T::value_type> Scatter_send(
     MPI_Comm comm,
     const T& data,
     const std::source_location& location = std::source_location::current()) {
+	using std::begin;
 	int count = int(data.size()) / Comm_size(comm);
 	assert(Comm_size(comm) * count ==
 	       int(data.size())); // data are equally splitable
 
 	std::vector<typename T::value_type> out(count);
-	Scatter_send(comm, &*data.begin(), out.data(), int(data.size()), location);
+	Scatter_send(comm, &*begin(data), out.data(), int(data.size()), location);
 	return out;
 }
 
@@ -507,10 +515,11 @@ std::vector<typename T::value_type> Scatter_send_managed(
     MPI_Comm comm,
     const T& data,
     const std::source_location& location = std::source_location::current()) {
+	using std::begin;
 	int count = int(data.size()) / Comm_size(comm);
 	std::vector<typename T::value_type> out(count);
 
-	Scatter_send_managed(comm, &*data.begin(), out.data(), int(data.size()),
+	Scatter_send_managed(comm, &*begin(data), out.data(), int(data.size()),
 	                     location);
 	return out;
 }
@@ -553,16 +562,17 @@ std::vector<typename T::value_type> Scatterv_send(
     const std::source_location& location = std::source_location::current()) {
 	assert(int(data.size()) == Comm_size(comm));
 	using U = typename T::value_type;
+	using std::begin;
 
 	std::vector<int> counts(data.size());
 	std::vector<U> buffer;
-	std::ranges::transform(data, counts.begin(), [&](const auto& v) {
-		buffer.insert(buffer.end(), v.begin(),
+	std::ranges::transform(data, begin(counts), [&](const auto& v) {
+		buffer.insert(buffer.end(), begin(v),
 		              v.end()); // filling buffer simultaneously
 		return v.size();
 	});
 	std::vector<int> displs(counts.size());
-	std::exclusive_scan(counts.begin(), counts.end(), displs.begin(), 0);
+	std::exclusive_scan(begin(counts), counts.end(), begin(displs), 0);
 
 	int my_count;
 	int my_rank = Comm_rank(comm);
@@ -631,7 +641,7 @@ void Reduce_send(
     MPI_Op op,
     int root,
     const std::source_location& location = std::source_location::current()) {
-	Reduce_send(comm, &*data.begin(), int(data.size()), op, root, location);
+	Reduce_send(comm, &*begin(data), int(data.size()), op, root, location);
 }
 
 template <typename T>
@@ -656,7 +666,7 @@ std::vector<typename T::value_type> Reduce_recv(
     const std::source_location& location = std::source_location::current()) {
 	std::vector<typename T::value_type> out(data.size());
 
-	Reduce_recv(comm, &*data.begin(), out.data(), int(data.size()), op,
+	Reduce_recv(comm, &*begin(data), out.data(), int(data.size()), op,
 	            location);
 	return out;
 }
@@ -683,7 +693,7 @@ std::vector<typename T::value_type> AllReduce(
     const std::source_location& location = std::source_location::current()) {
 	std::vector<typename T::value_type> out(data.size());
 
-	AllReduce(comm, &*data.begin(), out.data(), int(data.size()), op, location);
+	AllReduce(comm, &*begin(data), out.data(), int(data.size()), op, location);
 
 	return out;
 }
