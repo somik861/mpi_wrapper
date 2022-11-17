@@ -11,6 +11,7 @@ var types_8hpp =
     [ "MPIw_register_type", "types_8hpp.html#a4bfd5ea0f6ba219563cdbf3cfc98c8c3", null ],
     [ "MPIw_register_type", "types_8hpp.html#af809923a510844d3fc710901015c860f", null ],
     [ "MPIw_register_type", "types_8hpp.html#a34d48a125ab414e8d5ad92d25b7deeb1", null ],
+    [ "MPIw_register_type", "types_8hpp.html#a1598e71023ce2e8df16e5ba6909e53ea", null ],
     [ "MPIw_register_type", "types_8hpp.html#a55389ed50cac08a0f02b8f15100c260a", null ],
     [ "MPIw_register_type", "types_8hpp.html#a85a9e42ad970ea5185f777ae79574912", null ],
     [ "MPIw_register_type", "types_8hpp.html#a58dc8a47895390e47d5d7a6d04365063", null ],

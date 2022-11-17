@@ -97,17 +97,17 @@ $(document).ready(function(){initNavTree('concepts_8hpp_source.html',''); initRe
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    requires std::is_enum_v&lt;T&gt; || std::is_same_v&lt;T, int&gt;;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespace_m_p_iw_1_1details_1_1cnpts.html#a9660876470beb85494c1bb2792cd5872">   14</a></span>&#160;concept <a class="code" href="namespace_m_p_iw_1_1details_1_1cnpts.html#a9660876470beb85494c1bb2792cd5872">Container</a> = requires(T a) {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    { a.begin() } -&gt; std::contiguous_iterator;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> std::begin;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespace_m_p_iw_1_1details_1_1cnpts.html#a9660876470beb85494c1bb2792cd5872">   15</a></span>&#160;concept <a class="code" href="namespace_m_p_iw_1_1details_1_1cnpts.html#a9660876470beb85494c1bb2792cd5872">Container</a> = requires(T a) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    { begin(a) } -&gt; std::contiguous_iterator;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    { a.size() } -&gt; std::same_as&lt;std::size_t&gt;;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    { <span class="keyword">sizeof</span>(<span class="keyword">typename</span> T::value_type) } -&gt; std::same_as&lt;std::size_t&gt;;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;} <span class="comment">// namespace MPIw::details::cnpts</span></div>
 <div class="ttc" id="anamespace_m_p_iw_1_1details_1_1cnpts_html"><div class="ttname"><a href="namespace_m_p_iw_1_1details_1_1cnpts.html">MPIw::details::cnpts</a></div><div class="ttdef"><b>Definition:</b> concepts.hpp:7</div></div>
 <div class="ttc" id="anamespace_m_p_iw_1_1details_1_1cnpts_html_a8d7053ca01d16057ef2b4d4c1a6a6950"><div class="ttname"><a href="namespace_m_p_iw_1_1details_1_1cnpts.html#a8d7053ca01d16057ef2b4d4c1a6a6950">MPIw::details::cnpts::EnumOrInt</a></div><div class="ttdeci">concept EnumOrInt</div><div class="ttdef"><b>Definition:</b> concepts.hpp:9</div></div>
-<div class="ttc" id="anamespace_m_p_iw_1_1details_1_1cnpts_html_a9660876470beb85494c1bb2792cd5872"><div class="ttname"><a href="namespace_m_p_iw_1_1details_1_1cnpts.html#a9660876470beb85494c1bb2792cd5872">MPIw::details::cnpts::Container</a></div><div class="ttdeci">concept Container</div><div class="ttdef"><b>Definition:</b> concepts.hpp:14</div></div>
+<div class="ttc" id="anamespace_m_p_iw_1_1details_1_1cnpts_html_a9660876470beb85494c1bb2792cd5872"><div class="ttname"><a href="namespace_m_p_iw_1_1details_1_1cnpts.html#a9660876470beb85494c1bb2792cd5872">MPIw::details::cnpts::Container</a></div><div class="ttdeci">concept Container</div><div class="ttdef"><b>Definition:</b> concepts.hpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -20,8 +20,7 @@ concept MPIw\+::details\+::cnpts\+::\+Container}
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{= requires(T a) \{}
-\DoxyCodeLine{}
-\DoxyCodeLine{    \{ a.begin() \} -\/> std::contiguous\_iterator;}
+\DoxyCodeLine{    \{ begin(a) \} -\/> std::contiguous\_iterator;}
 \DoxyCodeLine{    \{ a.size() \} -\/> std::same\_as<std::size\_t>;}
 \DoxyCodeLine{    \{ \textcolor{keyword}{sizeof}(\textcolor{keyword}{typename} T::value\_type) \} -\/> std::same\_as<std::size\_t>;}
 \DoxyCodeLine{\}}

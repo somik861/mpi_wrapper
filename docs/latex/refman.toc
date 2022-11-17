@@ -159,21 +159,22 @@
 \contentsline {subsection}{\numberline {6.8.1}Macro Definition Documentation}{48}{subsection.6.8.1}%
 \contentsline {subsubsection}{\numberline {6.8.1.1}MPIw\_register\_type}{48}{subsubsection.6.8.1.1}%
 \contentsline {subsection}{\numberline {6.8.2}Function Documentation}{48}{subsection.6.8.2}%
-\contentsline {subsubsection}{\numberline {6.8.2.1}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [1/17]}}{49}{subsubsection.6.8.2.1}%
-\contentsline {subsubsection}{\numberline {6.8.2.2}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [2/17]}}{49}{subsubsection.6.8.2.2}%
-\contentsline {subsubsection}{\numberline {6.8.2.3}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [3/17]}}{49}{subsubsection.6.8.2.3}%
-\contentsline {subsubsection}{\numberline {6.8.2.4}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [4/17]}}{49}{subsubsection.6.8.2.4}%
-\contentsline {subsubsection}{\numberline {6.8.2.5}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [5/17]}}{49}{subsubsection.6.8.2.5}%
-\contentsline {subsubsection}{\numberline {6.8.2.6}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [6/17]}}{49}{subsubsection.6.8.2.6}%
-\contentsline {subsubsection}{\numberline {6.8.2.7}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [7/17]}}{50}{subsubsection.6.8.2.7}%
-\contentsline {subsubsection}{\numberline {6.8.2.8}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [8/17]}}{50}{subsubsection.6.8.2.8}%
-\contentsline {subsubsection}{\numberline {6.8.2.9}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [9/17]}}{50}{subsubsection.6.8.2.9}%
-\contentsline {subsubsection}{\numberline {6.8.2.10}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [10/17]}}{50}{subsubsection.6.8.2.10}%
-\contentsline {subsubsection}{\numberline {6.8.2.11}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [11/17]}}{50}{subsubsection.6.8.2.11}%
-\contentsline {subsubsection}{\numberline {6.8.2.12}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [12/17]}}{50}{subsubsection.6.8.2.12}%
-\contentsline {subsubsection}{\numberline {6.8.2.13}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [13/17]}}{51}{subsubsection.6.8.2.13}%
-\contentsline {subsubsection}{\numberline {6.8.2.14}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [14/17]}}{51}{subsubsection.6.8.2.14}%
-\contentsline {subsubsection}{\numberline {6.8.2.15}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [15/17]}}{51}{subsubsection.6.8.2.15}%
-\contentsline {subsubsection}{\numberline {6.8.2.16}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [16/17]}}{51}{subsubsection.6.8.2.16}%
-\contentsline {subsubsection}{\numberline {6.8.2.17}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [17/17]}}{51}{subsubsection.6.8.2.17}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [1/18]}}{49}{subsubsection.6.8.2.1}%
+\contentsline {subsubsection}{\numberline {6.8.2.2}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [2/18]}}{49}{subsubsection.6.8.2.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.3}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [3/18]}}{49}{subsubsection.6.8.2.3}%
+\contentsline {subsubsection}{\numberline {6.8.2.4}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [4/18]}}{49}{subsubsection.6.8.2.4}%
+\contentsline {subsubsection}{\numberline {6.8.2.5}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [5/18]}}{49}{subsubsection.6.8.2.5}%
+\contentsline {subsubsection}{\numberline {6.8.2.6}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [6/18]}}{49}{subsubsection.6.8.2.6}%
+\contentsline {subsubsection}{\numberline {6.8.2.7}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [7/18]}}{50}{subsubsection.6.8.2.7}%
+\contentsline {subsubsection}{\numberline {6.8.2.8}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [8/18]}}{50}{subsubsection.6.8.2.8}%
+\contentsline {subsubsection}{\numberline {6.8.2.9}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [9/18]}}{50}{subsubsection.6.8.2.9}%
+\contentsline {subsubsection}{\numberline {6.8.2.10}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [10/18]}}{50}{subsubsection.6.8.2.10}%
+\contentsline {subsubsection}{\numberline {6.8.2.11}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [11/18]}}{50}{subsubsection.6.8.2.11}%
+\contentsline {subsubsection}{\numberline {6.8.2.12}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [12/18]}}{50}{subsubsection.6.8.2.12}%
+\contentsline {subsubsection}{\numberline {6.8.2.13}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [13/18]}}{51}{subsubsection.6.8.2.13}%
+\contentsline {subsubsection}{\numberline {6.8.2.14}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [14/18]}}{51}{subsubsection.6.8.2.14}%
+\contentsline {subsubsection}{\numberline {6.8.2.15}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [15/18]}}{51}{subsubsection.6.8.2.15}%
+\contentsline {subsubsection}{\numberline {6.8.2.16}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [16/18]}}{51}{subsubsection.6.8.2.16}%
+\contentsline {subsubsection}{\numberline {6.8.2.17}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [17/18]}}{51}{subsubsection.6.8.2.17}%
+\contentsline {subsubsection}{\numberline {6.8.2.18}MPIw\_register\_type()\hspace {0.1cm}{\footnotesize \ttfamily [18/18]}}{51}{subsubsection.6.8.2.18}%
 \contentsline {chapter}{Index}{53}{section*.49}%

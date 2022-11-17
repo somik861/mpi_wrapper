@@ -112,8 +112,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= requires(T a) {</div>
-<div class="line"> </div>
-<div class="line">    { a.begin() } -&gt; std::contiguous_iterator;</div>
+<div class="line">    { begin(a) } -&gt; std::contiguous_iterator;</div>
 <div class="line">    { a.size() } -&gt; std::same_as&lt;std::size_t&gt;;</div>
 <div class="line">    { <span class="keyword">sizeof</span>(<span class="keyword">typename</span> T::value_type) } -&gt; std::same_as&lt;std::size_t&gt;;</div>
 <div class="line">}</div>
